@@ -10,10 +10,12 @@ export const siteConfig = {
 export const pricingTiers = [
   {
     name: "Starter",
+    slug: "starter" as const,
     listings: 1,
     price: 39,
     pricePerListing: 39,
     earlyAdopterPrice: 19,
+    durationDays: 60,
     popular: false,
     features: [
       "1 active listing",
@@ -25,10 +27,12 @@ export const pricingTiers = [
   },
   {
     name: "Collector",
+    slug: "collector" as const,
     listings: 5,
     price: 149,
     pricePerListing: 30,
     earlyAdopterPrice: 79,
+    durationDays: 90,
     popular: true,
     features: [
       "Up to 5 active listings",
@@ -41,10 +45,12 @@ export const pricingTiers = [
   },
   {
     name: "Dealer",
+    slug: "dealer" as const,
     listings: 20,
     price: 399,
     pricePerListing: 20,
     earlyAdopterPrice: 199,
+    durationDays: 120,
     popular: false,
     features: [
       "Up to 20 active listings",
@@ -57,3 +63,6 @@ export const pricingTiers = [
     ],
   },
 ] as const;
+
+export type PricingTier = (typeof pricingTiers)[number];
+export type TierSlug = PricingTier["slug"];

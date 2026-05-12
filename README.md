@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# YT Pay — Curated Classics & Beautiful Cars
+
+European marketplace for retro, classic and beautiful automobiles.
+
+**Live:** [yt-pay.io](https://yt-pay.io)
+
+## Tech Stack
+
+- **Frontend:** Next.js 16 (App Router) + TypeScript + Tailwind CSS + shadcn/ui
+- **Backend:** Supabase (PostgreSQL + Auth + Storage)
+- **Payments:** Stripe Checkout
+- **Hosting:** Vercel
+- **Domain:** yt-pay.io (Cloudflare DNS)
+
+## Features
+
+### Public
+- Car catalog with search, filters (make, year, price), sold badges
+- Car detail pages with photo gallery, specs, inquiry form
+- 3 pricing tiers with early adopter discounts
+- About, Contact, Privacy, Terms pages
+
+### Seller Dashboard (`/dashboard`)
+- Listings CRUD (create, edit, archive, mark sold)
+- Buyer inquiries inbox
+- Profile management, favorites
+
+### Admin Panel (`/admin`)
+- Moderation queue (approve/reject with audit trail)
+- User management (ban, verify, change roles)
+- Listings management (featured toggle)
+- Payments and inquiries overview
+
+### Auth
+- Email/password via Supabase Auth
+- Role-based access (admin, seller, buyer)
+- Forgot/reset password flow
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+git clone https://github.com/solskiysb/yt-pay.git
+cd yt-pay
+npm install
+cp .env.example .env.local
+# Fill in Supabase and Stripe keys
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Database
 
-## Learn More
+Schema in `supabase/schema.sql`. 7 tables with Row Level Security:
+profiles, listings, listing_images, inquiries, payments, favorites, moderation_events.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+vercel deploy --prod
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Auto-deploys via GitHub on push to `main`.
