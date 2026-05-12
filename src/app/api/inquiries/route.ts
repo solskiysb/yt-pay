@@ -2,8 +2,54 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { sendInquiryNotification } from "@/lib/email";
 
+// Simple in-memory rate limiting
+const rateLimit = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT = 5; // 5 inquiries per hour per IP
+const WINDOW = 60 * 60 * 1000; // 1 hour
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimit.get(ip);
+
+  if (!entry || now > entry.resetTime) {
+    rateLimit.set(ip, { count: 1, resetTime: now + WINDOW });
+    return false;
+  }
+
+  if (entry.count >= RATE_LIMIT) {
+    return true;
+  }
+
+  entry.count++;
+  return false;
+}
+
+// Periodically clean up expired entries to prevent memory leaks
+if (typeof globalThis !== "undefined") {
+  const CLEANUP_INTERVAL = 10 * 60 * 1000; // every 10 minutes
+  setInterval(() => {
+    const now = Date.now();
+    for (const [ip, entry] of rateLimit) {
+      if (now > entry.resetTime) {
+        rateLimit.delete(ip);
+      }
+    }
+  }, CLEANUP_INTERVAL).unref?.();
+}
+
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting
+    const forwarded = request.headers.get("x-forwarded-for");
+    const ip = forwarded?.split(",")[0]?.trim() || "unknown";
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: "Too many inquiries. Please try again later." },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
     const { listingId, sellerId, name, email, phone, message } = body;
 

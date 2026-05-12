@@ -8,6 +8,9 @@ import {
   MessageSquare,
   Car,
   CheckCircle,
+  BadgeCheck,
+  Users,
+  Lock,
 } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { CarCard } from "@/components/car-card";
@@ -167,6 +170,72 @@ export default async function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust & Safety */}
+      <section className="bg-stone-50 py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+              Trust & Safety
+            </h2>
+            <p className="mt-2 text-stone-500">
+              Built for peace of mind at every step
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+            <div className="rounded-2xl border border-stone-200 bg-white p-6 text-center">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                <BadgeCheck className="size-6" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-stone-900">
+                Curated Listings
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                Every listing is reviewed for quality and authenticity before it
+                goes live. We keep the standard high so you don&apos;t waste
+                your time.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-stone-200 bg-white p-6 text-center">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+                <Users className="size-6" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-stone-900">
+                Direct Contact
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                No middlemen, no hidden layers. You communicate and transact
+                directly with the seller -- transparent and straightforward.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-stone-200 bg-white p-6 text-center">
+              <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
+                <Globe className="size-6" />
+              </div>
+              <h3 className="mt-4 text-lg font-semibold text-stone-900">
+                Pan-European
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                One marketplace across 12+ countries. Find cars in Germany,
+                France, Italy, Spain, and beyond -- all in one place.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/how-it-works"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-stone-600 transition-colors hover:text-stone-900"
+            >
+              Learn more about how it works
+              <ArrowRight className="size-4" />
+            </Link>
           </div>
         </div>
       </section>

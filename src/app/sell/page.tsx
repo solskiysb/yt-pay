@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Camera, FileText, CreditCard, Rocket } from "lucide-react";
+import { Camera, FileText, Users, Rocket, Check, Shield } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { getUser } from "@/lib/auth";
-import { PricingCards } from "@/components/pricing-cards";
+// PricingCards and Stripe integration preserved — will re-enable post-beta
+// import { PricingCards } from "@/components/pricing-cards";
 
 export const metadata: Metadata = {
   title: `Sell Your Car — ${siteConfig.name}`,
   description:
-    "List your classic, retro or beautiful car on YT Pay. Reach thousands of enthusiasts across Europe.",
+    "List your classic, retro or beautiful car on YT Pay. Currently in private beta — list for free.",
 };
 
 const steps = [
@@ -27,11 +28,11 @@ const steps = [
       "Tell buyers about your car's history, condition, and what makes it special. Honest, detailed descriptions sell faster.",
   },
   {
-    icon: CreditCard,
+    icon: Users,
     step: "03",
-    title: "Choose Your Plan",
+    title: "Get Approved",
     description:
-      "Start free with one listing, or subscribe for more. All paid plans include a 14-day free trial.",
+      "Our team reviews your application to ensure quality. We'll get back to you within 48 hours.",
   },
   {
     icon: Rocket,
@@ -42,22 +43,31 @@ const steps = [
   },
 ];
 
+const betaFeatures = [
+  "Up to 3 active listings",
+  "Up to 20 photos per listing",
+  "Direct buyer inquiries",
+  "Zero commission on sales",
+  "Priority support",
+  "Seller profile page",
+];
+
 const faqs = [
   {
-    q: "Is there really a free plan?",
-    a: "Yes. The Free plan lets you list one car at no cost, with no time limit. Upgrade anytime if you need more listings.",
+    q: "How do I get approved to sell?",
+    a: "Click 'Apply to Sell' and fill out a brief application. We review each seller individually to maintain quality. You'll hear back within 48 hours.",
   },
   {
-    q: "How does the 14-day free trial work?",
-    a: "When you choose a paid plan (Collector or Dealer), you get 14 days free. You won't be charged until the trial ends, and you can cancel anytime before that.",
-  },
-  {
-    q: "Can I switch plans or cancel?",
-    a: "Absolutely. Upgrade, downgrade, or cancel anytime from your billing dashboard. Changes take effect at the next billing cycle.",
+    q: "Is it really free during the beta?",
+    a: "Yes. All beta sellers list for free with full features. When we launch paid plans, beta sellers will receive preferential pricing as a thank you.",
   },
   {
     q: "What kind of cars can I list?",
     a: "We focus on classic, retro, and visually distinctive cars. Think timeless design, not just age. Modern classics and youngtimers are welcome.",
+  },
+  {
+    q: "How many cars can I list?",
+    a: "During the beta, each seller can have up to 3 active listings with up to 20 photos each.",
   },
   {
     q: "Do you handle payment or delivery?",
@@ -77,20 +87,21 @@ export default async function SellPage() {
       <section className="bg-stone-50 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <div className="mx-auto mb-4 inline-flex items-center rounded-full bg-amber-100 px-4 py-1.5 text-sm font-medium text-amber-800">
-            Start Free — Upgrade Anytime
+            Private Beta — Free Listing
           </div>
           <h1 className="font-heading text-4xl font-bold tracking-tight text-stone-900 lg:text-5xl">
-            Sell Your Car
+            Sell Your Classic Car
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-stone-600">
-            Reach thousands of passionate car enthusiasts across Europe. No
-            commissions, no surprises — just transparent subscription pricing.
+            Currently in private beta — list your car for free and reach
+            thousands of passionate enthusiasts across Europe. No commissions,
+            no fees, no surprises.
           </p>
           <Link
-            href="#pricing"
+            href="#beta"
             className="mt-8 inline-flex h-12 items-center rounded-full bg-amber-500 px-8 font-medium text-stone-900 transition hover:bg-amber-400"
           >
-            See Plans & Pricing
+            Apply to Sell
           </Link>
         </div>
       </section>
@@ -120,17 +131,58 @@ export default async function SellPage() {
         </div>
       </section>
 
-      {/* Pricing Tiers */}
-      <section id="pricing" className="bg-stone-900 py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-6">
+      {/* Beta Seller Card */}
+      <section id="beta" className="bg-stone-900 py-20 lg:py-28">
+        <div className="mx-auto max-w-xl px-6">
           <h2 className="text-center font-heading text-3xl font-bold text-white">
-            Choose Your Plan
+            Join the Beta
           </h2>
           <p className="mt-4 text-center text-stone-400">
-            No commissions. No hidden fees. Cancel anytime.
+            We&apos;re onboarding select sellers during our beta period.
           </p>
 
-          <PricingCards isLoggedIn={!!user} />
+          <div className="mt-10 rounded-2xl border border-stone-700 bg-stone-800 p-8">
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-white">Beta Seller</h3>
+                <p className="mt-1 text-sm text-stone-400">
+                  Full access during launch
+                </p>
+              </div>
+              <div className="text-right">
+                <span className="text-3xl font-bold text-white">Free</span>
+                <p className="text-xs text-amber-400 font-medium">
+                  during beta
+                </p>
+              </div>
+            </div>
+
+            <div className="my-6 h-px bg-stone-700" />
+
+            <ul className="space-y-3">
+              {betaFeatures.map((feature) => (
+                <li
+                  key={feature}
+                  className="flex items-center gap-3 text-sm text-stone-300"
+                >
+                  <Check className="h-4 w-4 flex-shrink-0 text-amber-400" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <Link
+              href={user ? "/dashboard/listings/new" : "/register"}
+              className="mt-8 flex h-12 w-full items-center justify-center rounded-full bg-amber-500 font-medium text-stone-900 transition hover:bg-amber-400"
+            >
+              Apply to Sell
+            </Link>
+
+            <p className="mt-4 flex items-center justify-center gap-2 text-xs text-stone-500">
+              <Shield className="h-3.5 w-3.5" />
+              By invitation — applications reviewed within 48 hours
+            </p>
+          </div>
         </div>
       </section>
 

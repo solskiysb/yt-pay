@@ -6,7 +6,7 @@ const footerLinks = {
   marketplace: [
     { name: "Browse Cars", href: "/cars" },
     { name: "Sell Your Car", href: "/sell" },
-    { name: "How It Works", href: "/about" },
+    { name: "How It Works", href: "/how-it-works" },
   ],
   company: [
     { name: "About", href: "/about" },
