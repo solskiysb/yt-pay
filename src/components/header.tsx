@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Menu, LogOut, LayoutDashboard, Shield, User } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
@@ -12,6 +13,17 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { createClient } from "@/lib/supabase/client";
+import type { User as SupabaseUser } from "@supabase/supabase-js";
 
 const navigation = [
   { name: "Browse Cars", href: "/cars" },
@@ -20,9 +32,27 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
+function getInitials(user: SupabaseUser): string {
+  const name =
+    user.user_metadata?.full_name || user.email || "";
+  if (!name) return "U";
+  const parts = name.split(/[\s@]+/);
+  if (parts.length >= 2) {
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+  return name[0].toUpperCase();
+}
+
+function getDisplayName(user: SupabaseUser): string {
+  return user.user_metadata?.full_name || user.email || "User";
+}
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +61,31 @@ export function Header() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const supabase = createClient();
+
+    supabase.auth.getUser().then(({ data: { user: currentUser } }) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  async function handleLogout() {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    setUser(null);
+    router.push("/");
+    router.refresh();
+  }
 
   return (
     <header
@@ -60,7 +115,69 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <div className="ml-4">
+
+          <div className="ml-4 flex items-center gap-3">
+            {loading ? (
+              <div className="h-8 w-8 animate-pulse rounded-full bg-muted" />
+            ) : user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger
+                  render={
+                    <button className="flex items-center gap-2 rounded-full outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
+                  }
+                >
+                  <Avatar size="default">
+                    <AvatarFallback className="bg-accent-gold/15 text-accent-gold-dark text-xs font-semibold">
+                      {getInitials(user)}
+                    </AvatarFallback>
+                  </Avatar>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" sideOffset={8} className="w-56">
+                  <DropdownMenuLabel className="font-normal">
+                    <div className="flex flex-col gap-1">
+                      <p className="text-sm font-medium text-foreground">
+                        {getDisplayName(user)}
+                      </p>
+                      <p className="text-xs text-muted-foreground truncate">
+                        {user.email}
+                      </p>
+                    </div>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    onSelect={() => router.push("/dashboard")}
+                  >
+                    <LayoutDashboard className="mr-2 size-4" />
+                    Dashboard
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onSelect={() => router.push("/admin")}
+                  >
+                    <Shield className="mr-2 size-4" />
+                    Admin
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    variant="destructive"
+                    onSelect={handleLogout}
+                  >
+                    <LogOut className="mr-2 size-4" />
+                    Sign out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                href="/login"
+                className={cn(
+                  buttonVariants({ variant: "outline", size: "sm" }),
+                  "border-accent-gold/30 text-foreground hover:bg-accent-gold/5"
+                )}
+              >
+                Sign in
+              </Link>
+            )}
+
             <Link
               href="/sell"
               className={cn(
@@ -104,6 +221,65 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
+
+              {!loading && user && (
+                <>
+                  <div className="my-3 h-px bg-border" />
+                  <div className="flex items-center gap-3 px-4 py-2">
+                    <Avatar size="sm">
+                      <AvatarFallback className="bg-accent-gold/15 text-accent-gold-dark text-[10px] font-semibold">
+                        {getInitials(user)}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-medium text-foreground">
+                        {getDisplayName(user)}
+                      </p>
+                    </div>
+                  </div>
+                  <Link
+                    href="/dashboard"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  >
+                    <LayoutDashboard className="size-4" />
+                    Dashboard
+                  </Link>
+                  <Link
+                    href="/admin"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  >
+                    <Shield className="size-4" />
+                    Admin
+                  </Link>
+                  <button
+                    onClick={() => {
+                      setOpen(false);
+                      handleLogout();
+                    }}
+                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-destructive transition-colors hover:bg-destructive/5"
+                  >
+                    <LogOut className="size-4" />
+                    Sign out
+                  </button>
+                </>
+              )}
+
+              {!loading && !user && (
+                <>
+                  <div className="my-3 h-px bg-border" />
+                  <Link
+                    href="/login"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  >
+                    <User className="size-4" />
+                    Sign in
+                  </Link>
+                </>
+              )}
+
               <div className="mt-4 px-4">
                 <Link
                   href="/sell"
