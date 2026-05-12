@@ -171,7 +171,7 @@ export async function getListingBySlug(slug: string): Promise<ListingDetail | nu
 
   const { data, error } = await supabase
     .from("listings")
-    .select("*, listing_images(*), profiles(display_name)")
+    .select("*, listing_images(*), profiles(full_name)")
     .eq("slug", slug)
     .in("status", ["approved", "sold"])
     .single();
@@ -180,9 +180,9 @@ export async function getListingBySlug(slug: string): Promise<ListingDetail | nu
     return null;
   }
 
-  const listing = data as DbListing & { profiles?: { display_name: string | null } | null };
+  const listing = data as DbListing & { profiles?: { full_name: string | null } | null };
   const car = dbListingToCar(listing);
-  const sellerName = listing.profiles?.display_name || "Seller";
+  const sellerName = listing.profiles?.full_name || "Seller";
 
   return {
     ...car,
