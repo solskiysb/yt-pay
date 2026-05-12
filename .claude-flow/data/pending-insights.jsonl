@@ -182,3 +182,17 @@
 {"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/dashboard/listings/page.tsx","timestamp":1778617353235,"sessionId":null}
 {"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/dashboard/listings/page.tsx","timestamp":1778617360147,"sessionId":null}
 {"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/dashboard/listings/page.tsx","timestamp":1778617369927,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/supabase/migrations/20260512120004_storage.sql","timestamp":1778617671885,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/lib/email.ts","timestamp":1778617704460,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/api/inquiries/route.ts","timestamp":1778617711884,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/components/inquiry-form.tsx","timestamp":1778617726962,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/dashboard/listings/page.tsx","timestamp":1778617744970,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/lib/email.ts","timestamp":1778617746300,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/lib/email.ts","timestamp":1778617754607,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/dashboard/listings/new/page.tsx","timestamp":1778617756302,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/dashboard/listings/[id]/edit/page.tsx","timestamp":1778617765527,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/buyer/saved-searches/page.tsx","timestamp":1778617775181,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/buyer/saved-searches/page.tsx","timestamp":1778617783537,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/buyer/saved-searches/page.tsx","timestamp":1778617790771,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/dashboard/listings/[id]/edit/page.tsx","timestamp":1778617951243,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/next.config.ts","timestamp":1778617973973,"sessionId":null}

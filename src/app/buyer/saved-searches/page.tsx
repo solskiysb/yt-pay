@@ -84,9 +84,8 @@ export default function SavedSearchesPage() {
   const [minYear, setMinYear] = useState("");
   const [maxYear, setMaxYear] = useState("");
 
-  const supabase = createClient();
-
   const fetchSearches = useCallback(async () => {
+    const supabase = createClient();
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -100,13 +99,14 @@ export default function SavedSearchesPage() {
 
     setSearches((data ?? []) as SavedSearch[]);
     setLoading(false);
-  }, [supabase]);
+  }, []);
 
   useEffect(() => {
     fetchSearches();
   }, [fetchSearches]);
 
   const handleCreate = async () => {
+    const supabase = createClient();
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -136,6 +136,7 @@ export default function SavedSearchesPage() {
   };
 
   const toggleActive = async (id: string, currentActive: boolean) => {
+    const supabase = createClient();
     await supabase
       .from("saved_searches")
       .update({ is_active: !currentActive })
@@ -144,6 +145,7 @@ export default function SavedSearchesPage() {
   };
 
   const deleteSearch = async (id: string) => {
+    const supabase = createClient();
     await supabase.from("saved_searches").delete().eq("id", id);
     fetchSearches();
   };

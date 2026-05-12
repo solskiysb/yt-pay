@@ -61,7 +61,7 @@ export default async function ListingsPage() {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    redirect("/auth/login");
+    redirect("/login");
   }
 
   const listings = await getSellerListings(user.id);

@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Upload, X, Plus } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, Upload, X, Plus, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { createClient } from "@/lib/supabase/client";
 
 const carMakes = [
   "Alfa Romeo",
@@ -61,6 +63,9 @@ const bodyTypes = [
   "Shooting Brake",
 ];
 
+const MAX_PHOTOS = 10;
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+
 interface FormData {
   make: string;
   model: string;
@@ -80,7 +85,24 @@ interface FormData {
   features: string[];
 }
 
+interface PhotoPreview {
+  file: File;
+  previewUrl: string;
+}
+
+function generateSlug(make: string, model: string, year: string): string {
+  const base = `${make}-${model}-${year}`
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  const suffix = Math.random().toString(36).substring(2, 8);
+  return `${base}-${suffix}`;
+}
+
 export default function NewListingPage() {
+  const router = useRouter();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const [form, setForm] = useState<FormData>({
     make: "",
     model: "",
@@ -101,6 +123,10 @@ export default function NewListingPage() {
   });
 
   const [featureInput, setFeatureInput] = useState("");
+  const [photos, setPhotos] = useState<PhotoPreview[]>([]);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [uploadProgress, setUploadProgress] = useState<number>(0);
 
   const update = (field: keyof FormData, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -121,11 +147,181 @@ export default function NewListingPage() {
     }));
   };
 
-  const handleSubmit = (action: "draft" | "review") => {
-    const label = action === "draft" ? "draft" : "review";
-    alert(
-      `Listing saved as ${label}.\n\n${form.year} ${form.make} ${form.model}\nPrice: ${form.price}\n\nThis will connect to Supabase later.`
-    );
+  const handleFilesSelected = useCallback(
+    (files: FileList | null) => {
+      if (!files) return;
+
+      const newFiles: PhotoPreview[] = [];
+      const remaining = MAX_PHOTOS - photos.length;
+
+      for (let i = 0; i < Math.min(files.length, remaining); i++) {
+        const file = files[i];
+        if (!file.type.startsWith("image/")) continue;
+        if (file.size > MAX_FILE_SIZE) {
+          setError(`File "${file.name}" exceeds 10MB limit`);
+          continue;
+        }
+        newFiles.push({
+          file,
+          previewUrl: URL.createObjectURL(file),
+        });
+      }
+
+      if (files.length > remaining) {
+        setError(`Maximum ${MAX_PHOTOS} photos allowed. Only first ${remaining} were added.`);
+      }
+
+      setPhotos((prev) => [...prev, ...newFiles]);
+    },
+    [photos.length]
+  );
+
+  const removePhoto = (index: number) => {
+    setPhotos((prev) => {
+      const removed = prev[index];
+      URL.revokeObjectURL(removed.previewUrl);
+      return prev.filter((_, i) => i !== index);
+    });
+  };
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent) => {
+      e.preventDefault();
+      handleFilesSelected(e.dataTransfer.files);
+    },
+    [handleFilesSelected]
+  );
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
+  const validate = (): string | null => {
+    if (!form.make) return "Please select a make";
+    if (!form.model.trim()) return "Please enter a model";
+    if (!form.year || Number(form.year) < 1900) return "Please enter a valid year";
+    if (!form.price || Number(form.price) <= 0) return "Please enter a valid price";
+    if (!form.mileage) return "Please enter mileage";
+    if (!form.location.trim()) return "Please enter a location";
+    if (!form.shortDescription.trim()) return "Please enter a short description";
+    if (!form.description.trim()) return "Please enter a description";
+    return null;
+  };
+
+  const handleSubmit = async (action: "draft" | "review") => {
+    const validationError = validate();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+    setSaving(true);
+    setError(null);
+    setUploadProgress(0);
+
+    try {
+      const supabase = createClient();
+
+      // Get current user
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (!user) {
+        setError("You must be logged in to create a listing");
+        setSaving(false);
+        return;
+      }
+
+      const slug = generateSlug(form.make, form.model, form.year);
+
+      // Insert listing
+      const { data: listing, error: insertError } = await supabase
+        .from("listings")
+        .insert({
+          seller_id: user.id,
+          slug,
+          make: form.make,
+          model: form.model,
+          year: Number(form.year),
+          price: Number(form.price),
+          mileage: Number(form.mileage),
+          location: form.location,
+          description: form.description,
+          short_description: form.shortDescription,
+          condition: form.condition,
+          engine: form.engine || null,
+          transmission: form.transmission || null,
+          drivetrain: form.drivetrain || null,
+          exterior_color: form.exteriorColor || null,
+          interior_color: form.interiorColor || null,
+          body_type: form.bodyType || null,
+          features: form.features,
+          status: "draft",
+        })
+        .select("id")
+        .single();
+
+      if (insertError || !listing) {
+        throw new Error(insertError?.message ?? "Failed to create listing");
+      }
+
+      // Upload photos
+      if (photos.length > 0) {
+        const imageRecords: {
+          listing_id: string;
+          url: string;
+          storage_path: string;
+          sort_order: number;
+          is_primary: boolean;
+        }[] = [];
+
+        for (let i = 0; i < photos.length; i++) {
+          const photo = photos[i];
+          const ext = photo.file.name.split(".").pop() ?? "jpg";
+          const fileName = `${Date.now()}-${i}.${ext}`;
+          const storagePath = `${user.id}/${listing.id}/${fileName}`;
+
+          const { data: uploadData, error: uploadError } = await supabase.storage
+            .from("listing-photos")
+            .upload(storagePath, photo.file, {
+              cacheControl: "3600",
+              upsert: false,
+            });
+
+          if (uploadError) {
+            throw new Error(`Failed to upload photo ${i + 1}: ${uploadError.message}`);
+          }
+
+          const {
+            data: { publicUrl },
+          } = supabase.storage.from("listing-photos").getPublicUrl(uploadData.path);
+
+          imageRecords.push({
+            listing_id: listing.id,
+            url: publicUrl,
+            storage_path: storagePath,
+            sort_order: i,
+            is_primary: i === 0,
+          });
+
+          setUploadProgress(Math.round(((i + 1) / photos.length) * 100));
+        }
+
+        const { error: imagesError } = await supabase
+          .from("listing_images")
+          .insert(imageRecords);
+
+        if (imagesError) {
+          throw new Error(`Failed to save image records: ${imagesError.message}`);
+        }
+      }
+
+      router.push("/dashboard/listings");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "An unexpected error occurred");
+      setSaving(false);
+    }
   };
 
   return (
@@ -147,6 +343,12 @@ export default function NewListingPage() {
           </p>
         </div>
       </div>
+
+      {error && (
+        <div className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+          {error}
+        </div>
+      )}
 
       {/* Car Details */}
       <section className="rounded-xl bg-white p-6 ring-1 ring-stone-200">
@@ -332,26 +534,74 @@ export default function NewListingPage() {
           Photos
         </h3>
         <p className="mt-1 text-sm text-stone-500">
-          Upload up to 20 high-quality photos of your car
+          Upload up to {MAX_PHOTOS} high-quality photos of your car
         </p>
-        <div className="mt-5 flex items-center justify-center rounded-xl border-2 border-dashed border-stone-300 bg-stone-50 px-6 py-12 transition-colors hover:border-amber-400 hover:bg-amber-50/30">
-          <div className="text-center">
-            <Upload className="mx-auto size-8 text-stone-400" />
-            <p className="mt-3 text-sm font-medium text-stone-700">
-              Drag and drop photos here
-            </p>
-            <p className="mt-1 text-xs text-stone-400">
-              PNG, JPG up to 10MB each
-            </p>
-            <button
-              type="button"
-              className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-200"
-            >
-              <Plus className="size-3.5" />
-              Browse Files
-            </button>
+
+        {/* Photo previews */}
+        {photos.length > 0 && (
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            {photos.map((photo, index) => (
+              <div
+                key={photo.previewUrl}
+                className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-stone-100"
+              >
+                <Image
+                  src={photo.previewUrl}
+                  alt={`Photo ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+                {index === 0 && (
+                  <span className="absolute left-1.5 top-1.5 rounded bg-amber-500 px-1.5 py-0.5 text-[10px] font-semibold text-stone-900">
+                    Cover
+                  </span>
+                )}
+                <button
+                  type="button"
+                  onClick={() => removePhoto(index)}
+                  className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100"
+                >
+                  <X className="size-3.5" />
+                </button>
+              </div>
+            ))}
           </div>
-        </div>
+        )}
+
+        {/* Upload zone */}
+        {photos.length < MAX_PHOTOS && (
+          <div
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+            className="mt-4 flex items-center justify-center rounded-xl border-2 border-dashed border-stone-300 bg-stone-50 px-6 py-12 transition-colors hover:border-amber-400 hover:bg-amber-50/30"
+          >
+            <div className="text-center">
+              <Upload className="mx-auto size-8 text-stone-400" />
+              <p className="mt-3 text-sm font-medium text-stone-700">
+                Drag and drop photos here
+              </p>
+              <p className="mt-1 text-xs text-stone-400">
+                PNG, JPG up to 10MB each ({photos.length}/{MAX_PHOTOS} uploaded)
+              </p>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={(e) => handleFilesSelected(e.target.files)}
+                className="hidden"
+              />
+              <button
+                type="button"
+                onClick={() => fileInputRef.current?.click()}
+                className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-200"
+              >
+                <Plus className="size-3.5" />
+                Browse Files
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Description */}
@@ -460,20 +710,40 @@ export default function NewListingPage() {
         </div>
       </section>
 
+      {/* Upload progress */}
+      {saving && photos.length > 0 && uploadProgress < 100 && (
+        <div className="rounded-lg bg-amber-50 px-4 py-3">
+          <div className="mb-1.5 flex items-center justify-between text-sm">
+            <span className="font-medium text-amber-800">Uploading photos...</span>
+            <span className="text-amber-600">{uploadProgress}%</span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-amber-200">
+            <div
+              className="h-full rounded-full bg-amber-500 transition-all duration-300"
+              style={{ width: `${uploadProgress}%` }}
+            />
+          </div>
+        </div>
+      )}
+
       {/* Submit */}
       <div className="flex flex-col gap-3 pb-8 sm:flex-row sm:justify-end">
         <button
           type="button"
           onClick={() => handleSubmit("draft")}
-          className="inline-flex h-11 items-center justify-center rounded-full border border-stone-300 px-6 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-100"
+          disabled={saving}
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-stone-300 px-6 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-100 disabled:opacity-50"
         >
+          {saving && <Loader2 className="size-4 animate-spin" />}
           Save as Draft
         </button>
         <button
           type="button"
           onClick={() => handleSubmit("review")}
-          className="inline-flex h-11 items-center justify-center rounded-full bg-amber-500 px-6 text-sm font-medium text-stone-900 transition-colors hover:bg-amber-400"
+          disabled={saving}
+          className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-amber-500 px-6 text-sm font-medium text-stone-900 transition-colors hover:bg-amber-400 disabled:opacity-50"
         >
+          {saving && <Loader2 className="size-4 animate-spin" />}
           Submit for Review
         </button>
       </div>

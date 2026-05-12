@@ -2,7 +2,6 @@
 
 import { useState, type FormEvent } from "react";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
-import { createClient } from "@/lib/supabase/client";
 
 interface InquiryFormProps {
   listingId: string;
@@ -28,32 +27,34 @@ export function InquiryForm({
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const buyerName = (formData.get("name") as string).trim();
-    const buyerEmail = (formData.get("email") as string).trim();
-    const buyerPhone = (formData.get("phone") as string).trim() || null;
+    const name = (formData.get("name") as string).trim();
+    const email = (formData.get("email") as string).trim();
+    const phone = (formData.get("phone") as string).trim() || undefined;
     const message = (formData.get("message") as string).trim();
 
-    if (!buyerName || !buyerEmail || !message) {
+    if (!name || !email || !message) {
       setStatus("error");
       setErrorMessage("Please fill in all required fields.");
       return;
     }
 
     try {
-      const supabase = createClient();
-
-      const { error } = await supabase.from("inquiries").insert({
-        listing_id: listingId,
-        seller_id: sellerId,
-        buyer_name: buyerName,
-        buyer_email: buyerEmail,
-        buyer_phone: buyerPhone,
-        message,
-        status: "new",
+      const res = await fetch("/api/inquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          listingId,
+          sellerId,
+          name,
+          email,
+          phone,
+          message,
+        }),
       });
 
-      if (error) {
-        throw error;
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Request failed");
       }
 
       setStatus("success");

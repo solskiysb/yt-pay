@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, useRef, useCallback, use } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Plus, X, Loader2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, Plus, X, Loader2, Upload } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { createClient } from "@/lib/supabase/client";
 
@@ -62,6 +63,9 @@ const bodyTypes = [
   "Shooting Brake",
 ];
 
+const MAX_PHOTOS = 10;
+const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
+
 interface FormData {
   make: string;
   model: string;
@@ -81,6 +85,19 @@ interface FormData {
   features: string[];
 }
 
+interface ExistingImage {
+  id: string;
+  url: string;
+  storage_path: string | null;
+  sort_order: number;
+  is_primary: boolean;
+}
+
+interface NewPhoto {
+  file: File;
+  previewUrl: string;
+}
+
 export default function EditListingPage({
   params,
 }: {
@@ -89,11 +106,14 @@ export default function EditListingPage({
   const { id } = use(params);
   const router = useRouter();
   const supabase = createClient();
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [featureInput, setFeatureInput] = useState("");
+  const [userId, setUserId] = useState<string | null>(null);
+  const [uploadProgress, setUploadProgress] = useState<number>(0);
 
   const [form, setForm] = useState<FormData>({
     make: "",
@@ -114,9 +134,12 @@ export default function EditListingPage({
     features: [],
   });
 
+  const [existingImages, setExistingImages] = useState<ExistingImage[]>([]);
+  const [imagesToRemove, setImagesToRemove] = useState<ExistingImage[]>([]);
+  const [newPhotos, setNewPhotos] = useState<NewPhoto[]>([]);
+
   useEffect(() => {
     async function fetchListing() {
-      // Verify the user owns this listing
       const {
         data: { user },
       } = await supabase.auth.getUser();
@@ -124,10 +147,11 @@ export default function EditListingPage({
         router.push("/auth/login");
         return;
       }
+      setUserId(user.id);
 
       const { data, error: fetchError } = await supabase
         .from("listings")
-        .select("*")
+        .select("*, listing_images(*)")
         .eq("id", id)
         .eq("seller_id", user.id)
         .single();
@@ -156,6 +180,11 @@ export default function EditListingPage({
         condition: data.condition ?? "good",
         features: data.features ?? [],
       });
+
+      const sortedImages = [...(data.listing_images ?? [])].sort(
+        (a: ExistingImage, b: ExistingImage) => a.sort_order - b.sort_order
+      );
+      setExistingImages(sortedImages);
       setLoading(false);
     }
 
@@ -181,39 +210,184 @@ export default function EditListingPage({
     }));
   };
 
+  const totalPhotoCount = existingImages.length + newPhotos.length;
+
+  const handleFilesSelected = useCallback(
+    (files: FileList | null) => {
+      if (!files) return;
+
+      const remaining = MAX_PHOTOS - totalPhotoCount;
+      const added: NewPhoto[] = [];
+
+      for (let i = 0; i < Math.min(files.length, remaining); i++) {
+        const file = files[i];
+        if (!file.type.startsWith("image/")) continue;
+        if (file.size > MAX_FILE_SIZE) {
+          setError(`File "${file.name}" exceeds 10MB limit`);
+          continue;
+        }
+        added.push({
+          file,
+          previewUrl: URL.createObjectURL(file),
+        });
+      }
+
+      if (files.length > remaining) {
+        setError(
+          `Maximum ${MAX_PHOTOS} photos allowed. Only first ${remaining} were added.`
+        );
+      }
+
+      setNewPhotos((prev) => [...prev, ...added]);
+    },
+    [totalPhotoCount]
+  );
+
+  const removeExistingImage = (image: ExistingImage) => {
+    setExistingImages((prev) => prev.filter((img) => img.id !== image.id));
+    setImagesToRemove((prev) => [...prev, image]);
+  };
+
+  const removeNewPhoto = (index: number) => {
+    setNewPhotos((prev) => {
+      const removed = prev[index];
+      URL.revokeObjectURL(removed.previewUrl);
+      return prev.filter((_, i) => i !== index);
+    });
+  };
+
+  const handleDrop = useCallback(
+    (e: React.DragEvent) => {
+      e.preventDefault();
+      handleFilesSelected(e.dataTransfer.files);
+    },
+    [handleFilesSelected]
+  );
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+  };
+
   const handleSave = async () => {
     setSaving(true);
     setError(null);
+    setUploadProgress(0);
 
-    const { error: updateError } = await supabase
-      .from("listings")
-      .update({
-        make: form.make,
-        model: form.model,
-        year: Number(form.year),
-        price: Number(form.price),
-        mileage: Number(form.mileage),
-        location: form.location,
-        engine: form.engine || null,
-        transmission: form.transmission || null,
-        drivetrain: form.drivetrain || null,
-        exterior_color: form.exteriorColor || null,
-        interior_color: form.interiorColor || null,
-        body_type: form.bodyType || null,
-        description: form.description,
-        short_description: form.shortDescription,
-        condition: form.condition,
-        features: form.features,
-      })
-      .eq("id", id);
+    try {
+      // Update listing fields
+      const { error: updateError } = await supabase
+        .from("listings")
+        .update({
+          make: form.make,
+          model: form.model,
+          year: Number(form.year),
+          price: Number(form.price),
+          mileage: Number(form.mileage),
+          location: form.location,
+          engine: form.engine || null,
+          transmission: form.transmission || null,
+          drivetrain: form.drivetrain || null,
+          exterior_color: form.exteriorColor || null,
+          interior_color: form.interiorColor || null,
+          body_type: form.bodyType || null,
+          description: form.description,
+          short_description: form.shortDescription,
+          condition: form.condition,
+          features: form.features,
+        })
+        .eq("id", id);
 
-    if (updateError) {
-      setError(updateError.message);
+      if (updateError) {
+        throw new Error(updateError.message);
+      }
+
+      // Delete removed images from Storage and DB
+      if (imagesToRemove.length > 0) {
+        // Delete from storage
+        const pathsToDelete = imagesToRemove
+          .map((img) => img.storage_path)
+          .filter((p): p is string => p !== null);
+
+        if (pathsToDelete.length > 0) {
+          await supabase.storage.from("listing-photos").remove(pathsToDelete);
+        }
+
+        // Delete from DB
+        const idsToDelete = imagesToRemove.map((img) => img.id);
+        await supabase
+          .from("listing_images")
+          .delete()
+          .in("id", idsToDelete);
+      }
+
+      // Upload new photos
+      if (newPhotos.length > 0 && userId) {
+        const imageRecords: {
+          listing_id: string;
+          url: string;
+          storage_path: string;
+          sort_order: number;
+          is_primary: boolean;
+        }[] = [];
+
+        const startOrder = existingImages.length;
+
+        for (let i = 0; i < newPhotos.length; i++) {
+          const photo = newPhotos[i];
+          const ext = photo.file.name.split(".").pop() ?? "jpg";
+          const fileName = `${Date.now()}-${i}.${ext}`;
+          const storagePath = `${userId}/${id}/${fileName}`;
+
+          const { data: uploadData, error: uploadError } = await supabase.storage
+            .from("listing-photos")
+            .upload(storagePath, photo.file, {
+              cacheControl: "3600",
+              upsert: false,
+            });
+
+          if (uploadError) {
+            throw new Error(
+              `Failed to upload photo ${i + 1}: ${uploadError.message}`
+            );
+          }
+
+          const {
+            data: { publicUrl },
+          } = supabase.storage
+            .from("listing-photos")
+            .getPublicUrl(uploadData.path);
+
+          imageRecords.push({
+            listing_id: id,
+            url: publicUrl,
+            storage_path: storagePath,
+            sort_order: startOrder + i,
+            is_primary: existingImages.length === 0 && i === 0,
+          });
+
+          setUploadProgress(
+            Math.round(((i + 1) / newPhotos.length) * 100)
+          );
+        }
+
+        const { error: imagesError } = await supabase
+          .from("listing_images")
+          .insert(imageRecords);
+
+        if (imagesError) {
+          throw new Error(
+            `Failed to save image records: ${imagesError.message}`
+          );
+        }
+      }
+
+      router.push("/dashboard/listings");
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "An unexpected error occurred"
+      );
       setSaving(false);
-      return;
     }
-
-    router.push("/dashboard/listings");
   };
 
   if (loading) {
@@ -445,6 +619,108 @@ export default function EditListingPage({
         </div>
       </section>
 
+      {/* Photos */}
+      <section className="rounded-xl bg-white p-6 ring-1 ring-stone-200">
+        <h3 className="font-heading text-lg font-semibold text-stone-900">
+          Photos
+        </h3>
+        <p className="mt-1 text-sm text-stone-500">
+          Manage photos for your listing (max {MAX_PHOTOS})
+        </p>
+
+        {/* Existing + new photo previews */}
+        {(existingImages.length > 0 || newPhotos.length > 0) && (
+          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
+            {existingImages.map((image, index) => (
+              <div
+                key={image.id}
+                className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-stone-100"
+              >
+                <Image
+                  src={image.url}
+                  alt={`Photo ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+                {index === 0 && (
+                  <span className="absolute left-1.5 top-1.5 rounded bg-amber-500 px-1.5 py-0.5 text-[10px] font-semibold text-stone-900">
+                    Cover
+                  </span>
+                )}
+                <button
+                  type="button"
+                  onClick={() => removeExistingImage(image)}
+                  className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100"
+                >
+                  <X className="size-3.5" />
+                </button>
+              </div>
+            ))}
+            {newPhotos.map((photo, index) => (
+              <div
+                key={photo.previewUrl}
+                className="group relative aspect-[4/3] overflow-hidden rounded-lg bg-stone-100 ring-2 ring-amber-300"
+              >
+                <Image
+                  src={photo.previewUrl}
+                  alt={`New photo ${index + 1}`}
+                  fill
+                  className="object-cover"
+                />
+                <span className="absolute left-1.5 top-1.5 rounded bg-green-500 px-1.5 py-0.5 text-[10px] font-semibold text-white">
+                  New
+                </span>
+                <button
+                  type="button"
+                  onClick={() => removeNewPhoto(index)}
+                  className="absolute right-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100"
+                >
+                  <X className="size-3.5" />
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Upload zone */}
+        {totalPhotoCount < MAX_PHOTOS && (
+          <div
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+            className="mt-4 flex items-center justify-center rounded-xl border-2 border-dashed border-stone-300 bg-stone-50 px-6 py-10 transition-colors hover:border-amber-400 hover:bg-amber-50/30"
+          >
+            <div className="text-center">
+              <Upload className="mx-auto size-7 text-stone-400" />
+              <p className="mt-2 text-sm font-medium text-stone-700">
+                Add more photos
+              </p>
+              <p className="mt-1 text-xs text-stone-400">
+                PNG, JPG up to 10MB each ({totalPhotoCount}/{MAX_PHOTOS})
+              </p>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={(e) => {
+                  handleFilesSelected(e.target.files);
+                  e.target.value = "";
+                }}
+                className="hidden"
+              />
+              <button
+                type="button"
+                onClick={() => fileInputRef.current?.click()}
+                className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-200"
+              >
+                <Plus className="size-3.5" />
+                Browse Files
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+
       {/* Description */}
       <section className="rounded-xl bg-white p-6 ring-1 ring-stone-200">
         <h3 className="font-heading text-lg font-semibold text-stone-900">
@@ -550,6 +826,24 @@ export default function EditListingPage({
           ))}
         </div>
       </section>
+
+      {/* Upload progress */}
+      {saving && newPhotos.length > 0 && uploadProgress < 100 && (
+        <div className="rounded-lg bg-amber-50 px-4 py-3">
+          <div className="mb-1.5 flex items-center justify-between text-sm">
+            <span className="font-medium text-amber-800">
+              Uploading photos...
+            </span>
+            <span className="text-amber-600">{uploadProgress}%</span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-amber-200">
+            <div
+              className="h-full rounded-full bg-amber-500 transition-all duration-300"
+              style={{ width: `${uploadProgress}%` }}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Submit */}
       <div className="flex flex-col gap-3 pb-8 sm:flex-row sm:justify-end">
