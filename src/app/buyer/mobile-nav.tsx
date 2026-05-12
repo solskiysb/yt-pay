@@ -6,23 +6,21 @@ import {
   Menu,
   X,
   LayoutDashboard,
-  Car,
-  MessageSquare,
   Heart,
-  CreditCard,
+  MessageSquare,
+  Bell,
   UserCircle,
 } from "lucide-react";
 
 const navItems = [
-  { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
-  { href: "/dashboard/listings", label: "My Listings", icon: Car },
-  { href: "/dashboard/inquiries", label: "Inquiries", icon: MessageSquare },
-  { href: "/dashboard/favorites", label: "Favorites", icon: Heart },
-  { href: "/dashboard/billing", label: "Billing", icon: CreditCard },
-  { href: "/dashboard/profile", label: "Profile", icon: UserCircle },
+  { href: "/buyer", label: "Overview", icon: LayoutDashboard },
+  { href: "/buyer/favorites", label: "Saved Cars", icon: Heart },
+  { href: "/buyer/inquiries", label: "My Inquiries", icon: MessageSquare },
+  { href: "/buyer/saved-searches", label: "Saved Searches", icon: Bell },
+  { href: "/buyer/profile", label: "Profile", icon: UserCircle },
 ];
 
-export function DashboardMobileNav() {
+export function BuyerMobileNav() {
   const [open, setOpen] = useState(false);
 
   return (

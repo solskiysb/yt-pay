@@ -51,6 +51,7 @@ export function dbListingToCar(listing: DbListing): Car {
 
   return {
     id: listing.slug,
+    dbId: listing.id,
     make: listing.make,
     model: listing.model,
     year: listing.year,

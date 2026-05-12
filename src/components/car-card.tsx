@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Gauge } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { SaveButton } from "@/components/save-button";
 import type { Car } from "@/lib/types";
 
 const formatPrice = (price: number) =>
@@ -49,6 +50,11 @@ export function CarCard({ car }: { car: Car }) {
             {condition.label}
           </span>
         </div>
+        {car.dbId && (
+          <div className="absolute top-3 right-3 z-10">
+            <SaveButton listingId={car.dbId} />
+          </div>
+        )}
         {car.status === "sold" && (
           <div className="absolute inset-0 bg-stone-900/20" />
         )}

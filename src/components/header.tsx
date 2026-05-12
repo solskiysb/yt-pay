@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Menu, LogOut, LayoutDashboard, Shield, User } from "lucide-react";
+import { Menu, LogOut, LayoutDashboard, Shield, User, UserCircle } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import {
@@ -145,6 +145,12 @@ export function Header() {
                   </DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem
+                    onSelect={() => router.push("/buyer")}
+                  >
+                    <UserCircle className="mr-2 size-4" />
+                    My Account
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
                     onSelect={() => router.push("/dashboard")}
                   >
                     <LayoutDashboard className="mr-2 size-4" />
@@ -237,6 +243,14 @@ export function Header() {
                       </p>
                     </div>
                   </div>
+                  <Link
+                    href="/buyer"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                  >
+                    <UserCircle className="size-4" />
+                    My Account
+                  </Link>
                   <Link
                     href="/dashboard"
                     onClick={() => setOpen(false)}

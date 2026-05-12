@@ -31,7 +31,7 @@ const steps = [
     step: "03",
     title: "Choose Your Plan",
     description:
-      "Pick the tier that suits you — from a single listing to a full dealer package. Early adopter pricing available now.",
+      "Start free with one listing, or subscribe for more. All paid plans include a 14-day free trial.",
   },
   {
     icon: Rocket,
@@ -44,8 +44,16 @@ const steps = [
 
 const faqs = [
   {
-    q: "How long does my listing stay active?",
-    a: "Depends on your plan: Starter gets 60 days, Collector 90 days, and Dealer 120 days. You can renew at a discounted rate.",
+    q: "Is there really a free plan?",
+    a: "Yes. The Free plan lets you list one car at no cost, with no time limit. Upgrade anytime if you need more listings.",
+  },
+  {
+    q: "How does the 14-day free trial work?",
+    a: "When you choose a paid plan (Collector or Dealer), you get 14 days free. You won't be charged until the trial ends, and you can cancel anytime before that.",
+  },
+  {
+    q: "Can I switch plans or cancel?",
+    a: "Absolutely. Upgrade, downgrade, or cancel anytime from your billing dashboard. Changes take effect at the next billing cycle.",
   },
   {
     q: "What kind of cars can I list?",
@@ -59,10 +67,6 @@ const faqs = [
     q: "Can I edit my listing after publishing?",
     a: "Yes. You can update photos, description, and price at any time. Key changes go through a quick re-review.",
   },
-  {
-    q: "What are early adopter prices?",
-    a: "We're offering special launch pricing for our first sellers. These prices are locked in for your first purchase and won't increase for renewals.",
-  },
 ];
 
 export default async function SellPage() {
@@ -73,14 +77,14 @@ export default async function SellPage() {
       <section className="bg-stone-50 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <div className="mx-auto mb-4 inline-flex items-center rounded-full bg-amber-100 px-4 py-1.5 text-sm font-medium text-amber-800">
-            Early Adopter Pricing — Limited Time
+            Start Free — Upgrade Anytime
           </div>
           <h1 className="font-heading text-4xl font-bold tracking-tight text-stone-900 lg:text-5xl">
             Sell Your Car
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-stone-600">
             Reach thousands of passionate car enthusiasts across Europe. No
-            commissions, no surprises — just transparent pricing.
+            commissions, no surprises — just transparent subscription pricing.
           </p>
           <Link
             href="#pricing"
@@ -123,7 +127,7 @@ export default async function SellPage() {
             Choose Your Plan
           </h2>
           <p className="mt-4 text-center text-stone-400">
-            No commissions. No hidden fees. Just a one-time payment.
+            No commissions. No hidden fees. Cancel anytime.
           </p>
 
           <PricingCards isLoggedIn={!!user} />

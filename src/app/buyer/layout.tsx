@@ -1,51 +1,45 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { Metadata } from "next";
 import {
   LayoutDashboard,
-  Car,
-  MessageSquare,
-  BarChart3,
   Heart,
-  CreditCard,
+  MessageSquare,
+  Bell,
   UserCircle,
-  Menu,
 } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { requireSeller } from "@/lib/auth";
-import { DashboardMobileNav } from "./mobile-nav";
+import { requireAuth } from "@/lib/auth";
+import { BuyerMobileNav } from "./mobile-nav";
 
 export const metadata: Metadata = {
-  title: `Dashboard — ${siteConfig.name}`,
+  title: `My Account — ${siteConfig.name}`,
 };
 
 const navItems = [
-  { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
-  { href: "/dashboard/listings", label: "My Listings", icon: Car },
-  { href: "/dashboard/inquiries", label: "Inquiries", icon: MessageSquare },
-  { href: "/dashboard/favorites", label: "Favorites", icon: Heart },
-  { href: "/dashboard/billing", label: "Billing", icon: CreditCard },
-  { href: "/dashboard/profile", label: "Profile", icon: UserCircle },
+  { href: "/buyer", label: "Overview", icon: LayoutDashboard },
+  { href: "/buyer/favorites", label: "Saved Cars", icon: Heart },
+  { href: "/buyer/inquiries", label: "My Inquiries", icon: MessageSquare },
+  { href: "/buyer/saved-searches", label: "Saved Searches", icon: Bell },
+  { href: "/buyer/profile", label: "Profile", icon: UserCircle },
 ];
 
-export default async function DashboardLayout({
+export default async function BuyerLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const result = await requireSeller();
+  const user = await requireAuth();
 
-  const displayName =
-    result.user.email?.split("@")[0] ?? "Seller";
+  const displayName = user.email?.split("@")[0] ?? "User";
 
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Top bar */}
       <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-stone-200 bg-white px-4 lg:px-6">
         <div className="flex items-center gap-3">
-          <DashboardMobileNav />
+          <BuyerMobileNav />
           <h1 className="font-heading text-lg font-semibold text-stone-900">
-            Dashboard
+            My Account
           </h1>
         </div>
         <div className="flex items-center gap-2 text-sm text-stone-600">

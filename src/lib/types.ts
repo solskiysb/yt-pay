@@ -1,5 +1,7 @@
 export interface Car {
   id: string;
+  /** The database UUID — available when loaded from Supabase */
+  dbId?: string;
   make: string;
   model: string;
   year: number;
