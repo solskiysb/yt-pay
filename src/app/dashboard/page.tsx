@@ -73,13 +73,8 @@ const recentInquiries = [
 ];
 
 export default async function DashboardPage() {
-  let displayName = "Seller";
-  try {
-    const { user } = await requireSeller();
-    displayName = user.email?.split("@")[0] ?? "Seller";
-  } catch {
-    // Layout handles redirect
-  }
+  const { user } = await requireSeller();
+  const displayName = user.email?.split("@")[0] ?? "Seller";
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">

@@ -31,15 +31,10 @@ export default async function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  let user: { user: { email?: string }; profile: { role: string } };
-  try {
-    user = await requireSeller();
-  } catch {
-    redirect("/login");
-  }
+  const result = await requireSeller();
 
   const displayName =
-    user.user.email?.split("@")[0] ?? "Seller";
+    result.user.email?.split("@")[0] ?? "Seller";
 
   return (
     <div className="min-h-screen bg-stone-50">
