@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata } from "next";
-import { Plus, Eye, Pencil, Archive, Tag } from "lucide-react";
+import { Plus, Eye, Pencil } from "lucide-react";
+import { ListingActions } from "../listing-actions";
 import { siteConfig } from "@/lib/config";
 import { createClient } from "@/lib/supabase/server";
 import { getSellerListings, type DbListing } from "@/lib/db";
@@ -23,6 +24,7 @@ const statusConfig = {
   },
   approved: { label: "Approved", className: "bg-emerald-100 text-emerald-700" },
   rejected: { label: "Rejected", className: "bg-red-100 text-red-700" },
+  paused: { label: "Paused", className: "bg-amber-100 text-amber-700" },
   sold: { label: "Sold", className: "bg-purple-100 text-purple-700" },
   archived: { label: "Archived", className: "bg-stone-100 text-stone-500" },
 } as const;
@@ -173,18 +175,10 @@ export default async function ListingsPage() {
                           >
                             <Pencil className="size-3.5" />
                           </Link>
-                          <button
-                            className="flex h-8 w-8 items-center justify-center rounded-lg text-stone-400 transition-colors hover:bg-stone-100 hover:text-stone-600"
-                            title="Archive"
-                          >
-                            <Archive className="size-3.5" />
-                          </button>
-                          <button
-                            className="flex h-8 w-8 items-center justify-center rounded-lg text-stone-400 transition-colors hover:bg-stone-100 hover:text-stone-600"
-                            title="Mark as Sold"
-                          >
-                            <Tag className="size-3.5" />
-                          </button>
+                          <ListingActions
+                            listingId={listing.id}
+                            status={listing.status}
+                          />
                         </div>
                       </td>
                     </tr>
