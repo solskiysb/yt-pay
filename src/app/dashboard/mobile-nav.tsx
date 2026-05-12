@@ -2,16 +2,25 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import {
+  Menu,
+  X,
+  LayoutDashboard,
+  Car,
+  MessageSquare,
+  Heart,
+  UserCircle,
+} from "lucide-react";
 
-interface NavItem {
-  href: string;
-  label: string;
-  icon: LucideIcon;
-}
+const navItems = [
+  { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
+  { href: "/dashboard/listings", label: "My Listings", icon: Car },
+  { href: "/dashboard/inquiries", label: "Inquiries", icon: MessageSquare },
+  { href: "/dashboard/favorites", label: "Favorites", icon: Heart },
+  { href: "/dashboard/profile", label: "Profile", icon: UserCircle },
+];
 
-export function DashboardMobileNav({ items }: { items: NavItem[] }) {
+export function DashboardMobileNav() {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,11 +39,12 @@ export function DashboardMobileNav({ items }: { items: NavItem[] }) {
             className="fixed inset-0 z-40 bg-black/20"
             onClick={() => setOpen(false)}
           />
-          <nav className="fixed left-0 top-14 z-50 w-64 border-r border-stone-200 bg-white p-4 shadow-lg"
+          <nav
+            className="fixed left-0 top-14 z-50 w-64 border-r border-stone-200 bg-white p-4 shadow-lg"
             style={{ height: "calc(100vh - 3.5rem)" }}
           >
             <div className="flex flex-col gap-1">
-              {items.map((item) => (
+              {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

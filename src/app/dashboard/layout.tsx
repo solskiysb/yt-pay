@@ -41,7 +41,7 @@ export default async function DashboardLayout({
       {/* Top bar */}
       <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-stone-200 bg-white px-4 lg:px-6">
         <div className="flex items-center gap-3">
-          <DashboardMobileNav items={navItems} />
+          <DashboardMobileNav />
           <h1 className="font-heading text-lg font-semibold text-stone-900">
             Dashboard
           </h1>
