@@ -9,107 +9,130 @@ import {
   Eye,
   ArrowRight,
 } from "lucide-react";
+import { createClient } from "@/lib/supabase/server";
+import { requireAdmin } from "@/lib/auth";
 
-const stats = [
-  {
-    label: "Total Listings",
-    value: "247",
-    change: "+12 this week",
-    icon: Car,
-    color: "bg-blue-50 text-blue-600",
-  },
-  {
-    label: "Pending Review",
-    value: "18",
-    change: "3 urgent",
-    icon: Clock,
-    color: "bg-amber-50 text-amber-600",
-  },
-  {
-    label: "Total Users",
-    value: "1,834",
-    change: "+89 this month",
-    icon: Users,
-    color: "bg-green-50 text-green-600",
-  },
-  {
-    label: "Revenue",
-    value: "\u20AC14,720",
-    change: "+22% vs last month",
-    icon: DollarSign,
-    color: "bg-purple-50 text-purple-600",
-  },
-];
+export default async function AdminDashboardPage() {
+  await requireAdmin();
+  const supabase = await createClient();
 
-const recentActivity = [
-  {
-    id: "act-1",
-    action: "approved",
-    listing: "1973 Porsche 911 Carrera RS",
-    admin: "admin@yt-pay.io",
-    time: "12 min ago",
-  },
-  {
-    id: "act-2",
-    action: "rejected",
-    listing: "2019 BMW M3 (not classic)",
-    admin: "admin@yt-pay.io",
-    time: "45 min ago",
-  },
-  {
-    id: "act-3",
-    action: "approved",
-    listing: "1967 Alfa Romeo Spider",
-    admin: "admin@yt-pay.io",
-    time: "1 hour ago",
-  },
-  {
-    id: "act-4",
-    action: "featured",
-    listing: "1961 Jaguar E-Type",
-    admin: "admin@yt-pay.io",
-    time: "2 hours ago",
-  },
-  {
-    id: "act-5",
-    action: "approved",
-    listing: "1989 Mercedes 300SL",
-    admin: "admin@yt-pay.io",
-    time: "3 hours ago",
-  },
-  {
-    id: "act-6",
-    action: "user_banned",
-    listing: "spam-seller-42",
-    admin: "admin@yt-pay.io",
-    time: "5 hours ago",
-  },
-];
+  // Fetch stats in parallel
+  const [
+    listingsRes,
+    pendingRes,
+    usersRes,
+    revenueRes,
+    activityRes,
+    inquiriesRes,
+  ] = await Promise.all([
+    supabase.from("listings").select("id", { count: "exact", head: true }),
+    supabase
+      .from("listings")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "pending_review"),
+    supabase.from("profiles").select("id", { count: "exact", head: true }),
+    supabase
+      .from("payments")
+      .select("amount")
+      .eq("status", "paid"),
+    supabase
+      .from("moderation_events")
+      .select("id, action, reason, created_at, listing_id, listings(make, model, year)")
+      .order("created_at", { ascending: false })
+      .limit(8),
+    supabase
+      .from("inquiries")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "new"),
+  ]);
 
-const quickLinks = [
-  {
-    label: "Review pending listings",
-    href: "/admin/moderation",
-    count: 18,
-  },
-  {
-    label: "Manage users",
-    href: "/admin/users",
-    count: null,
-  },
-  {
-    label: "View all payments",
-    href: "/admin/payments",
-    count: null,
-  },
-  {
-    label: "Check inquiries",
-    href: "/admin/inquiries",
-    count: 7,
-  },
-];
+  const totalListings = listingsRes.count ?? 0;
+  const pendingCount = pendingRes.count ?? 0;
+  const totalUsers = usersRes.count ?? 0;
+  const totalRevenue = (revenueRes.data ?? []).reduce(
+    (sum, p) => sum + (p.amount ?? 0),
+    0
+  );
+  const newInquiries = inquiriesRes.count ?? 0;
 
-export default function AdminDashboardPage() {
+  const stats = [
+    {
+      label: "Total Listings",
+      value: totalListings.toLocaleString(),
+      icon: Car,
+      color: "bg-blue-50 text-blue-600",
+    },
+    {
+      label: "Pending Review",
+      value: pendingCount.toLocaleString(),
+      icon: Clock,
+      color: "bg-amber-50 text-amber-600",
+    },
+    {
+      label: "Total Users",
+      value: totalUsers.toLocaleString(),
+      icon: Users,
+      color: "bg-green-50 text-green-600",
+    },
+    {
+      label: "Revenue",
+      value: `\u20AC${totalRevenue.toLocaleString()}`,
+      icon: DollarSign,
+      color: "bg-purple-50 text-purple-600",
+    },
+  ];
+
+  const rawActivity = (activityRes.data ?? []) as Array<{
+    id: string;
+    action: string;
+    reason: string | null;
+    created_at: string;
+    listing_id: string | null;
+    listings: unknown;
+  }>;
+
+  const recentActivity = rawActivity.map((item) => {
+    const listingsRaw = item.listings;
+    const listings = Array.isArray(listingsRaw)
+      ? (listingsRaw[0] as { make: string; model: string; year: number } | undefined) ?? null
+      : (listingsRaw as { make: string; model: string; year: number } | null);
+    return { ...item, listings };
+  });
+
+  const quickLinks = [
+    {
+      label: "Review pending listings",
+      href: "/admin/moderation",
+      count: pendingCount || null,
+    },
+    {
+      label: "Manage users",
+      href: "/admin/users",
+      count: null,
+    },
+    {
+      label: "View all payments",
+      href: "/admin/payments",
+      count: null,
+    },
+    {
+      label: "Check inquiries",
+      href: "/admin/inquiries",
+      count: newInquiries || null,
+    },
+  ];
+
+  function timeAgo(dateStr: string) {
+    const diff = Date.now() - new Date(dateStr).getTime();
+    const mins = Math.floor(diff / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins} min ago`;
+    const hours = Math.floor(mins / 60);
+    if (hours < 24) return `${hours}h ago`;
+    const days = Math.floor(hours / 24);
+    return `${days}d ago`;
+  }
+
   return (
     <div className="space-y-6">
       <h2 className="text-lg font-semibold text-stone-900">Dashboard</h2>
@@ -132,7 +155,6 @@ export default function AdminDashboardPage() {
             <p className="mt-2 text-2xl font-bold text-stone-900">
               {stat.value}
             </p>
-            <p className="mt-1 text-xs text-stone-500">{stat.change}</p>
           </div>
         ))}
       </div>
@@ -146,36 +168,60 @@ export default function AdminDashboardPage() {
             </h3>
           </div>
           <div className="divide-y divide-stone-100">
-            {recentActivity.map((item) => (
-              <div
-                key={item.id}
-                className="flex items-center gap-3 px-4 py-2.5"
-              >
-                {item.action === "approved" && (
-                  <CheckCircle className="h-4 w-4 shrink-0 text-green-500" />
-                )}
-                {item.action === "rejected" && (
-                  <XCircle className="h-4 w-4 shrink-0 text-red-500" />
-                )}
-                {item.action === "featured" && (
-                  <Eye className="h-4 w-4 shrink-0 text-amber-500" />
-                )}
-                {item.action === "user_banned" && (
-                  <XCircle className="h-4 w-4 shrink-0 text-red-700" />
-                )}
-                <div className="flex-1 min-w-0">
-                  <p className="truncate text-sm text-stone-700">
-                    <span className="font-medium capitalize">
-                      {item.action.replace("_", " ")}
-                    </span>{" "}
-                    &mdash; {item.listing}
-                  </p>
-                </div>
-                <span className="shrink-0 text-xs text-stone-400">
-                  {item.time}
-                </span>
+            {recentActivity.length === 0 ? (
+              <div className="px-4 py-8 text-center text-sm text-stone-400">
+                No activity yet.
               </div>
-            ))}
+            ) : (
+              recentActivity.map((item) => {
+                const listingLabel = item.listings
+                  ? `${item.listings.year} ${item.listings.make} ${item.listings.model}`
+                  : item.reason ?? "Unknown";
+
+                return (
+                  <div
+                    key={item.id}
+                    className="flex items-center gap-3 px-4 py-2.5"
+                  >
+                    {item.action === "approved" && (
+                      <CheckCircle className="h-4 w-4 shrink-0 text-green-500" />
+                    )}
+                    {item.action === "rejected" && (
+                      <XCircle className="h-4 w-4 shrink-0 text-red-500" />
+                    )}
+                    {(item.action === "featured" ||
+                      item.action === "unfeatured") && (
+                      <Eye className="h-4 w-4 shrink-0 text-amber-500" />
+                    )}
+                    {(item.action === "user_banned" ||
+                      item.action === "user_unbanned") && (
+                      <XCircle className="h-4 w-4 shrink-0 text-red-700" />
+                    )}
+                    {![
+                      "approved",
+                      "rejected",
+                      "featured",
+                      "unfeatured",
+                      "user_banned",
+                      "user_unbanned",
+                    ].includes(item.action) && (
+                      <CheckCircle className="h-4 w-4 shrink-0 text-stone-400" />
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <p className="truncate text-sm text-stone-700">
+                        <span className="font-medium capitalize">
+                          {item.action.replace(/_/g, " ")}
+                        </span>{" "}
+                        &mdash; {listingLabel}
+                      </p>
+                    </div>
+                    <span className="shrink-0 text-xs text-stone-400">
+                      {timeAgo(item.created_at)}
+                    </span>
+                  </div>
+                );
+              })
+            )}
           </div>
         </div>
 

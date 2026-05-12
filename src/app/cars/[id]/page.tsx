@@ -6,13 +6,12 @@ import {
   MapPin,
   Gauge,
   Check,
-  Mail,
-  Phone,
   User,
 } from "lucide-react";
 import { getListingBySlug } from "@/lib/db";
 import { Separator } from "@/components/ui/separator";
 import { PhotoGallery } from "@/components/photo-gallery";
+import { InquiryForm } from "@/components/inquiry-form";
 
 const formatPrice = (price: number) =>
   new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
@@ -178,36 +177,16 @@ export default async function CarDetailPage({
             <h2 className="mb-3 text-lg font-semibold text-stone-900">
               Contact Seller
             </h2>
-            <div className="space-y-2">
-              <p className="flex items-center gap-2 text-sm text-stone-700">
-                <User className="size-4 text-stone-400" />
-                {car.seller.name}
-              </p>
-              <a
-                href={`mailto:${car.seller.email}?subject=Inquiry: ${car.year} ${car.make} ${car.model}`}
-                className="flex items-center gap-2 text-sm text-stone-700 transition-colors hover:text-stone-900"
-              >
-                <Mail className="size-4 text-stone-400" />
-                {car.seller.email}
-              </a>
-              {car.seller.phone && (
-                <a
-                  href={`tel:${car.seller.phone}`}
-                  className="flex items-center gap-2 text-sm text-stone-700 transition-colors hover:text-stone-900"
-                >
-                  <Phone className="size-4 text-stone-400" />
-                  {car.seller.phone}
-                </a>
-              )}
-            </div>
+            <p className="mb-4 flex items-center gap-2 text-sm text-stone-700">
+              <User className="size-4 text-stone-400" />
+              {car.sellerName}
+            </p>
 
-            <a
-              href={`mailto:${car.seller.email}?subject=Inquiry: ${car.year} ${car.make} ${car.model}`}
-              className="mt-4 flex h-9 w-full items-center justify-center gap-2 rounded-lg bg-stone-900 text-sm font-medium text-white transition-colors hover:bg-stone-800"
-            >
-              <Mail className="size-4" />
-              Send Inquiry
-            </a>
+            <InquiryForm
+              listingId={car.dbId}
+              sellerId={car.sellerId}
+              listingTitle={`${car.year} ${car.make} ${car.model}`}
+            />
           </div>
         </div>
       </div>

@@ -143,14 +143,25 @@ export async function getListings(params?: {
 }
 
 /**
- * Fetch a single listing by its slug (used as the public URL id).
+ * A listing enriched with its database UUID and seller ID,
+ * needed for the inquiry form on the detail page.
  */
-export async function getListingBySlug(slug: string): Promise<Car | null> {
+export interface ListingDetail extends Car {
+  dbId: string;
+  sellerId: string;
+  sellerName: string;
+}
+
+/**
+ * Fetch a single listing by its slug (used as the public URL id).
+ * Returns enriched data including the DB UUID and seller info for the inquiry form.
+ */
+export async function getListingBySlug(slug: string): Promise<ListingDetail | null> {
   const supabase = await createClient();
 
   const { data, error } = await supabase
     .from("listings")
-    .select("*, listing_images(*)")
+    .select("*, listing_images(*), profiles(display_name)")
     .eq("slug", slug)
     .in("status", ["approved", "sold"])
     .single();
@@ -159,7 +170,20 @@ export async function getListingBySlug(slug: string): Promise<Car | null> {
     return null;
   }
 
-  return dbListingToCar(data as DbListing);
+  const listing = data as DbListing & { profiles?: { display_name: string | null } | null };
+  const car = dbListingToCar(listing);
+  const sellerName = listing.profiles?.display_name || "Seller";
+
+  return {
+    ...car,
+    dbId: listing.id,
+    sellerId: listing.seller_id,
+    sellerName,
+    seller: {
+      ...car.seller,
+      name: sellerName,
+    },
+  };
 }
 
 /**

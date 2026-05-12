@@ -11,11 +11,24 @@ export default function ContactPage() {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSending(true);
-    // Simulate network delay
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = (formData.get("name") as string).trim();
+    const email = (formData.get("email") as string).trim();
+    const subject = (formData.get("subject") as string).trim();
+    const message = (formData.get("message") as string).trim();
+
+    const subjectLine = `[YT Pay Contact] ${subject}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const mailtoUrl = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoUrl;
+
     setTimeout(() => {
       setSending(false);
       setSubmitted(true);
-    }, 600);
+    }, 400);
   }
 
   return (
