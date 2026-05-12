@@ -5,14 +5,11 @@ import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { Search, X } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { getCarMakes } from "@/lib/data";
 
-export function SearchFilters() {
+export function SearchFilters({ makes }: { makes: string[] }) {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
-
-  const makes = getCarMakes();
 
   const currentSearch = searchParams.get("search") ?? "";
   const currentMake = searchParams.get("make") ?? "";
@@ -60,7 +57,6 @@ export function SearchFilters() {
             defaultValue={currentSearch}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               const val = e.target.value;
-              // Debounce-like: update on every keystroke for simplicity
               updateParam("search", val);
             }}
             className="pl-8"

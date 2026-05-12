@@ -10,9 +10,7 @@ import {
   Phone,
   User,
 } from "lucide-react";
-import { getCarById, cars } from "@/lib/data";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { getListingBySlug } from "@/lib/db";
 import { Separator } from "@/components/ui/separator";
 import { PhotoGallery } from "@/components/photo-gallery";
 
@@ -36,7 +34,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const car = getCarById(id);
+  const car = await getListingBySlug(id);
   if (!car) {
     return { title: "Car Not Found | YT Pay" };
   }
@@ -46,17 +44,13 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  return cars.map((car) => ({ id: car.id }));
-}
-
 export default async function CarDetailPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const car = getCarById(id);
+  const car = await getListingBySlug(id);
 
   if (!car) {
     notFound();
@@ -156,24 +150,28 @@ export default async function CarDetailPage({
           <Separator className="my-6" />
 
           {/* Features */}
-          <div>
-            <h2 className="mb-3 text-lg font-semibold text-stone-900">
-              Features
-            </h2>
-            <ul className="grid grid-cols-2 gap-2">
-              {car.features.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-center gap-2 text-sm text-stone-600"
-                >
-                  <Check className="size-4 flex-shrink-0 text-emerald-500" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {car.features.length > 0 && (
+            <>
+              <div>
+                <h2 className="mb-3 text-lg font-semibold text-stone-900">
+                  Features
+                </h2>
+                <ul className="grid grid-cols-2 gap-2">
+                  {car.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-2 text-sm text-stone-600"
+                    >
+                      <Check className="size-4 flex-shrink-0 text-emerald-500" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          <Separator className="my-6" />
+              <Separator className="my-6" />
+            </>
+          )}
 
           {/* Seller Contact */}
           <div className="rounded-xl bg-stone-50 p-5">

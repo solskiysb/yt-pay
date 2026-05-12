@@ -2,14 +2,15 @@ import { Metadata } from "next";
 import { Heart } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 import { CarCard } from "@/components/car-card";
-import { getFeaturedCars } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: `Favorites — ${siteConfig.name}`,
 };
 
 export default function FavoritesPage() {
-  const favorites = getFeaturedCars();
+  // TODO: Fetch user's favorites from Supabase (favorites table not yet created).
+  // For now, show the empty state.
+  const favorites: never[] = [];
 
   return (
     <div className="mx-auto max-w-6xl space-y-6">
@@ -27,7 +28,7 @@ export default function FavoritesPage() {
       {favorites.length > 0 ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {favorites.map((car) => (
-            <CarCard key={car.id} car={car} />
+            <CarCard key={car} car={car} />
           ))}
         </div>
       ) : (

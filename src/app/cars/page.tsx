@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { filterCars } from "@/lib/data";
+import { getListings, getListingMakes } from "@/lib/db";
 import { CarCard } from "@/components/car-card";
 import { SearchFilters } from "@/components/search-filters";
 
@@ -29,15 +29,18 @@ export default async function CarsPage({
     typeof params.search === "string" ? params.search : undefined;
   const hideSold = params.hideSold === "1";
 
-  const filteredCars = filterCars({
-    make,
-    minPrice: minPrice && !isNaN(minPrice) ? minPrice : undefined,
-    maxPrice: maxPrice && !isNaN(maxPrice) ? maxPrice : undefined,
-    minYear: minYear && !isNaN(minYear) ? minYear : undefined,
-    maxYear: maxYear && !isNaN(maxYear) ? maxYear : undefined,
-    search,
-    hideSold,
-  });
+  const [filteredCars, makes] = await Promise.all([
+    getListings({
+      make,
+      minPrice: minPrice && !isNaN(minPrice) ? minPrice : undefined,
+      maxPrice: maxPrice && !isNaN(maxPrice) ? maxPrice : undefined,
+      minYear: minYear && !isNaN(minYear) ? minYear : undefined,
+      maxYear: maxYear && !isNaN(maxYear) ? maxYear : undefined,
+      search,
+      hideSold,
+    }),
+    getListingMakes(),
+  ]);
 
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -53,7 +56,7 @@ export default async function CarsPage({
 
       <div className="mb-8">
         <Suspense fallback={<div className="h-10" />}>
-          <SearchFilters />
+          <SearchFilters makes={makes} />
         </Suspense>
       </div>
 

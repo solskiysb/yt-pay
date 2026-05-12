@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { CarCard } from "@/components/car-card";
-import { getFeaturedCars } from "@/lib/data";
+import { getFeaturedListings } from "@/lib/db";
 import { siteConfig } from "@/lib/config";
 
 const valueProps = [
@@ -63,8 +63,8 @@ const steps = [
   },
 ];
 
-export default function HomePage() {
-  const featuredCars = getFeaturedCars().slice(0, 6);
+export default async function HomePage() {
+  const featuredCars = await getFeaturedListings();
 
   return (
     <main>
