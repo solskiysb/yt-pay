@@ -17,6 +17,7 @@ const navigation = [
   { name: "Browse Cars", href: "/cars" },
   { name: "Sell Your Car", href: "/sell" },
   { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
