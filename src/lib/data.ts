@@ -14,8 +14,8 @@ export const cars: Car[] = [
     shortDescription:
       "Matching-numbers RS 2.7 in iconic white/green livery with full history.",
     images: [
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -54,8 +54,8 @@ export const cars: Car[] = [
     shortDescription:
       "Guards Red 930 Turbo with factory sport seats and full Swiss service history.",
     images: [
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -94,8 +94,8 @@ export const cars: Car[] = [
     shortDescription:
       "Last of the air-cooled 911s in Midnight Blue, two-owner Bavarian car.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
     ],
     seller: {
       name: "Hans Muller",
@@ -133,8 +133,8 @@ export const cars: Car[] = [
     shortDescription:
       "Alpine White E30 M3 with dogleg box and complete BMW dealer records.",
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -173,8 +173,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rare 2002 Turbo, one of 1,672 built, concours-restored in 2018.",
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
     ],
     seller: {
       name: "De Klassieker BV",
@@ -213,8 +213,8 @@ export const cars: Car[] = [
     shortDescription:
       "Imola Red E46 M3, six-speed manual, subframe reinforced and rod bearings done.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
     ],
     seller: {
       name: "Carlos Fernandez",
@@ -253,8 +253,8 @@ export const cars: Car[] = [
     shortDescription:
       "Horizon Blue Pagoda with cream leather, California-delivery car returned to Europe.",
     images: [
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
     ],
     seller: {
       name: "Galerie Automobile Paris",
@@ -293,8 +293,8 @@ export const cars: Car[] = [
     shortDescription:
       "Porsche-built E500 super sedan, single-country Swedish car from new.",
     images: [
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
     ],
     seller: {
       name: "Nordic Classics AB",
@@ -333,8 +333,8 @@ export const cars: Car[] = [
     shortDescription:
       "Smoke Silver Cosworth 190E with Sportline Recaros and original paint.",
     images: [
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -373,8 +373,8 @@ export const cars: Car[] = [
     shortDescription:
       "Alfa Red Bertone GTV 2000 with rebuilt twin-cam and Weber carbs.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
     ],
     seller: {
       name: "Officina Alfa Milano",
@@ -413,8 +413,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Medio Spider Veloce, fuel-injected, new soft top, Mediterranean ready.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
     ],
     seller: {
       name: "Mediterranean Classics",
@@ -452,8 +452,8 @@ export const cars: Car[] = [
     shortDescription:
       "Series 1 E-Type Roadster in Opalescent Dark Blue, fully restored to concours standard.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
+      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
     ],
     seller: {
       name: "Heritage Motor Gallery",
@@ -492,8 +492,8 @@ export const cars: Car[] = [
     shortDescription:
       "Lotus White Karmann Ghia, rust-free, 15 years in single Dutch ownership.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
     ],
     seller: {
       name: "Jan de Vries",
@@ -531,8 +531,8 @@ export const cars: Car[] = [
     shortDescription:
       "Two-tone Bay Window camper bus with pop-top and rebuilt engine.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
     ],
     seller: {
       name: "Surf & Classic Barcelona",
@@ -571,8 +571,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Monza Delta Integrale Evo 1, rally-bred legend with recent major service.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
+      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -611,8 +611,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Positano 124 Spider, Pininfarina design, repainted in original colour.",
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
+      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
     ],
     seller: {
       name: "Pablo Ruiz",
@@ -650,8 +650,8 @@ export const cars: Car[] = [
     shortDescription:
       "Pearl White P1800 S, lifelong Swedish car with original leather interior.",
     images: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/qValfiWMIII?w=800&q=80",
+      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
     ],
     seller: {
       name: "Svensk Klassiker AB",
@@ -690,8 +690,8 @@ export const cars: Car[] = [
     shortDescription:
       "Eddy Grey 900 Turbo three-door, enthusiast-maintained Saab classic.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
+      "https://images.unsplash.com/HzX6ncsim9U?w=800&q=80",
+      "https://images.unsplash.com/Liqmmue-kJY?w=800&q=80",
     ],
     seller: {
       name: "Erik Johansson",
@@ -729,8 +729,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa 308 GTS, carburetted V8, Massini report, tools and books.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
+      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -769,8 +769,8 @@ export const cars: Car[] = [
     shortDescription:
       "Coniston Green Defender 90, galvanized chassis, BFG tyres, adventure-ready.",
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/QZ4gaM5R9oA?w=800&q=80",
+      "https://images.unsplash.com/3jquALuN6B0?w=800&q=80",
     ],
     seller: {
       name: "Overland Europe BV",
@@ -809,8 +809,8 @@ export const cars: Car[] = [
     shortDescription:
       "Matching-numbers 356A Speedster in Silver with red leather and Porsche CoA.",
     images: [
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -849,8 +849,8 @@ export const cars: Car[] = [
     shortDescription:
       "Chamonix White 3.0 CSL Batmobile with original aero kit and lightweight panels.",
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -889,8 +889,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brun Scarabee DS 21 Pallas with serviced hydropneumatic suspension.",
     images: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/xPFCPOvr1GA?w=800&q=80",
+      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
     ],
     seller: {
       name: "Garage Citroen Classique",
@@ -929,8 +929,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Fly Dino 246 GT, matching numbers, Ferrari Classiche certified.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
+      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -969,8 +969,8 @@ export const cars: Car[] = [
     shortDescription:
       "Miami Blue 205 GTI 1.9, unmodified benchmark hot hatch with Speedline wheels.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
     ],
     seller: {
       name: "French Classics Auto",
@@ -1008,8 +1008,8 @@ export const cars: Car[] = [
     shortDescription:
       "California Sage DB6 Vantage with triple Webers and Magnolia leather.",
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
+      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -1048,8 +1048,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bleu Alpine A110 1600S, Gordini engine, rally legend in lightweight fibreglass.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
     ],
     seller: {
       name: "Heritage Motor Gallery",
@@ -1088,8 +1088,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver 300 SL Gullwing with red plaid, 30 years in European collection.",
     images: [
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1128,8 +1128,8 @@ export const cars: Car[] = [
     shortDescription:
       "Azzurro Metallizzato Ghibli 4.7, Ghia design, Maserati Classiche documented.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
+      "https://images.unsplash.com/eZJiWQjz1dc?w=800&q=80",
+      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -1168,8 +1168,8 @@ export const cars: Car[] = [
     shortDescription:
       "Pimento Red TR6, straight-six roadster, 20 years in Dutch ownership.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
+      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
     ],
     seller: {
       name: "British Car Corner",
@@ -1207,8 +1207,8 @@ export const cars: Car[] = [
     shortDescription:
       "Titanium Silver Z8 with just 34,000 km, S62 V8, hardtop included.",
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -1247,8 +1247,8 @@ export const cars: Car[] = [
     shortDescription:
       "Celeste Blue Cinquecento 500 L, canvas roof, the ultimate city car icon.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
+      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
     ],
     seller: {
       name: "Mediterranean Classics",
@@ -1286,8 +1286,8 @@ export const cars: Car[] = [
     shortDescription:
       "Guards Red 944 Turbo S, 250 hp, M030 suspension, 1 of 1,635 built.",
     images: [
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1326,8 +1326,8 @@ export const cars: Car[] = [
     shortDescription:
       "Fjord Green 356A Coupe, numbers-matching, recently serviced with new tyres.",
     images: [
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1366,8 +1366,8 @@ export const cars: Car[] = [
     shortDescription:
       "Signal Orange 914 2.0, rebuilt engine, fresh paint, Targa-top fun.",
     images: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
     ],
     seller: {
       name: "Lukas Berger",
@@ -1405,8 +1405,8 @@ export const cars: Car[] = [
     shortDescription:
       "Alpine White 924 Turbo with iconic Pasha interior and NACA ducts.",
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
     ],
     seller: {
       name: "Pierre Morel",
@@ -1444,8 +1444,8 @@ export const cars: Car[] = [
     shortDescription:
       "Grand Prix White 964 C4, AWD, exclusive Porsche Centre service history.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -1484,8 +1484,8 @@ export const cars: Car[] = [
     shortDescription:
       "Arena Red 993 Turbo, twin-turbo AWD legend, new turbos and engine reseal.",
     images: [
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -1524,8 +1524,8 @@ export const cars: Car[] = [
     shortDescription:
       "Meridian Metallic Boxster S, IMS bearing done, mid-engine Porsche value.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
     ],
     seller: {
       name: "Antoine Dupont",
@@ -1563,8 +1563,8 @@ export const cars: Car[] = [
     shortDescription:
       "Inka Orange 2002tii with original Kugelfischer injection, rust-free body.",
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
     ],
     seller: {
       name: "Dirk Schneider",
@@ -1602,8 +1602,8 @@ export const cars: Car[] = [
     shortDescription:
       "Fjord Blue E9 3.0 CSi, fuel-injected pillarless coupe, saddle leather.",
     images: [
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -1642,8 +1642,8 @@ export const cars: Car[] = [
     shortDescription:
       "Delphin Metallic E28 M5, M1-derived engine, the original super sedan.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
     ],
     seller: {
       name: "De Klassieker BV",
@@ -1682,8 +1682,8 @@ export const cars: Car[] = [
     shortDescription:
       "Avus Blue E34 M5 3.8, hand-built S38 engine, timing chain done.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
     ],
     seller: {
       name: "Stefan Huber",
@@ -1721,8 +1721,8 @@ export const cars: Car[] = [
     shortDescription:
       "Dakar Yellow E36 M3 coupe, Euro-spec S50, VANOS rebuilt.",
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
     ],
     seller: {
       name: "Lars Petersen",
@@ -1760,8 +1760,8 @@ export const cars: Car[] = [
     shortDescription:
       "Estoril Blue Z3 M Coupe, S54-powered clown shoe, black Nappa leather.",
     images: [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
     ],
     seller: {
       name: "Thomas Weber",
@@ -1799,8 +1799,8 @@ export const cars: Car[] = [
     shortDescription:
       "Anthracite E39 540i, rare six-speed manual V8, cooling system refreshed.",
     images: [
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
     ],
     seller: {
       name: "Willem van Dijk",
@@ -1838,8 +1838,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver W111 250 SE Coupe, fuel-injected, chrome re-plated, red leather.",
     images: [
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1878,8 +1878,8 @@ export const cars: Car[] = [
     shortDescription:
       "Astral Silver 450 SEL 6.9, fastest sedan of its era, hydropneumatic ride.",
     images: [
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
     ],
     seller: {
       name: "Friedrich Bauer",
@@ -1917,8 +1917,8 @@ export const cars: Car[] = [
     shortDescription:
       "Nautical Blue 560 SEC, V8 pillarless coupe, new headliner and fresh brakes.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
     ],
     seller: {
       name: "Marc Janssen",
@@ -1956,8 +1956,8 @@ export const cars: Car[] = [
     shortDescription:
       "Signal Red R107 300 SL, cream leather, both tops, Riviera-ready.",
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
     ],
     seller: {
       name: "Cote d'Azur Classics",
@@ -1996,8 +1996,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blue-Black 190E 2.6 Sportline, lowered suspension, smooth inline-six.",
     images: [
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
     ],
     seller: {
       name: "Pavel Novak",
@@ -2035,8 +2035,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brilliant Silver E55 AMG, hand-built 5.4L V8, autobahn devourer.",
     images: [
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
     ],
     seller: {
       name: "Klaus Fischer",
@@ -2074,8 +2074,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bianco Gardenia Giulia Sprint GT, twin-cam, twin Webers, honest patina.",
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
+      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
     ],
     seller: {
       name: "Marco Bianchi",
@@ -2113,8 +2113,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Alfa GTV6 2.5, legendary Busso V6, transaxle layout.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
     ],
     seller: {
       name: "Officina Alfa Milano",
@@ -2153,8 +2153,8 @@ export const cars: Car[] = [
     shortDescription:
       "Nero 155 Q4, turbo AWD with Delta Integrale mechanicals, rare performance saloon.",
     images: [
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
+      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
     ],
     seller: {
       name: "Giuseppe Rossi",
@@ -2192,8 +2192,8 @@ export const cars: Car[] = [
     shortDescription:
       "Verde Tropico 164, Busso V6, Pininfarina design, affordable Italian class.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
+      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
+      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
     ],
     seller: {
       name: "Carlos Fernandez",
@@ -2232,8 +2232,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Competizione 8C, 1 of 500, Ferrari V8, just 12,000 km from new.",
     images: [
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
+      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -2272,8 +2272,8 @@ export const cars: Car[] = [
     shortDescription:
       "Regency Red XJ6 Sovereign, Pininfarina design, biscuit leather, XK six.",
     images: [
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
+      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -2312,8 +2312,8 @@ export const cars: Car[] = [
     shortDescription:
       "Westminster Blue XJS V12 convertible, magnolia leather, V12 grand tourer.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
+      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
     ],
     seller: {
       name: "Caledonian Classics",
@@ -2351,8 +2351,8 @@ export const cars: Car[] = [
     shortDescription:
       "BRG XK8 Coupe, AJ-V8, cream leather, chain tensioners sorted.",
     images: [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
+      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
+      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
     ],
     seller: {
       name: "Padraig O'Sullivan",
@@ -2390,8 +2390,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa 328 GTS, Swiss delivery, full belt service, V8 targa.",
     images: [
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
+      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
+      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -2430,8 +2430,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Modena 348 TS, engine-out service done, affordable mid-engine Ferrari.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
+      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
+      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Roma",
@@ -2470,8 +2470,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Fiorano F355 Berlinetta, six-speed manual, titanium exhaust, howling V8.",
     images: [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
+      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -2510,8 +2510,8 @@ export const cars: Car[] = [
     shortDescription:
       "Grigio Ingrid 456 GT, V12 six-speed manual, continent-crossing grand tourer.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
+      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
     ],
     seller: {
       name: "Galerie Automobile Paris",
@@ -2550,8 +2550,8 @@ export const cars: Car[] = [
     shortDescription:
       "Verde Espada Series III, V12 four-seater, Bertone design, tobacco leather.",
     images: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
+      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -2590,8 +2590,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bianco Jalpa 3500, rare V8 Lamborghini, 1 of 410 built, red leather.",
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
+      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Roma",
@@ -2630,8 +2630,8 @@ export const cars: Car[] = [
     shortDescription:
       "Viola SE30 Diablo VT, V12 AWD, just 38,000 km, full service history.",
     images: [
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
+      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
+      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -2670,8 +2670,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cumberland Grey V8 Vantage, Britain's first supercar, red Connolly leather.",
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
-      "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
+      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+      "https://images.unsplash.com/7T5juXetLeU?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -2710,8 +2710,8 @@ export const cars: Car[] = [
     shortDescription:
       "Solway Grey DB7 Vantage, V12 manual, Ian Callum design, Parchment leather.",
     images: [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/7T5juXetLeU?w=800&q=80",
+      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
     ],
     seller: {
       name: "Galerie Automobile Paris",
@@ -2750,8 +2750,8 @@ export const cars: Car[] = [
     shortDescription:
       "Celeste Chiaro Merak SS, mid-engine V6, Giugiaro design, SS upgrades.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
+      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
+      "https://images.unsplash.com/fizuSGluj8M?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -2790,8 +2790,8 @@ export const cars: Car[] = [
     shortDescription:
       "Grigio Biturbo S, twin-turbo V6, freshly rebuilt turbos, affordable Maserati.",
     images: [
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
+      "https://images.unsplash.com/fizuSGluj8M?w=800&q=80",
+      "https://images.unsplash.com/eZJiWQjz1dc?w=800&q=80",
     ],
     seller: {
       name: "Giuseppe Rossi",
@@ -2829,8 +2829,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Nettuno 3200 GT, twin-turbo V8, boomerang lights, cambelt done.",
     images: [
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
+      "https://images.unsplash.com/eZJiWQjz1dc?w=800&q=80",
+      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -2869,8 +2869,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Arancio Stratos Stradale, 1 of 492, Ferrari V6, rally legend.",
     images: [
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
+      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
+      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
     ],
     seller: {
       name: "Marco Bianchi",
@@ -2908,8 +2908,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Lancia Fulvia 1.6 HF, rally-bred V4, lightweight coupe.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
+      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
     ],
     seller: {
       name: "Officina Lancia Torino",
@@ -2948,8 +2948,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Lord Thema 8.32, Ferrari V8 in a Lancia sedan, Poltrona Frau leather.",
     images: [
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
+      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
+      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
     ],
     seller: {
       name: "Officina Lancia Torino",
@@ -2988,8 +2988,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Tahiti X1/9, mid-engine Bertone targa, lightweight fun.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
+      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
     ],
     seller: {
       name: "Pierre Duval",
@@ -3027,8 +3027,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Capri 124 Sport Coupe, twin-cam, attractive Italian sporting coupe.",
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
+      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
     ],
     seller: {
       name: "Mediterranean Classics",
@@ -3066,8 +3066,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa Barchetta, 1.8 16V roadster, affordable open-air fun.",
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
+      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
     ],
     seller: {
       name: "Luca Moretti",
@@ -3105,8 +3105,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brun Sandalwood 504 Coupe V6, Pininfarina elegance, tobacco leather.",
     images: [
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
     ],
     seller: {
       name: "French Classics Auto",
@@ -3144,8 +3144,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brun Scarabee SM, Maserati V6, hydropneumatic, DIRAVI steering marvel.",
     images: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
+      "https://images.unsplash.com/OvHMqzIQZlo?w=800&q=80",
     ],
     seller: {
       name: "Garage Citroen Classique",
@@ -3184,8 +3184,8 @@ export const cars: Car[] = [
     shortDescription:
       "Gris Futura CX GTi Turbo 2, 168 hp, hydropneumatic magic carpet ride.",
     images: [
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
+      "https://images.unsplash.com/OvHMqzIQZlo?w=800&q=80",
+      "https://images.unsplash.com/xPFCPOvr1GA?w=800&q=80",
     ],
     seller: {
       name: "Henri Martin",
@@ -3223,8 +3223,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bleu Alpine R5 Turbo 2, mid-engine Group B homologation, wide-body legend.",
     images: [
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
-      "https://images.unsplash.com/photo-1507136566006-cfc505b114fc?w=800&q=80",
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
     ],
     seller: {
       name: "Heritage Motor Gallery",
@@ -3263,8 +3263,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cardinal Red Saab 99 Turbo, turbo pioneer, rugged Swedish engineering.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
+      "https://images.unsplash.com/Liqmmue-kJY?w=800&q=80",
+      "https://images.unsplash.com/cCA-kz1SKzc?w=800&q=80",
     ],
     seller: {
       name: "Svensk Klassiker AB",
@@ -3303,8 +3303,8 @@ export const cars: Car[] = [
     shortDescription:
       "Nocturne Blue 9000 Aero, 225 hp turbo, rust-free Swedish autobahn express.",
     images: [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
+      "https://images.unsplash.com/cCA-kz1SKzc?w=800&q=80",
+      "https://images.unsplash.com/HzX6ncsim9U?w=800&q=80",
     ],
     seller: {
       name: "Anders Lindqvist",
@@ -3342,8 +3342,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cypress Green 1800ES shooting brake, glass tailgate icon, fuel-injected.",
     images: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
+      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
+      "https://images.unsplash.com/w5d3zmSe4pw?w=800&q=80",
     ],
     seller: {
       name: "Svensk Klassiker AB",
@@ -3382,8 +3382,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver 240 Turbo estate, intercooled, boxy icon with endless redblock engine.",
     images: [
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
+      "https://images.unsplash.com/w5d3zmSe4pw?w=800&q=80",
+      "https://images.unsplash.com/qValfiWMIII?w=800&q=80",
     ],
     seller: {
       name: "Erik Johansson",
@@ -3421,8 +3421,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cream Yellow 850 T5-R estate, 1 of 2,500, turbo five-cylinder, Porsche brakes.",
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/qValfiWMIII?w=800&q=80",
+      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
     ],
     seller: {
       name: "Nordic Classics AB",
@@ -3461,8 +3461,8 @@ export const cars: Car[] = [
     shortDescription:
       "Orange Opel GT 1900, rotating headlights, German mini-Corvette.",
     images: [
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
     ],
     seller: {
       name: "Matthias Braun",
@@ -3500,8 +3500,8 @@ export const cars: Car[] = [
     shortDescription:
       "Signal Red Manta GTE, fuel-injected, Recaro seats, affordable classic coupe.",
     images: [
-      "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c6?w=800&q=80",
-      "https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
     ],
     seller: {
       name: "Dirk Schneider",
@@ -3539,8 +3539,8 @@ export const cars: Car[] = [
     shortDescription:
       "Moonstone Silver Calibra Turbo 4x4, 204 hp, ultra-low drag, AWD.",
     images: [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
     ],
     seller: {
       name: "Thomas Weber",
@@ -3578,8 +3578,8 @@ export const cars: Car[] = [
     shortDescription:
       "French Blue TR6 PI, Lucas injection, 150 hp UK-spec with overdrive.",
     images: [
-      "https://images.unsplash.com/photo-1552519507-da3b142c6e3b?w=800&q=80",
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
+      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
+      "https://images.unsplash.com/NzZfSaPfytI?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -3618,8 +3618,8 @@ export const cars: Car[] = [
     shortDescription:
       "Inca Yellow Spitfire 1500, low mileage, new soft top, budget roadster fun.",
     images: [
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-      "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80",
+      "https://images.unsplash.com/NzZfSaPfytI?w=800&q=80",
+      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
     ],
     seller: {
       name: "Caledonian Classics",
@@ -3657,8 +3657,8 @@ export const cars: Car[] = [
     shortDescription:
       "Magenta Stag V8, improved cooling, T-bar roll hoop, four-seat GT convertible.",
     images: [
-      "https://images.unsplash.com/photo-1526726538690-e1e7108e7d70?w=800&q=80",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f1d7?w=800&q=80",
+      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
+      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
     ],
     seller: {
       name: "James Crawford",
@@ -3696,8 +3696,8 @@ export const cars: Car[] = [
     shortDescription:
       "BRG MGB GT, chrome bumpers, rebuilt engine, practical Pininfarina fastback.",
     images: [
-      "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&q=80",
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
+      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
+      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -3736,8 +3736,8 @@ export const cars: Car[] = [
     shortDescription:
       "Old English White MGA 1600 Coupe, full restoration 2017, red leather.",
     images: [
-      "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-      "https://images.unsplash.com/photo-1533473359331-2969b6cb02e1?w=800&q=80",
+      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
+      "https://images.unsplash.com/NzZfSaPfytI?w=800&q=80",
     ],
     seller: {
       name: "De Klassieker BV",
@@ -3762,6 +3762,2455 @@ export const cars: Car[] = [
     condition: "excellent",
     featured: false,
     createdAt: "2026-03-22",
+  },
+  {
+    id: "lotus-elan-sprint-1971",
+    make: "Lotus",
+    model: "Elan Sprint",
+    year: 1971,
+    price: 52000,
+    mileage: 62000,
+    location: "London, United Kingdom",
+    description:
+      "The Elan Sprint is Colin Chapman's masterpiece, a featherweight roadster with a Lotus-tuned twin-cam engine. This Gold Leaf Yellow example with black leather has the Big Valve Sprint engine producing 126 hp. At just 680 kg, the power-to-weight ratio is extraordinary.",
+    shortDescription:
+      "Gold Leaf Yellow Elan Sprint, Big Valve twin-cam, featherweight roadster.",
+    images: [
+      "https://images.unsplash.com/_KESEuT51IA?w=800&q=80",
+      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
+    ],
+    seller: {
+      name: "Lotus Heritage Ltd",
+      email: "info@lotus-heritage.co.uk",
+      phone: "+44 1onal 555 2121",
+    },
+    specs: {
+      engine: "1.6L Twin-Cam Inline-4 (Big Valve)",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Gold Leaf Yellow",
+      interiorColor: "Black Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Big Valve Sprint engine",
+      "Fibreglass body",
+      "Pop-up headlights",
+      "Backbone chassis",
+      "Weber carburettors",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-01",
+  },
+  {
+    id: "lotus-esprit-turbo-1985",
+    make: "Lotus",
+    model: "Esprit Turbo",
+    year: 1985,
+    price: 42000,
+    mileage: 58000,
+    location: "London, United Kingdom",
+    description:
+      "The Giugiaro-designed Esprit Turbo made famous by James Bond. This Calypso Red example with tan leather has the turbocharged 2.2L engine producing 210 hp. The wedge profile remains stunning and the mid-engine chassis provides sharp handling. Well maintained by a specialist.",
+    shortDescription:
+      "Calypso Red Esprit Turbo, Bond car icon, mid-engine wedge, turbo 2.2L.",
+    images: [
+      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
+      "https://images.unsplash.com/nnhSYjLhtG4?w=800&q=80",
+    ],
+    seller: {
+      name: "Lotus Heritage Ltd",
+      email: "info@lotus-heritage.co.uk",
+      phone: "+44 1onal 555 2121",
+    },
+    specs: {
+      engine: "2.2L Turbocharged Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Calypso Red",
+      interiorColor: "Tan Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Turbo engine",
+      "Giugiaro design",
+      "Pop-up headlights",
+      "Mid-engine layout",
+      "Kevlar body panels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-15",
+  },
+  {
+    id: "lotus-elise-s1-1997",
+    make: "Lotus",
+    model: "Elise S1",
+    year: 1997,
+    price: 28000,
+    mileage: 52000,
+    location: "London, United Kingdom",
+    description:
+      "The original Elise is the purest driving machine of the modern era. This Norfolk Mustard Yellow example with black Alcantara weighs just 725 kg and features the Rover K-Series engine. The extruded aluminium chassis and fibreglass body deliver unmatched agility.",
+    shortDescription:
+      "Norfolk Mustard Elise S1, 725 kg, Rover K-Series, pure driving machine.",
+    images: [
+      "https://images.unsplash.com/nnhSYjLhtG4?w=800&q=80",
+      "https://images.unsplash.com/_KESEuT51IA?w=800&q=80",
+    ],
+    seller: {
+      name: "Simon Clarke",
+      email: "simon.clarke@email.co.uk",
+    },
+    specs: {
+      engine: "1.8L Rover K-Series Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Norfolk Mustard Yellow",
+      interiorColor: "Black Alcantara",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Extruded aluminium chassis",
+      "Fibreglass body",
+      "Removable soft top",
+      "Lightweight construction",
+      "MMC brake discs",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-05-04",
+  },
+  {
+    id: "jensen-interceptor-1972",
+    make: "Jensen",
+    model: "Interceptor III",
+    year: 1972,
+    price: 72000,
+    mileage: 78000,
+    location: "London, United Kingdom",
+    description:
+      "The Jensen Interceptor combines Italian design by Touring of Milan with a Chrysler V8 engine. This Crystal Blue example with biscuit leather has the 7.2L V8 producing 330 hp through a TorqueFlite automatic. The curved glass tailgate is its signature design element.",
+    shortDescription:
+      "Crystal Blue Interceptor III, Chrysler V8, Italian design, glass tailgate.",
+    images: [
+      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+    ],
+    seller: {
+      name: "British Heritage Motors",
+      email: "sales@british-heritage.co.uk",
+      phone: "+44 20 555 1818",
+    },
+    specs: {
+      engine: "7.2L Chrysler V8",
+      transmission: "3-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Crystal Blue",
+      interiorColor: "Biscuit Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Chrysler V8",
+      "Curved glass tailgate",
+      "Connolly leather",
+      "Air conditioning",
+      "Power steering",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-08",
+  },
+  {
+    id: "tvr-griffith-500-1994",
+    make: "TVR",
+    model: "Griffith 500",
+    year: 1994,
+    price: 38000,
+    mileage: 48000,
+    location: "London, United Kingdom",
+    description:
+      "The TVR Griffith 500 is a raw, V8-powered British sports car with no electronic driver aids. This Starmist Blue example with magnolia leather has the 5.0L Rover V8 producing 340 hp in a car weighing just 1,060 kg. Not for the faint-hearted but utterly thrilling.",
+    shortDescription:
+      "Starmist Blue Griffith 500, 5.0L V8, no electronics, raw British thrills.",
+    images: [
+      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+    ],
+    seller: {
+      name: "Simon Clarke",
+      email: "simon.clarke@email.co.uk",
+    },
+    specs: {
+      engine: "5.0L Rover V8",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Starmist Blue",
+      interiorColor: "Magnolia Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Rover V8 engine",
+      "Tubular steel chassis",
+      "Fibreglass body",
+      "No ABS or traction control",
+      "15-inch alloy wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-20",
+  },
+  {
+    id: "tvr-cerbera-speed-six-2000",
+    make: "TVR",
+    model: "Cerbera Speed Six",
+    year: 2000,
+    price: 35000,
+    mileage: 42000,
+    location: "Edinburgh, United Kingdom",
+    description:
+      "The Cerbera Speed Six features TVR's own 4.0L AJP inline-six producing 350 hp. This Reflex Spice Orange with black leather is the desirable Speed Six variant. Despite its reputation, this example has been well maintained and runs beautifully. A characterful British GT.",
+    shortDescription:
+      "Reflex Spice Cerbera Speed Six, TVR's own inline-six, 350 hp British GT.",
+    images: [
+      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+    ],
+    seller: {
+      name: "Caledonian Classics",
+      email: "info@caledonian-classics.co.uk",
+    },
+    specs: {
+      engine: "4.0L AJP Inline-6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Reflex Spice Orange",
+      interiorColor: "Black Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "TVR AJP engine",
+      "No driver aids",
+      "Fibreglass body",
+      "Hidden door handles",
+      "18-inch alloy wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-05-01",
+  },
+  {
+    id: "delorean-dmc12-1982",
+    make: "DeLorean",
+    model: "DMC-12",
+    year: 1982,
+    price: 48000,
+    mileage: 38000,
+    location: "Dublin, Ireland",
+    description:
+      "The stainless-steel DeLorean DMC-12, made famous by Back to the Future. This low-mileage example with grey leather has the rear-mounted PRV V6 and gullwing doors. The brushed stainless body never needs painting. A true pop culture icon and conversation starter.",
+    shortDescription:
+      "Low-mileage DMC-12, stainless steel, gullwing doors, pop culture icon.",
+    images: [
+      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+    ],
+    seller: {
+      name: "Padraig O'Sullivan",
+      email: "padraig.osullivan@email.ie",
+    },
+    specs: {
+      engine: "2.8L PRV V6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Brushed Stainless Steel",
+      interiorColor: "Grey Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Gullwing doors",
+      "Stainless steel body",
+      "Rear-mounted engine",
+      "Lotus-designed chassis",
+      "Craig stereo",
+    ],
+    condition: "good",
+    featured: true,
+    createdAt: "2026-03-14",
+  },
+  {
+    id: "mini-cooper-classic-1997",
+    make: "Mini",
+    model: "Cooper 1.3i Sport Pack",
+    year: 1997,
+    price: 18000,
+    mileage: 62000,
+    location: "London, United Kingdom",
+    description:
+      "One of the last classic Minis produced, this Cooper 1.3i Sport Pack in British Racing Green with white roof has the fuel-injected 1.3L engine and close-ratio gearbox. Just 62,000 miles with two owners from new. Complete with all Sport Pack extras.",
+    shortDescription:
+      "BRG Cooper Sport Pack, late production, low mileage, two owners from new.",
+    images: [
+      "https://images.unsplash.com/5XNipxnR7NM?w=800&q=80",
+      "https://images.unsplash.com/Y8Sm2UsRJng?w=800&q=80",
+    ],
+    seller: {
+      name: "James Crawford",
+      email: "james.crawford@email.co.uk",
+    },
+    specs: {
+      engine: "1.3L Fuel-Injected Inline-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "British Racing Green / White Roof",
+      interiorColor: "Black/Grey Check Cloth",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "Sport Pack extras",
+      "12-inch alloy wheels",
+      "Centre-exit exhaust",
+      "Half leather seats",
+      "White roof and bonnet stripes",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-04-30",
+  },
+  {
+    id: "vw-golf-gti-mk1-1983",
+    make: "Volkswagen",
+    model: "Golf GTI Mk1",
+    year: 1983,
+    price: 22000,
+    mileage: 148000,
+    location: "Hamburg, Germany",
+    description:
+      "The car that invented the hot hatch. This Mars Red GTI Mk1 with the iconic tartan cloth interior has the 1.8L engine producing 112 hp. Red stripe around the grille, golf ball gear knob, and three-spoke steering wheel define the original GTI experience.",
+    shortDescription:
+      "Mars Red Golf GTI Mk1, tartan seats, golf ball knob, the original hot hatch.",
+    images: [
+      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+    ],
+    seller: {
+      name: "Matthias Braun",
+      email: "matthias.braun@email.de",
+    },
+    specs: {
+      engine: "1.8L Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Mars Red",
+      interiorColor: "GTI Tartan Cloth",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "Red grille stripe",
+      "Golf ball gear knob",
+      "Tartan sport seats",
+      "Three-spoke steering wheel",
+      "Alloy wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-07",
+  },
+  {
+    id: "vw-corrado-vr6-1994",
+    make: "Volkswagen",
+    model: "Corrado VR6",
+    year: 1994,
+    price: 16000,
+    mileage: 132000,
+    location: "Amsterdam, Netherlands",
+    description:
+      "The Corrado VR6 is VW's forgotten sports coupe with the glorious narrow-angle VR6 engine. This Classic Green Metallic example with black leather has the 2.9L VR6 producing 190 hp. The active rear spoiler rises at speed. Timing chains recently serviced.",
+    shortDescription:
+      "Classic Green Corrado VR6, narrow-angle six, active spoiler, chains done.",
+    images: [
+      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+    ],
+    seller: {
+      name: "Jan de Vries",
+      email: "jan.devries@email.nl",
+    },
+    specs: {
+      engine: "2.9L VR6",
+      transmission: "5-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Classic Green Metallic",
+      interiorColor: "Black Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "VR6 narrow-angle engine",
+      "Active rear spoiler",
+      "ABS brakes",
+      "Heated seats",
+      "15-inch BBS alloy wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-23",
+  },
+  {
+    id: "vw-scirocco-1978",
+    make: "Volkswagen",
+    model: "Scirocco GTI",
+    year: 1978,
+    price: 14000,
+    mileage: 112000,
+    location: "Berlin, Germany",
+    description:
+      "The Giugiaro-designed Scirocco predated the Golf GTI and offered sharper handling. This Diamond Silver Mk1 with black cloth has the 1.6L fuel-injected engine. The clean lines and low profile give it a timeless elegance. A wonderful alternative to the Golf GTI.",
+    shortDescription:
+      "Diamond Silver Scirocco GTI, Giugiaro design, GTI performance, clean lines.",
+    images: [
+      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+    ],
+    seller: {
+      name: "Lukas Berger",
+      email: "lukas.berger@email.de",
+    },
+    specs: {
+      engine: "1.6L Fuel-Injected Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Diamond Silver",
+      interiorColor: "Black Cloth",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Fuel injection",
+      "Giugiaro design",
+      "Sport steering wheel",
+      "Rear spoiler",
+      "Steel wheels with trims",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-06",
+  },
+  {
+    id: "citroen-ds-cabriolet-1967",
+    make: "Citroen",
+    model: "DS 21 Cabriolet",
+    year: 1967,
+    price: 165000,
+    mileage: 52000,
+    location: "Paris, France",
+    description:
+      "The factory Chapron-bodied DS Cabriolet is the rarest and most desirable variant of the DS. This Gris Palladium example with red leather has the four-door convertible body by Henri Chapron. Hydropneumatic suspension provides an incomparable ride with the roof down.",
+    shortDescription:
+      "Gris Palladium DS 21 Cabriolet by Chapron, hydropneumatic, red leather.",
+    images: [
+      "https://images.unsplash.com/xPFCPOvr1GA?w=800&q=80",
+      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
+    ],
+    seller: {
+      name: "Garage Citroen Classique",
+      email: "contact@citroen-classique.fr",
+      phone: "+33 1 555 1616",
+    },
+    specs: {
+      engine: "2.2L Inline-4",
+      transmission: "4-Speed Semi-Automatic",
+      drivetrain: "FWD",
+      exteriorColor: "Gris Palladium",
+      interiorColor: "Red Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Chapron convertible body",
+      "Hydropneumatic suspension",
+      "Power steering",
+      "Swiveling headlights",
+      "Power soft top",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-02-25",
+  },
+  {
+    id: "alpine-a110-berlinette-1975",
+    make: "Alpine",
+    model: "A110 1300 Berlinette",
+    year: 1975,
+    price: 82000,
+    mileage: 54000,
+    location: "Lyon, France",
+    description:
+      "A late-production A110 Berlinette with the 1.3L Gordini engine. This Bleu Metallise example with black vinyl is lighter and more nimble than the 1600S variant. The backbone chassis and fibreglass body create an engaging driving experience on mountain roads.",
+    shortDescription:
+      "Bleu Metallise A110 1300 Berlinette, late production, lightweight rally heritage.",
+    images: [
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+    ],
+    seller: {
+      name: "Antoine Dupont",
+      email: "antoine.dupont@email.fr",
+    },
+    specs: {
+      engine: "1.3L Gordini Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Bleu Metallise",
+      interiorColor: "Black Vinyl",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Fibreglass body",
+      "Backbone chassis",
+      "Gordini engine",
+      "Rally-spec suspension",
+      "Lightweight construction",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-02",
+  },
+  {
+    id: "porsche-944-s2-1990",
+    make: "Porsche",
+    model: "944 S2 Cabriolet",
+    year: 1990,
+    price: 28000,
+    mileage: 118000,
+    location: "Stuttgart, Germany",
+    description:
+      "The 944 S2 with the 3.0L 16-valve engine is the ultimate naturally-aspirated transaxle Porsche. This Maritime Blue Cabriolet with linen leather has 211 hp and perfect 50/50 weight distribution. The power soft top and four-seat layout make it a practical sports car.",
+    shortDescription:
+      "Maritime Blue 944 S2 Cabriolet, 3.0L 16V, perfect balance, open-air Porsche.",
+    images: [
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+    ],
+    seller: {
+      name: "Klassik Automobil Stuttgart",
+      email: "info@klassik-stuttgart.de",
+      phone: "+49 711 555 0101",
+    },
+    specs: {
+      engine: "3.0L 16V Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Maritime Blue",
+      interiorColor: "Linen Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "3.0L 16-valve engine",
+      "Power soft top",
+      "ABS brakes",
+      "Cruise control",
+      "16-inch Club Sport wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-05-02",
+  },
+  {
+    id: "bmw-e24-635csi-1985",
+    make: "BMW",
+    model: "635 CSi (E24)",
+    year: 1985,
+    price: 32000,
+    mileage: 142000,
+    location: "Vienna, Austria",
+    description:
+      "The E24 6 Series is one of BMW's most elegant grand tourers. This Lachssilber Metallic 635 CSi with natural leather has the 3.5L M30 inline-six producing 218 hp. The pillarless coupe design and long bonnet create a timeless silhouette on any European road.",
+    shortDescription:
+      "Lachssilber 635 CSi, pillarless grand tourer, M30 inline-six, natural leather.",
+    images: [
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+    ],
+    seller: {
+      name: "Stefan Huber",
+      email: "stefan.huber@email.at",
+    },
+    specs: {
+      engine: "3.5L M30 Inline-6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Lachssilber Metallic",
+      interiorColor: "Natural Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Pillarless coupe",
+      "On-board computer",
+      "Electric seats",
+      "Cruise control",
+      "16-inch TRX wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-13",
+  },
+  {
+    id: "ferrari-246-dino-gt-1972",
+    make: "Ferrari",
+    model: "246 Dino GTS",
+    year: 1972,
+    price: 395000,
+    mileage: 42000,
+    location: "Milan, Italy",
+    description:
+      "The Dino GTS adds a removable Targa panel to the already stunning 246 GT. This Azzurro Metallic example with nero leather has Classiche certification and matching numbers. The 2.4L V6 screams to its redline and the chassis balance is perfection. A masterwork of Pininfarina.",
+    shortDescription:
+      "Azzurro Dino 246 GTS, Classiche certified, matching numbers, targa V6.",
+    images: [
+      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
+      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
+    ],
+    seller: {
+      name: "Scuderia Classica",
+      email: "info@scuderiaclassica.it",
+      phone: "+39 02 555 1212",
+    },
+    specs: {
+      engine: "2.4L V6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Azzurro Metallic",
+      interiorColor: "Nero Leather",
+      bodyType: "Targa",
+    },
+    features: [
+      "Targa roof panel",
+      "Classiche certification",
+      "Matching numbers",
+      "Borrani wire wheels",
+      "Pininfarina design",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-02-15",
+  },
+  {
+    id: "porsche-911-targa-1978",
+    make: "Porsche",
+    model: "911 SC Targa",
+    year: 1978,
+    price: 62000,
+    mileage: 142000,
+    location: "Hamburg, Germany",
+    description:
+      "The 911 SC Targa offers open-air motoring with the security of a fixed roll bar. This Minerva Blue example with cork leather has the reliable 3.0L flat-six. The SC is widely regarded as the best balance of reliability and classic 911 character. Recently fitted with new Bilstein shocks.",
+    shortDescription:
+      "Minerva Blue 911 SC Targa, 3.0L flat-six, cork leather, new Bilstein shocks.",
+    images: [
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+    ],
+    seller: {
+      name: "Friedrich Bauer",
+      email: "friedrich.bauer@email.de",
+    },
+    specs: {
+      engine: "3.0L Flat-6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Minerva Blue",
+      interiorColor: "Cork Leather",
+      bodyType: "Targa",
+    },
+    features: [
+      "Targa roll bar",
+      "Removable roof panel",
+      "Fuchs alloy wheels",
+      "Bilstein shocks",
+      "Fog lamps",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-18",
+  },
+  {
+    id: "mercedes-sl500-r129-1993",
+    make: "Mercedes-Benz",
+    model: "SL 500 (R129)",
+    year: 1993,
+    price: 28000,
+    mileage: 128000,
+    location: "Madrid, Spain",
+    description:
+      "The R129 SL was over-engineered to a degree that makes it virtually indestructible. This Brilliant Silver SL 500 with mushroom leather has the 5.0L V8 producing 320 hp. Both hard and soft tops included. The automatic roll bar deploys in 0.3 seconds if needed.",
+    shortDescription:
+      "Brilliant Silver R129 SL 500, V8, both tops, over-engineered luxury roadster.",
+    images: [
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+    ],
+    seller: {
+      name: "Miguel Santos",
+      email: "miguel.santos@email.es",
+    },
+    specs: {
+      engine: "5.0L M119 V8",
+      transmission: "4-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Brilliant Silver",
+      interiorColor: "Mushroom Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Hard and soft tops",
+      "Automatic roll bar",
+      "Heated seats",
+      "Climate control",
+      "17-inch AMG wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-05-03",
+  },
+  {
+    id: "bmw-e30-325i-cabriolet-1990",
+    make: "BMW",
+    model: "325i Cabriolet (E30)",
+    year: 1990,
+    price: 24000,
+    mileage: 152000,
+    location: "Copenhagen, Denmark",
+    description:
+      "The E30 Cabriolet is the quintessential yuppie car of the late 1980s. This Calypso Red example with tan leather has the smooth 2.5L M20 inline-six and a power-operated soft top. Late production model with improved specifications and build quality.",
+    shortDescription:
+      "Calypso Red E30 325i Cabriolet, M20 six, power top, late production model.",
+    images: [
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+    ],
+    seller: {
+      name: "Lars Petersen",
+      email: "lars.petersen@email.dk",
+    },
+    specs: {
+      engine: "2.5L M20 Inline-6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Calypso Red",
+      interiorColor: "Tan Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Power soft top",
+      "Electric windows",
+      "Central locking",
+      "14-inch alloy wheels",
+      "M-Tech steering wheel",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-26",
+  },
+  {
+    id: "alfa-romeo-montreal-1973",
+    make: "Alfa Romeo",
+    model: "Montreal",
+    year: 1973,
+    price: 78000,
+    mileage: 68000,
+    location: "Milan, Italy",
+    description:
+      "The Montreal is Alfa Romeo's exotic grand tourer with a detuned racing V8. This Verde Muschio example with black leather has the 2.6L V8 derived from the T33 racing car, producing 200 hp through a ZF five-speed gearbox. Bertone's slatted headlight covers are iconic.",
+    shortDescription:
+      "Verde Muschio Montreal, racing-derived V8, Bertone slatted headlights.",
+    images: [
+      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
+    ],
+    seller: {
+      name: "Officina Alfa Milano",
+      email: "info@officinaalfa.it",
+      phone: "+39 02 555 0909",
+    },
+    specs: {
+      engine: "2.6L V8",
+      transmission: "5-Speed Manual (ZF)",
+      drivetrain: "RWD",
+      exteriorColor: "Verde Muschio",
+      interiorColor: "Black Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Racing-derived V8",
+      "Spica fuel injection",
+      "Slatted headlight covers",
+      "ZF gearbox",
+      "Campagnolo wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-03-30",
+  },
+  {
+    id: "renault-alpine-gta-turbo-1990",
+    make: "Alpine",
+    model: "GTA V6 Turbo",
+    year: 1990,
+    price: 35000,
+    mileage: 78000,
+    location: "Lyon, France",
+    description:
+      "The GTA Turbo succeeded the A310 and offered genuine supercar performance. This Bleu Monaco example with grey leather has the turbocharged PRV V6 producing 200 hp in a lightweight rear-engine package. Excellent motorway cruiser and surprisingly comfortable for a sports car.",
+    shortDescription:
+      "Bleu Monaco GTA V6 Turbo, rear-engine, PRV turbo, French supercar.",
+    images: [
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+    ],
+    seller: {
+      name: "French Classics Auto",
+      email: "contact@frenchclassics.fr",
+    },
+    specs: {
+      engine: "2.5L Turbocharged PRV V6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Bleu Monaco",
+      interiorColor: "Grey Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Turbocharged PRV V6",
+      "Rear-engine layout",
+      "Fibreglass body",
+      "ABS brakes",
+      "Electric windows",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-22",
+  },
+  {
+    id: "peugeot-205-gti-16-1990",
+    make: "Peugeot",
+    model: "205 GTI 1.6",
+    year: 1990,
+    price: 18000,
+    mileage: 134000,
+    location: "Lyon, France",
+    description:
+      "The 1.6-litre 205 GTI is lighter and more nimble than the 1.9. This Sorrento Green example with grey cloth has been fastidiously maintained with documented service history. The chassis remains the benchmark by which all hot hatches are judged, even decades later.",
+    shortDescription:
+      "Sorrento Green 205 GTI 1.6, lighter and nimbler variant, service history.",
+    images: [
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+    ],
+    seller: {
+      name: "Henri Martin",
+      email: "henri.martin@email.fr",
+    },
+    specs: {
+      engine: "1.6L Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Sorrento Green",
+      interiorColor: "Grey Cloth",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "Sport suspension",
+      "Front disc brakes",
+      "Sunroof",
+      "Speedline alloy wheels",
+      "Radio-cassette",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-05-07",
+  },
+  {
+    id: "lancia-beta-monte-carlo-1979",
+    make: "Lancia",
+    model: "Beta Monte Carlo",
+    year: 1979,
+    price: 32000,
+    mileage: 62000,
+    location: "Turin, Italy",
+    description:
+      "The mid-engine Lancia that became the basis for the legendary Group 5 Silhouette racer. This Bianco Saratoga Beta Monte Carlo with black cloth has the 2.0L twin-cam mounted behind the seats. The Pininfarina-designed body features a removable targa roof panel.",
+    shortDescription:
+      "Bianco Saratoga Beta Monte Carlo, mid-engine targa, Group 5 racing heritage.",
+    images: [
+      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
+      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
+    ],
+    seller: {
+      name: "Officina Lancia Torino",
+      email: "info@officinalancia.it",
+      phone: "+39 011 555 2020",
+    },
+    specs: {
+      engine: "2.0L Twin-Cam Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Bianco Saratoga",
+      interiorColor: "Black Cloth",
+      bodyType: "Targa",
+    },
+    features: [
+      "Mid-engine layout",
+      "Targa roof panel",
+      "Pininfarina design",
+      "Independent suspension",
+      "Cromodora wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-09",
+  },
+  {
+    id: "bmw-m1-1980",
+    make: "BMW",
+    model: "M1",
+    year: 1980,
+    price: 495000,
+    mileage: 38000,
+    location: "Munich, Germany",
+    description:
+      "BMW's only mid-engine supercar, designed by Giugiaro with engineering input from Lamborghini. This Henna Red M1 with black leather is one of only 453 road cars produced. The 3.5L M88 inline-six produces 277 hp and the car is eligible for the most prestigious events worldwide.",
+    shortDescription:
+      "Henna Red M1, 1 of 453, mid-engine Giugiaro design, M88 inline-six.",
+    images: [
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+    ],
+    seller: {
+      name: "Bavarian Classics GmbH",
+      email: "info@bavarian-classics.de",
+      phone: "+49 89 555 0303",
+    },
+    specs: {
+      engine: "3.5L M88 Inline-6",
+      transmission: "5-Speed Manual (ZF)",
+      drivetrain: "RWD",
+      exteriorColor: "Henna Red",
+      interiorColor: "Black Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Mid-engine layout",
+      "Giugiaro design",
+      "Procar racing heritage",
+      "Fibreglass body",
+      "Pop-up headlights",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-02-10",
+  },
+  {
+    id: "jaguar-e-type-v12-1972",
+    make: "Jaguar",
+    model: "E-Type Series 3 V12 Roadster",
+    year: 1972,
+    price: 125000,
+    mileage: 68000,
+    location: "London, United Kingdom",
+    description:
+      "The Series 3 E-Type introduced the silky Jaguar V12 engine to the iconic body. This Regency Red V12 Roadster with biscuit leather has the 5.3L V12 paired with automatic transmission. The wider body accommodates the larger engine and gives a more muscular stance.",
+    shortDescription:
+      "Regency Red E-Type V12 Roadster, 5.3L V12, wider Series 3 body, biscuit leather.",
+    images: [
+      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
+      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
+    ],
+    seller: {
+      name: "British Heritage Motors",
+      email: "sales@british-heritage.co.uk",
+      phone: "+44 20 555 1818",
+    },
+    specs: {
+      engine: "5.3L V12",
+      transmission: "3-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Regency Red",
+      interiorColor: "Biscuit Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "V12 engine",
+      "Wire wheels",
+      "Chrome bumpers",
+      "Power steering",
+      "Air conditioning",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-03-28",
+  },
+  {
+    id: "fiat-500-abarth-695-1969",
+    make: "Fiat",
+    model: "Abarth 695 SS",
+    year: 1969,
+    price: 42000,
+    mileage: 54000,
+    location: "Rome, Italy",
+    description:
+      "The Abarth 695 SS is the ultimate performance version of the Fiat 500. This Rosso Corsa example with black vinyl has the Abarth-tuned 695cc engine producing 38 hp, impressive for a car weighing just 470 kg. Scorpion badges, flared arches, and a howling exhaust note.",
+    shortDescription:
+      "Rosso Corsa Abarth 695 SS, tuned 500, scorpion badges, giant-killing pocket rocket.",
+    images: [
+      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
+      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
+    ],
+    seller: {
+      name: "Luca Moretti",
+      email: "luca.moretti@email.it",
+    },
+    specs: {
+      engine: "0.7L Abarth Inline-2",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Rosso Corsa",
+      interiorColor: "Black Vinyl",
+      bodyType: "Sedan",
+    },
+    features: [
+      "Abarth-tuned engine",
+      "Flared wheel arches",
+      "Abarth exhaust",
+      "Scorpion badges",
+      "Oil cooler",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-03-18",
+  },
+  {
+    id: "mercedes-w123-280ce-1983",
+    make: "Mercedes-Benz",
+    model: "280 CE (W123)",
+    year: 1983,
+    price: 22000,
+    mileage: 168000,
+    location: "Hamburg, Germany",
+    description:
+      "The W123 Coupe is the most elegant version of Mercedes' indestructible saloon. This Champagne Metallic 280 CE with palomino MB-Tex has the smooth 2.8L inline-six with Bosch K-Jetronic injection. Pillarless design and slim chrome trim create understated beauty.",
+    shortDescription:
+      "Champagne W123 280 CE pillarless coupe, smooth inline-six, understated elegance.",
+    images: [
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+    ],
+    seller: {
+      name: "Friedrich Bauer",
+      email: "friedrich.bauer@email.de",
+    },
+    specs: {
+      engine: "2.8L M110 Inline-6",
+      transmission: "4-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Champagne Metallic",
+      interiorColor: "Palomino MB-Tex",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Pillarless coupe",
+      "Bosch K-Jetronic injection",
+      "Central locking",
+      "Electric sunroof",
+      "Becker radio",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-16",
+  },
+  {
+    id: "vw-beetle-1303-cabriolet-1979",
+    make: "Volkswagen",
+    model: "1303 Cabriolet",
+    year: 1979,
+    price: 28000,
+    mileage: 72000,
+    location: "Amsterdam, Netherlands",
+    description:
+      "The final evolution of the Karmann-built Beetle Cabriolet. This Kansas Beige 1303 with black leatherette has the MacPherson strut front end and the 1.6L engine. The canvas top is in excellent condition and the car presents beautifully. Perfect for summer cruising.",
+    shortDescription:
+      "Kansas Beige 1303 Cabriolet, Karmann-built, excellent canvas top, summer ready.",
+    images: [
+      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+    ],
+    seller: {
+      name: "Willem van Dijk",
+      email: "willem.vandijk@email.nl",
+    },
+    specs: {
+      engine: "1.6L Air-Cooled Flat-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Kansas Beige",
+      interiorColor: "Black Leatherette",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Karmann-built body",
+      "MacPherson strut front",
+      "Canvas soft top",
+      "Chrome bumpers",
+      "Spare wheel",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-21",
+  },
+  {
+    id: "bmw-e21-323i-1982",
+    make: "BMW",
+    model: "323i (E21)",
+    year: 1982,
+    price: 18000,
+    mileage: 138000,
+    location: "Munich, Germany",
+    description:
+      "The E21 323i was the top-of-the-range 3 Series with the smooth M20 2.3L six-cylinder. This Polaris Silver example with anthracite cloth has the European-spec twin-headlight front end. A lightweight and engaging car to drive, increasingly appreciated by enthusiasts.",
+    shortDescription:
+      "Polaris Silver E21 323i, M20 six, European twin-headlight, lightweight classic.",
+    images: [
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+    ],
+    seller: {
+      name: "Klaus Fischer",
+      email: "klaus.fischer@email.de",
+    },
+    specs: {
+      engine: "2.3L M20 Inline-6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Polaris Silver",
+      interiorColor: "Anthracite Cloth",
+      bodyType: "Coupe",
+    },
+    features: [
+      "M20 inline-six",
+      "European headlights",
+      "Sport steering wheel",
+      "Rear spoiler",
+      "13-inch alloy wheels",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-05",
+  },
+  {
+    id: "porsche-968-clubsport-1993",
+    make: "Porsche",
+    model: "968 Club Sport",
+    year: 1993,
+    price: 65000,
+    mileage: 82000,
+    location: "Stuttgart, Germany",
+    description:
+      "The 968 Club Sport stripped the 968 to its essentials for maximum driving purity. This Maritime Blue example with black cloth buckets has no air conditioning, no sunroof, and thinner glass. The 3.0L Variocam four-cylinder produces 240 hp with perfect balance.",
+    shortDescription:
+      "Maritime Blue 968 Club Sport, stripped, Variocam 3.0L, purist's Porsche.",
+    images: [
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+    ],
+    seller: {
+      name: "Klassik Automobil Stuttgart",
+      email: "info@klassik-stuttgart.de",
+      phone: "+49 711 555 0101",
+    },
+    specs: {
+      engine: "3.0L Variocam Inline-4",
+      transmission: "6-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Maritime Blue",
+      interiorColor: "Black Cloth Buckets",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Variocam engine",
+      "Club Sport bucket seats",
+      "Lightweight specification",
+      "No air conditioning",
+      "17-inch Cup wheels",
+    ],
+    condition: "good",
+    featured: true,
+    createdAt: "2026-03-16",
+  },
+  {
+    id: "maserati-quattroporte-iv-1997",
+    make: "Maserati",
+    model: "Quattroporte IV 2.8 V6",
+    year: 1997,
+    price: 15000,
+    mileage: 148000,
+    location: "Rome, Italy",
+    description:
+      "The Quattroporte IV combined Maserati grandeur with Marcello Gandini's dramatic design. This Blu Notte example with parchment leather has the twin-turbo 2.8L V6 producing 284 hp. An imposing Italian executive saloon at a fraction of its original cost.",
+    shortDescription:
+      "Blu Notte Quattroporte IV, twin-turbo V6, Gandini design, affordable opulence.",
+    images: [
+      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
+      "https://images.unsplash.com/fizuSGluj8M?w=800&q=80",
+    ],
+    seller: {
+      name: "Giuseppe Rossi",
+      email: "giuseppe.rossi@email.it",
+    },
+    specs: {
+      engine: "2.8L Twin-Turbo V6",
+      transmission: "4-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Blu Notte",
+      interiorColor: "Parchment Leather",
+      bodyType: "Sedan",
+    },
+    features: [
+      "Twin-turbo V6",
+      "Gandini design",
+      "Full leather interior",
+      "Climate control",
+      "17-inch alloy wheels",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-08",
+  },
+  {
+    id: "ferrari-mondial-qv-1985",
+    make: "Ferrari",
+    model: "Mondial Quattrovalvole",
+    year: 1985,
+    price: 52000,
+    mileage: 62000,
+    location: "Geneva, Switzerland",
+    description:
+      "The Mondial QV is the most affordable mid-engine V8 Ferrari. This Nero Daytona example with tan leather has the four-valve-per-cylinder 3.0L V8 producing 240 hp. A genuine four-seater Ferrari that is usable every day. Belt service completed at 58,000 km.",
+    shortDescription:
+      "Nero Mondial QV, four-seat mid-engine Ferrari, belt service done, Swiss car.",
+    images: [
+      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
+      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
+    ],
+    seller: {
+      name: "Prestige Motors AG",
+      email: "sales@prestige-motors.ch",
+      phone: "+41 44 555 0202",
+    },
+    specs: {
+      engine: "3.0L Quattrovalvole V8",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Nero Daytona",
+      interiorColor: "Tan Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Four-valve V8",
+      "Four-seat layout",
+      "Mid-engine",
+      "Air conditioning",
+      "Metric alloy wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-14",
+  },
+  {
+    id: "lotus-europa-twin-cam-1972",
+    make: "Lotus",
+    model: "Europa Twin Cam",
+    year: 1972,
+    price: 35000,
+    mileage: 48000,
+    location: "London, United Kingdom",
+    description:
+      "The mid-engine Europa is Colin Chapman's lightweight masterpiece. This Europa Twin Cam in Red with black vinyl has the Lotus-Ford twin-cam engine producing 105 hp. At just 610 kg, it delivers extraordinary performance. The low-slung profile is unmistakable.",
+    shortDescription:
+      "Red Europa Twin Cam, mid-engine, 610 kg, Lotus-Ford twin-cam, ultra-lightweight.",
+    images: [
+      "https://images.unsplash.com/_KESEuT51IA?w=800&q=80",
+      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
+    ],
+    seller: {
+      name: "Lotus Heritage Ltd",
+      email: "info@lotus-heritage.co.uk",
+      phone: "+44 1onal 555 2121",
+    },
+    specs: {
+      engine: "1.6L Twin-Cam Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Red",
+      interiorColor: "Black Vinyl",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Mid-engine layout",
+      "Lotus-Ford twin-cam",
+      "Backbone chassis",
+      "Fibreglass body",
+      "Renault five-speed gearbox",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-03",
+  },
+  {
+    id: "vw-golf-gti-mk2-1990",
+    make: "Volkswagen",
+    model: "Golf GTI 16V Mk2",
+    year: 1990,
+    price: 15000,
+    mileage: 168000,
+    location: "Hamburg, Germany",
+    description:
+      "The Mk2 GTI 16V refined the hot hatch formula with more power and better build quality. This Tornado Red example with red-striped cloth has the 1.8L 16-valve engine producing 139 hp. Late production model with the big bumper facelift and improved specification.",
+    shortDescription:
+      "Tornado Red Golf GTI 16V Mk2, big bumper, refined hot hatch evolution.",
+    images: [
+      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+    ],
+    seller: {
+      name: "Matthias Braun",
+      email: "matthias.braun@email.de",
+    },
+    specs: {
+      engine: "1.8L 16V Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Tornado Red",
+      interiorColor: "GTI Striped Cloth",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "16-valve engine",
+      "Big bumper facelift",
+      "Red grille stripe",
+      "BBS alloy wheels",
+      "Power steering",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-09",
+  },
+  {
+    id: "porsche-928-gts-1994",
+    make: "Porsche",
+    model: "928 GTS",
+    year: 1994,
+    price: 78000,
+    mileage: 98000,
+    location: "Zurich, Switzerland",
+    description:
+      "The 928 GTS was the final and finest evolution of Porsche's front-engine V8 grand tourer. This Baltic Blue example with light grey leather has the 5.4L V8 producing 350 hp through a rear-mounted gearbox for perfect weight distribution. A continent-crushing GT.",
+    shortDescription:
+      "Baltic Blue 928 GTS, 5.4L V8 transaxle, ultimate front-engine Porsche GT.",
+    images: [
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+    ],
+    seller: {
+      name: "Garage Suisse SA",
+      email: "info@garage-suisse.ch",
+      phone: "+41 44 555 1414",
+    },
+    specs: {
+      engine: "5.4L V8",
+      transmission: "4-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Baltic Blue",
+      interiorColor: "Light Grey Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "GTS-spec V8",
+      "Transaxle layout",
+      "ABS brakes",
+      "Heated seats",
+      "17-inch Cup Design wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-12",
+  },
+  {
+    id: "lamborghini-countach-lp400s-1982",
+    make: "Lamborghini",
+    model: "Countach LP400 S",
+    year: 1982,
+    price: 450000,
+    mileage: 42000,
+    location: "Milan, Italy",
+    description:
+      "The Countach LP400 S added the iconic wide body and massive wheel arches to Gandini's dramatic wedge design. This Bianco White example with tan leather has the 4.0L V12 and the desirable five-speed manual gearbox. Every bedroom poster from the 1980s, in the flesh.",
+    shortDescription:
+      "Bianco Countach LP400 S, V12 wide-body, the ultimate 1980s poster car.",
+    images: [
+      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
+      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
+    ],
+    seller: {
+      name: "Scuderia Classica",
+      email: "info@scuderiaclassica.it",
+      phone: "+39 02 555 1212",
+    },
+    specs: {
+      engine: "4.0L V12",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Bianco White",
+      interiorColor: "Tan Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Lamborghini V12",
+      "Scissor doors",
+      "Wide body kit",
+      "Rear wing",
+      "Campagnolo wheels",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-02-01",
+  },
+  {
+    id: "mercedes-w198-300sl-roadster-1958",
+    make: "Mercedes-Benz",
+    model: "300 SL Roadster",
+    year: 1958,
+    price: 350000,
+    mileage: 52000,
+    location: "Stuttgart, Germany",
+    description:
+      "The 300 SL Roadster succeeded the Gullwing with improved handling and a conventional door layout. This Graphite Grey example with red leather has the Bosch fuel-injected straight-six and a comprehensive service file. One of the greatest sports cars ever produced.",
+    shortDescription:
+      "Graphite Grey 300 SL Roadster, Bosch injection, red leather, comprehensive history.",
+    images: [
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+    ],
+    seller: {
+      name: "Klassik Automobil Stuttgart",
+      email: "info@klassik-stuttgart.de",
+      phone: "+49 711 555 0101",
+    },
+    specs: {
+      engine: "3.0L Inline-6",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Graphite Grey",
+      interiorColor: "Red Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Bosch mechanical fuel injection",
+      "Tubular space frame",
+      "Rudge knock-off wheels",
+      "Soft top and hardtop",
+      "Fitted luggage",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-01-15",
+  },
+  {
+    id: "bmw-507-1957",
+    make: "BMW",
+    model: "507",
+    year: 1957,
+    price: 475000,
+    mileage: 34000,
+    location: "Munich, Germany",
+    description:
+      "Count Albrecht von Goertz designed one of the most beautiful cars ever made. This Silver BMW 507 with red leather is one of only 252 produced. The 3.2L V8 provides spirited performance and the lines are simply breathtaking from every angle. Museum-quality condition.",
+    shortDescription:
+      "Silver BMW 507, 1 of 252, von Goertz design, V8, museum-quality condition.",
+    images: [
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+    ],
+    seller: {
+      name: "Bavarian Classics GmbH",
+      email: "info@bavarian-classics.de",
+      phone: "+49 89 555 0303",
+    },
+    specs: {
+      engine: "3.2L V8",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Silver",
+      interiorColor: "Red Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Aluminium body panels",
+      "V8 engine",
+      "Rudge knock-off wheels",
+      "Soft top and hardtop",
+      "Tool kit",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-01-05",
+  },
+  {
+    id: "aston-martin-db5-1964",
+    make: "Aston Martin",
+    model: "DB5",
+    year: 1964,
+    price: 385000,
+    mileage: 48000,
+    location: "London, United Kingdom",
+    description:
+      "The most famous car in the world, thanks to James Bond. This Silver Birch DB5 with black Connolly leather has the 4.0L straight-six with triple SU carburettors producing 282 hp. A matching-numbers car with documented history from the Aston Martin Heritage Trust.",
+    shortDescription:
+      "Silver Birch DB5, Bond car legend, matching numbers, AMHT documented.",
+    images: [
+      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+    ],
+    seller: {
+      name: "British Heritage Motors",
+      email: "sales@british-heritage.co.uk",
+      phone: "+44 20 555 1818",
+    },
+    specs: {
+      engine: "4.0L Inline-6",
+      transmission: "5-Speed Manual (ZF)",
+      drivetrain: "RWD",
+      exteriorColor: "Silver Birch",
+      interiorColor: "Black Connolly Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Triple SU carburettors",
+      "Matching numbers",
+      "Heritage Trust documentation",
+      "Wire wheels",
+      "Electric windows",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-01-10",
+  },
+  {
+    id: "alfa-romeo-sz-zagato-1990",
+    make: "Alfa Romeo",
+    model: "SZ (ES-30)",
+    year: 1990,
+    price: 85000,
+    mileage: 32000,
+    location: "Milan, Italy",
+    description:
+      "The Alfa SZ by Zagato is one of the most polarizing designs in automotive history. This Rosso example with tan leather is one of only 1,036 produced. The 3.0L Busso V6 produces 210 hp and the composite body sits on a shortened 75 platform with Koni adjustable suspension.",
+    shortDescription:
+      "Rosso SZ Zagato, 1 of 1,036, Busso V6, polarizing design icon.",
+    images: [
+      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
+      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+    ],
+    seller: {
+      name: "Auto Classica Milano",
+      email: "vendite@autoclassica.it",
+      phone: "+39 02 555 0808",
+    },
+    specs: {
+      engine: "3.0L Busso V6",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Rosso",
+      interiorColor: "Tan Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Zagato composite body",
+      "Busso V6",
+      "Koni adjustable suspension",
+      "Limited production",
+      "Recaro seats",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-03-05",
+  },
+  {
+    id: "bmw-e38-740i-sport-1999",
+    make: "BMW",
+    model: "740i Sport (E38)",
+    year: 1999,
+    price: 16000,
+    mileage: 172000,
+    location: "Brussels, Belgium",
+    description:
+      "The E38 7 Series is widely regarded as the most handsome BMW saloon ever made. This Orient Blue 740i Sport with champagne leather has the 4.4L V8 producing 286 hp. Sport package adds M-Parallel wheels, sport seats, and firmer suspension. A dignified motorway cruiser.",
+    shortDescription:
+      "Orient Blue E38 740i Sport, V8, M-Parallel wheels, handsome flagship.",
+    images: [
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+    ],
+    seller: {
+      name: "Marc Janssen",
+      email: "marc.janssen@email.be",
+    },
+    specs: {
+      engine: "4.4L M62 V8",
+      transmission: "5-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Orient Blue",
+      interiorColor: "Champagne Leather",
+      bodyType: "Sedan",
+    },
+    features: [
+      "Sport package",
+      "M-Parallel alloy wheels",
+      "Sport seats",
+      "Navigation system",
+      "Xenon headlights",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-04",
+  },
+  {
+    id: "renault-clio-v6-2003",
+    make: "Renault",
+    model: "Clio V6 Phase 2",
+    year: 2003,
+    price: 58000,
+    mileage: 42000,
+    location: "Paris, France",
+    description:
+      "The Clio V6 is a road-legal concept car: a 3.0L V6 mid-mounted behind the front seats of a supermini. This Liquid Yellow Phase 2 with black Alcantara has improved handling over the notoriously tail-happy Phase 1. Just 42,000 km from new. A truly wild hot hatch.",
+    shortDescription:
+      "Liquid Yellow Clio V6 Phase 2, mid-engine V6, road-legal concept car.",
+    images: [
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+    ],
+    seller: {
+      name: "Heritage Motor Gallery",
+      email: "gallery@heritage-motors.fr",
+      phone: "+33 1 555 1010",
+    },
+    specs: {
+      engine: "3.0L V6",
+      transmission: "6-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Liquid Yellow",
+      interiorColor: "Black Alcantara",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "Mid-mounted V6",
+      "Wide body kit",
+      "Recaro bucket seats",
+      "18-inch alloy wheels",
+      "Rear-mounted radiators",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-03-20",
+  },
+  {
+    id: "mercedes-clk-gtr-1998",
+    make: "Mercedes-Benz",
+    model: "CLK GTR Stradale",
+    year: 1998,
+    price: 480000,
+    mileage: 8000,
+    location: "Stuttgart, Germany",
+    description:
+      "One of the rarest road-legal racing cars ever produced. This Silver CLK GTR is one of only 25 road cars built. The 6.9L V12 produces 612 hp and the car was developed for the FIA GT Championship. A genuine race car with number plates.",
+    shortDescription:
+      "Silver CLK GTR, 1 of 25, 6.9L V12, 612 hp, street-legal GT racer.",
+    images: [
+      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+    ],
+    seller: {
+      name: "Klassik Automobil Stuttgart",
+      email: "info@klassik-stuttgart.de",
+      phone: "+49 711 555 0101",
+    },
+    specs: {
+      engine: "6.9L V12",
+      transmission: "6-Speed Sequential",
+      drivetrain: "RWD",
+      exteriorColor: "Silver",
+      interiorColor: "Black Alcantara/Carbon Fibre",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Carbon fibre body",
+      "Sequential gearbox",
+      "FIA GT homologation",
+      "Adjustable suspension",
+      "Roll cage",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-01-01",
+  },
+  {
+    id: "saab-900-turbo-convertible-1992",
+    make: "Saab",
+    model: "900 Turbo Convertible (Classic)",
+    year: 1992,
+    price: 14000,
+    mileage: 142000,
+    location: "Helsinki, Finland",
+    description:
+      "The classic 900 Convertible is one of the best open-top Scandinavian cars ever made. This Cherry Red example with tan leather has the turbocharged 2.0L engine and a power-operated soft top. The last year of the original 900 makes this a collectible variant.",
+    shortDescription:
+      "Cherry Red classic 900 Turbo Convertible, final year, tan leather, turbo.",
+    images: [
+      "https://images.unsplash.com/HzX6ncsim9U?w=800&q=80",
+      "https://images.unsplash.com/Liqmmue-kJY?w=800&q=80",
+    ],
+    seller: {
+      name: "Mikko Virtanen",
+      email: "mikko.virtanen@email.fi",
+    },
+    specs: {
+      engine: "2.0L Turbocharged Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Cherry Red",
+      interiorColor: "Tan Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Turbo engine",
+      "Power soft top",
+      "Heated seats",
+      "Electric windows",
+      "Ignition between seats",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-24",
+  },
+  {
+    id: "citroen-traction-avant-1955",
+    make: "Citroen",
+    model: "Traction Avant 15-Six",
+    year: 1955,
+    price: 45000,
+    mileage: 62000,
+    location: "Paris, France",
+    description:
+      "The Traction Avant pioneered front-wheel drive, monocoque construction, and independent suspension in a production car. This Noir 15-Six with grey cloth has the smooth six-cylinder engine. The last year of production makes this a historically significant automobile.",
+    shortDescription:
+      "Noir Traction Avant 15-Six, final year, pioneering FWD, six-cylinder.",
+    images: [
+      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
+      "https://images.unsplash.com/OvHMqzIQZlo?w=800&q=80",
+    ],
+    seller: {
+      name: "Garage Citroen Classique",
+      email: "contact@citroen-classique.fr",
+      phone: "+33 1 555 1616",
+    },
+    specs: {
+      engine: "2.9L Inline-6",
+      transmission: "3-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Noir",
+      interiorColor: "Grey Cloth",
+      bodyType: "Sedan",
+    },
+    features: [
+      "Front-wheel drive pioneer",
+      "Monocoque body",
+      "Independent suspension",
+      "Six-cylinder engine",
+      "Suicide doors",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-03-15",
+  },
+  {
+    id: "porsche-356-carrera-1960",
+    make: "Porsche",
+    model: "356B Carrera 2",
+    year: 1960,
+    price: 275000,
+    mileage: 48000,
+    location: "Stuttgart, Germany",
+    description:
+      "The 356 Carrera 2 is the ultimate development of the 356 line, with the four-cam Fuhrmann engine producing 130 hp. This Ivory example with red leather is one of only 310 Carrera 2 coupes produced. The quad-cam engine requires specialist maintenance but rewards with exceptional performance.",
+    shortDescription:
+      "Ivory 356B Carrera 2, four-cam Fuhrmann engine, 1 of 310 coupes, red leather.",
+    images: [
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+    ],
+    seller: {
+      name: "Klassik Automobil Stuttgart",
+      email: "info@klassik-stuttgart.de",
+      phone: "+49 711 555 0101",
+    },
+    specs: {
+      engine: "2.0L Four-Cam Flat-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Ivory",
+      interiorColor: "Red Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Fuhrmann four-cam engine",
+      "Disc brakes",
+      "Chrome wheels",
+      "Tool kit",
+      "Certificate of Authenticity",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-02-20",
+  },
+  {
+    id: "ferrari-testarossa-1988",
+    make: "Ferrari",
+    model: "Testarossa",
+    year: 1988,
+    price: 165000,
+    mileage: 48000,
+    location: "Milan, Italy",
+    description:
+      "The Pininfarina-designed Testarossa with its iconic side strakes is the definitive 1980s Ferrari. This Rosso Corsa example with tan leather has the 4.9L flat-12 producing 390 hp. Belt service completed at 42,000 km. The width and presence of this car is extraordinary.",
+    shortDescription:
+      "Rosso Corsa Testarossa, flat-12, iconic side strakes, belt service done.",
+    images: [
+      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
+      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
+    ],
+    seller: {
+      name: "Auto Classica Milano",
+      email: "vendite@autoclassica.it",
+      phone: "+39 02 555 0808",
+    },
+    specs: {
+      engine: "4.9L Flat-12",
+      transmission: "5-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Rosso Corsa",
+      interiorColor: "Tan Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Flat-12 engine",
+      "Side strakes",
+      "Pop-up headlights",
+      "Air conditioning",
+      "16-inch star wheels",
+    ],
+    condition: "excellent",
+    featured: true,
+    createdAt: "2026-02-05",
+  },
+  {
+    id: "lancia-delta-hf-turbo-1988",
+    make: "Lancia",
+    model: "Delta HF Turbo",
+    year: 1988,
+    price: 18000,
+    mileage: 138000,
+    location: "Turin, Italy",
+    description:
+      "The front-wheel-drive Delta HF Turbo predated the Integrale and offered turbocharged performance at a lower price point. This Grigio Quartz example with black Alcantara has the 1.6L turbo producing 140 hp. A practical everyday Italian performance car.",
+    shortDescription:
+      "Grigio Quartz Delta HF Turbo, 1.6 turbo, affordable Lancia performance.",
+    images: [
+      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
+      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
+    ],
+    seller: {
+      name: "Officina Lancia Torino",
+      email: "info@officinalancia.it",
+      phone: "+39 011 555 2020",
+    },
+    specs: {
+      engine: "1.6L Turbocharged Inline-4",
+      transmission: "5-Speed Manual",
+      drivetrain: "FWD",
+      exteriorColor: "Grigio Quartz",
+      interiorColor: "Black Alcantara",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "Turbo engine",
+      "Sport seats",
+      "Power steering",
+      "14-inch alloy wheels",
+      "Rear wiper",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-10",
+  },
+  {
+    id: "bmw-e60-m5-2005",
+    make: "BMW",
+    model: "M5 (E60)",
+    year: 2005,
+    price: 32000,
+    mileage: 98000,
+    location: "Munich, Germany",
+    description:
+      "The E60 M5 is the only BMW saloon with a naturally-aspirated V10 engine. This Silverstone Metallic example with black Merino leather has the 507 hp S85 V10 with the seven-speed SMG gearbox. Rod bearings replaced at 80,000 km. A unique chapter in M car history.",
+    shortDescription:
+      "Silverstone E60 M5, 507 hp V10, rod bearings done, SMG gearbox.",
+    images: [
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+    ],
+    seller: {
+      name: "Bavarian Classics GmbH",
+      email: "info@bavarian-classics.de",
+      phone: "+49 89 555 0303",
+    },
+    specs: {
+      engine: "5.0L S85 V10",
+      transmission: "7-Speed SMG",
+      drivetrain: "RWD",
+      exteriorColor: "Silverstone Metallic",
+      interiorColor: "Black Merino Leather",
+      bodyType: "Sedan",
+    },
+    features: [
+      "V10 engine",
+      "SMG gearbox",
+      "Rod bearings replaced",
+      "Heads-up display",
+      "19-inch M wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-27",
+  },
+  {
+    id: "alfa-romeo-giulietta-sprint-1960",
+    make: "Alfa Romeo",
+    model: "Giulietta Sprint",
+    year: 1960,
+    price: 55000,
+    mileage: 68000,
+    location: "Rome, Italy",
+    description:
+      "The Bertone-designed Giulietta Sprint launched the Giulietta series and defined Alfa Romeo's post-war identity. This Rosso example with beige leather has the 1.3L twin-cam producing 90 hp. A beautifully proportioned coupe that handles with typical Alfa precision.",
+    shortDescription:
+      "Rosso Giulietta Sprint, Bertone design, 1.3 twin-cam, post-war Alfa icon.",
+    images: [
+      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+    ],
+    seller: {
+      name: "Auto Classica Roma",
+      email: "vendite@autoclassicaroma.it",
+      phone: "+39 06 555 1919",
+    },
+    specs: {
+      engine: "1.3L Twin-Cam Inline-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Rosso",
+      interiorColor: "Beige Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Bertone design",
+      "Twin-cam engine",
+      "Weber carburettor",
+      "Chrome trim",
+      "Jaeger instruments",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-03-25",
+  },
+  {
+    id: "vw-golf-r32-mk4-2004",
+    make: "Volkswagen",
+    model: "Golf R32 Mk4",
+    year: 2004,
+    price: 18000,
+    mileage: 128000,
+    location: "Amsterdam, Netherlands",
+    description:
+      "The Mk4 R32 was the first Golf to feature the 3.2L VR6 engine and 4MOTION all-wheel drive. This Deep Blue Pearl example with black leather has the DSG dual-clutch gearbox and 241 hp. The VR6 exhaust note through the twin tailpipes is addictive.",
+    shortDescription:
+      "Deep Blue Pearl R32 Mk4, VR6, DSG, 4MOTION, twin-pipe exhaust note.",
+    images: [
+      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+    ],
+    seller: {
+      name: "Jan de Vries",
+      email: "jan.devries@email.nl",
+    },
+    specs: {
+      engine: "3.2L VR6",
+      transmission: "6-Speed DSG",
+      drivetrain: "AWD",
+      exteriorColor: "Deep Blue Pearl",
+      interiorColor: "Black Leather",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "VR6 engine",
+      "4MOTION AWD",
+      "DSG gearbox",
+      "Konig sport seats",
+      "18-inch Aristo wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-05-01",
+  },
+  {
+    id: "mercedes-c63-amg-w204-2008",
+    make: "Mercedes-Benz",
+    model: "C 63 AMG (W204)",
+    year: 2008,
+    price: 28000,
+    mileage: 88000,
+    location: "Stuttgart, Germany",
+    description:
+      "The naturally-aspirated 6.2L V8 C 63 AMG is the last of the old-school AMGs. This Obsidian Black example with black Nappa leather has 457 hp and the most dramatic exhaust note in its class. Performance Package with limited-slip differential. A future classic.",
+    shortDescription:
+      "Obsidian Black C 63 AMG, 6.2L V8, Performance Pack, old-school AMG.",
+    images: [
+      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+    ],
+    seller: {
+      name: "Klaus Fischer",
+      email: "klaus.fischer@email.de",
+    },
+    specs: {
+      engine: "6.2L M156 V8",
+      transmission: "7-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Obsidian Black",
+      interiorColor: "Black Nappa Leather",
+      bodyType: "Sedan",
+    },
+    features: [
+      "Performance Package",
+      "Limited-slip differential",
+      "AMG sport exhaust",
+      "19-inch AMG wheels",
+      "Harman Kardon audio",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-29",
+  },
+  {
+    id: "porsche-cayenne-turbo-2005",
+    make: "Porsche",
+    model: "Cayenne Turbo",
+    year: 2005,
+    price: 22000,
+    mileage: 142000,
+    location: "Zurich, Switzerland",
+    description:
+      "The first-generation Cayenne Turbo proved Porsche could build an SUV without compromising performance. This Basalt Black example with sand beige leather has the 4.5L twin-turbo V8 producing 450 hp. Surprisingly capable on both road and light off-road terrain.",
+    shortDescription:
+      "Basalt Black Cayenne Turbo, twin-turbo V8, 450 hp, Swiss-delivered SUV.",
+    images: [
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+    ],
+    seller: {
+      name: "Pierre Morel",
+      email: "pierre.morel@email.ch",
+    },
+    specs: {
+      engine: "4.5L Twin-Turbo V8",
+      transmission: "6-Speed Automatic",
+      drivetrain: "AWD",
+      exteriorColor: "Basalt Black",
+      interiorColor: "Sand Beige Leather",
+      bodyType: "SUV",
+    },
+    features: [
+      "Twin-turbo V8",
+      "Air suspension",
+      "Sport Chrono package",
+      "Bose surround sound",
+      "20-inch alloy wheels",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-11",
+  },
+  {
+    id: "lotus-seven-s3-1969",
+    make: "Lotus",
+    model: "Seven Series 3",
+    year: 1969,
+    price: 42000,
+    mileage: 32000,
+    location: "London, United Kingdom",
+    description:
+      "The Lotus Seven is the ultimate expression of lightweight performance. This aluminium-bodied Seven Series 3 in green with yellow nosecone has the Ford 1600 crossflow engine. Weighing just 460 kg, the power-to-weight ratio delivers a visceral driving experience unlike anything else.",
+    shortDescription:
+      "Green/Yellow Lotus Seven S3, aluminium body, 460 kg, visceral driving.",
+    images: [
+      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
+      "https://images.unsplash.com/nnhSYjLhtG4?w=800&q=80",
+    ],
+    seller: {
+      name: "Simon Clarke",
+      email: "simon.clarke@email.co.uk",
+    },
+    specs: {
+      engine: "1.6L Ford Crossflow Inline-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Green / Yellow Nosecone",
+      interiorColor: "Black Vinyl",
+      bodyType: "Roadster",
+    },
+    features: [
+      "Aluminium body panels",
+      "Tubular space frame",
+      "460 kg kerb weight",
+      "Side screens",
+      "Fold-flat windscreen",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-06",
+  },
+  {
+    id: "renault-dauphine-gordini-1962",
+    make: "Renault",
+    model: "Dauphine Gordini",
+    year: 1962,
+    price: 18000,
+    mileage: 72000,
+    location: "Paris, France",
+    description:
+      "The Gordini-tuned Dauphine is a pocket-rocket from the early 1960s. This Bleu Gordini example with grey vinyl has the rear-mounted 845cc engine tuned to produce 40 hp. While modest by modern standards, the Dauphine Gordini punched above its weight in period rallies.",
+    shortDescription:
+      "Bleu Gordini Dauphine, Gordini-tuned rear engine, rally-bred pocket rocket.",
+    images: [
+      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+    ],
+    seller: {
+      name: "Pierre Duval",
+      email: "pierre.duval@email.fr",
+    },
+    specs: {
+      engine: "0.8L Gordini Inline-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Bleu Gordini",
+      interiorColor: "Grey Vinyl",
+      bodyType: "Sedan",
+    },
+    features: [
+      "Gordini-tuned engine",
+      "Rear-engine layout",
+      "Rally heritage",
+      "Chrome hubcaps",
+      "Independent suspension",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-04-10",
+  },
+  {
+    id: "bmw-isetta-300-1959",
+    make: "BMW",
+    model: "Isetta 300",
+    year: 1959,
+    price: 42000,
+    mileage: 32000,
+    location: "Munich, Germany",
+    description:
+      "The Isetta saved BMW from bankruptcy in the 1950s. This Feuerrot example is an Italian-licensed microcar with a front-opening door and 298cc single-cylinder engine. Fully restored to concours condition. The bubble car that kept BMW alive to build the cars we love today.",
+    shortDescription:
+      "Feuerrot BMW Isetta 300, bubble car icon, concours-restored, BMW's saviour.",
+    images: [
+      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+    ],
+    seller: {
+      name: "Bavarian Classics GmbH",
+      email: "info@bavarian-classics.de",
+      phone: "+49 89 555 0303",
+    },
+    specs: {
+      engine: "0.3L Single-Cylinder",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Feuerrot",
+      interiorColor: "Grey Vinyl",
+      bodyType: "Microcar",
+    },
+    features: [
+      "Front-opening door",
+      "Single-cylinder engine",
+      "Bubble windows",
+      "Concours restoration",
+      "Steering column swings with door",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-03-10",
+  },
+  {
+    id: "jaguar-xk120-roadster-1953",
+    make: "Jaguar",
+    model: "XK120 OTS Roadster",
+    year: 1953,
+    price: 135000,
+    mileage: 48000,
+    location: "London, United Kingdom",
+    description:
+      "The XK120 was the fastest production car in the world when launched. This British Racing Green Roadster with tan leather has the legendary 3.4L XK twin-cam six-cylinder. Wire wheels and the curvaceous bodywork make it one of the most photogenic cars ever built.",
+    shortDescription:
+      "BRG XK120 Roadster, fastest car of its era, XK twin-cam, wire wheels.",
+    images: [
+      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
+      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
+    ],
+    seller: {
+      name: "British Heritage Motors",
+      email: "sales@british-heritage.co.uk",
+      phone: "+44 20 555 1818",
+    },
+    specs: {
+      engine: "3.4L XK Inline-6",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "British Racing Green",
+      interiorColor: "Tan Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "XK twin-cam engine",
+      "Wire wheels",
+      "Twin SU carburettors",
+      "Chrome bumpers",
+      "Tonneau cover",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-02-28",
+  },
+  {
+    id: "fiat-dino-coupe-1969",
+    make: "Fiat",
+    model: "Dino 2400 Coupe",
+    year: 1969,
+    price: 85000,
+    mileage: 72000,
+    location: "Turin, Italy",
+    description:
+      "The Fiat Dino shares its Ferrari-designed V6 engine with the Ferrari Dino 246. This Bertone-designed 2400 Coupe in Verde Pino with tan leather has the larger 2.4L V6 producing 180 hp. A sophisticated grand tourer with genuine Ferrari DNA at a fraction of the price.",
+    shortDescription:
+      "Verde Pino Fiat Dino 2400 Coupe, Ferrari V6, Bertone design, GT sophistication.",
+    images: [
+      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
+      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
+    ],
+    seller: {
+      name: "Marco Bianchi",
+      email: "marco.bianchi@email.it",
+    },
+    specs: {
+      engine: "2.4L Ferrari V6",
+      transmission: "5-Speed Manual (ZF)",
+      drivetrain: "FWD",
+      exteriorColor: "Verde Pino",
+      interiorColor: "Tan Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Ferrari-designed V6",
+      "Bertone coupe body",
+      "ZF five-speed gearbox",
+      "Power steering",
+      "Cromodora wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-01",
+  },
+  {
+    id: "volvo-pv544-1965",
+    make: "Volvo",
+    model: "PV544",
+    year: 1965,
+    price: 22000,
+    mileage: 104000,
+    location: "Gothenburg, Sweden",
+    description:
+      "The PV544 is Volvo's charming 1940s-designed saloon that remained in production until 1965. This California White example with red vinyl has the B18 engine and a rugged build quality typical of Volvo. The split rear window and rounded body give it an Americanised look.",
+    shortDescription:
+      "California White PV544, B18 engine, split rear window, charming final-year Volvo.",
+    images: [
+      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
+      "https://images.unsplash.com/w5d3zmSe4pw?w=800&q=80",
+    ],
+    seller: {
+      name: "Anders Lindqvist",
+      email: "anders.lindqvist@email.se",
+    },
+    specs: {
+      engine: "1.8L B18 Inline-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "California White",
+      interiorColor: "Red Vinyl",
+      bodyType: "Sedan",
+    },
+    features: [
+      "Split rear window",
+      "B18 engine",
+      "Chrome bumpers",
+      "Three-point seatbelts",
+      "Heater",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-04-17",
+  },
+  {
+    id: "porsche-cayman-s-987-2006",
+    make: "Porsche",
+    model: "Cayman S (987)",
+    year: 2006,
+    price: 28000,
+    mileage: 88000,
+    location: "Geneva, Switzerland",
+    description:
+      "The first-generation Cayman S proved that a mid-engine coupe could be the best car in the Porsche range. This Arctic Silver example with black leather has the 3.4L flat-six producing 295 hp. The fixed roof adds rigidity over the Boxster for even sharper handling.",
+    shortDescription:
+      "Arctic Silver Cayman S, 3.4L flat-six, mid-engine precision, Swiss car.",
+    images: [
+      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+    ],
+    seller: {
+      name: "Prestige Motors AG",
+      email: "sales@prestige-motors.ch",
+      phone: "+41 44 555 0202",
+    },
+    specs: {
+      engine: "3.4L Flat-6",
+      transmission: "6-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Arctic Silver",
+      interiorColor: "Black Leather",
+      bodyType: "Coupe",
+    },
+    features: [
+      "Mid-engine layout",
+      "Sport Chrono package",
+      "PASM adaptive dampers",
+      "Bose surround sound",
+      "19-inch Cayman S wheels",
+    ],
+    condition: "good",
+    featured: false,
+    createdAt: "2026-05-05",
+  },
+  {
+    id: "vw-type3-fastback-1971",
+    make: "Volkswagen",
+    model: "Type 3 Fastback",
+    year: 1971,
+    price: 16000,
+    mileage: 82000,
+    location: "Berlin, Germany",
+    description:
+      "The Type 3 Fastback is the sophisticated alternative to the Beetle with a pancake flat-four engine. This Elm Green example with black vinyl has the fuel-injected 1.6L engine and a boot at both ends thanks to the flat engine design. A practical and elegant air-cooled VW.",
+    shortDescription:
+      "Elm Green Type 3 Fastback, fuel-injected, dual-boot, elegant air-cooled VW.",
+    images: [
+      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+    ],
+    seller: {
+      name: "Dirk Schneider",
+      email: "dirk.schneider@email.de",
+    },
+    specs: {
+      engine: "1.6L Air-Cooled Flat-4",
+      transmission: "4-Speed Manual",
+      drivetrain: "RWD",
+      exteriorColor: "Elm Green",
+      interiorColor: "Black Vinyl",
+      bodyType: "Hatchback",
+    },
+    features: [
+      "Fuel injection",
+      "Pancake flat engine",
+      "Front and rear boot",
+      "IRS rear suspension",
+      "Chrome bumpers",
+    ],
+    condition: "fair",
+    featured: false,
+    createdAt: "2026-05-03",
+  },
+  {
+    id: "bmw-e52-z8-alpina-2003",
+    make: "BMW",
+    model: "Z8 Alpina Roadster V8",
+    year: 2003,
+    price: 285000,
+    mileage: 28000,
+    location: "Munich, Germany",
+    description:
+      "The Alpina Roadster V8 is the rarer, more refined version of the Z8 with an automatic gearbox and Alpina-tuned 4.8L V8. This Titanium Silver example with red Nappa leather is one of only 555 produced. Alpina added softer suspension and a switchgear for true grand touring.",
+    shortDescription:
+      "Titanium Silver Alpina Z8, 1 of 555, Alpina V8, red Nappa, grand tourer.",
+    images: [
+      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+    ],
+    seller: {
+      name: "Bavarian Classics GmbH",
+      email: "info@bavarian-classics.de",
+      phone: "+49 89 555 0303",
+    },
+    specs: {
+      engine: "4.8L Alpina V8",
+      transmission: "5-Speed Automatic",
+      drivetrain: "RWD",
+      exteriorColor: "Titanium Silver",
+      interiorColor: "Red Nappa Leather",
+      bodyType: "Convertible",
+    },
+    features: [
+      "Alpina-tuned V8",
+      "Limited edition",
+      "Alpina softened suspension",
+      "Hardtop included",
+      "20-inch Alpina wheels",
+    ],
+    condition: "excellent",
+    featured: false,
+    createdAt: "2026-02-15",
   },
 ];
 
