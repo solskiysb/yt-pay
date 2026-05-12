@@ -49,8 +49,8 @@ export default function RegisterPage() {
       return;
     }
 
-    setSuccess(true);
-    setLoading(false);
+    // Auto-confirm is enabled, redirect to dashboard
+    window.location.href = "/dashboard";
   }
 
   if (success) {
