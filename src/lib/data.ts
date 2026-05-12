@@ -14,8 +14,8 @@ export const cars: Car[] = [
     shortDescription:
       "Matching-numbers RS 2.7 in iconic white/green livery with full history.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -54,8 +54,8 @@ export const cars: Car[] = [
     shortDescription:
       "Guards Red 930 Turbo with factory sport seats and full Swiss service history.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -94,8 +94,8 @@ export const cars: Car[] = [
     shortDescription:
       "Last of the air-cooled 911s in Midnight Blue, two-owner Bavarian car.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Hans Muller",
@@ -133,8 +133,8 @@ export const cars: Car[] = [
     shortDescription:
       "Alpine White E30 M3 with dogleg box and complete BMW dealer records.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -173,8 +173,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rare 2002 Turbo, one of 1,672 built, concours-restored in 2018.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
     ],
     seller: {
       name: "De Klassieker BV",
@@ -213,8 +213,8 @@ export const cars: Car[] = [
     shortDescription:
       "Imola Red E46 M3, six-speed manual, subframe reinforced and rod bearings done.",
     images: [
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Carlos Fernandez",
@@ -253,8 +253,8 @@ export const cars: Car[] = [
     shortDescription:
       "Horizon Blue Pagoda with cream leather, California-delivery car returned to Europe.",
     images: [
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
     ],
     seller: {
       name: "Galerie Automobile Paris",
@@ -293,8 +293,8 @@ export const cars: Car[] = [
     shortDescription:
       "Porsche-built E500 super sedan, single-country Swedish car from new.",
     images: [
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
     ],
     seller: {
       name: "Nordic Classics AB",
@@ -333,8 +333,8 @@ export const cars: Car[] = [
     shortDescription:
       "Smoke Silver Cosworth 190E with Sportline Recaros and original paint.",
     images: [
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -373,8 +373,8 @@ export const cars: Car[] = [
     shortDescription:
       "Alfa Red Bertone GTV 2000 with rebuilt twin-cam and Weber carbs.",
     images: [
-      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
-      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+      "https://images.unsplash.com/photo-1756386159686-74c9ba1630e7?w=800&q=80",
+      "https://images.unsplash.com/photo-1741089499280-e8f3cfe03020?w=800&q=80",
     ],
     seller: {
       name: "Officina Alfa Milano",
@@ -413,8 +413,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Medio Spider Veloce, fuel-injected, new soft top, Mediterranean ready.",
     images: [
-      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
-      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
+      "https://images.unsplash.com/photo-1741089499280-e8f3cfe03020?w=800&q=80",
+      "https://images.unsplash.com/photo-1741090868609-2166f09eab8e?w=800&q=80",
     ],
     seller: {
       name: "Mediterranean Classics",
@@ -452,8 +452,8 @@ export const cars: Car[] = [
     shortDescription:
       "Series 1 E-Type Roadster in Opalescent Dark Blue, fully restored to concours standard.",
     images: [
-      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
-      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
+      "https://images.unsplash.com/photo-1742412615479-8173c0189475?w=800&q=80",
+      "https://images.unsplash.com/photo-1753266322092-3199ec27c087?w=800&q=80",
     ],
     seller: {
       name: "Heritage Motor Gallery",
@@ -492,8 +492,8 @@ export const cars: Car[] = [
     shortDescription:
       "Lotus White Karmann Ghia, rust-free, 15 years in single Dutch ownership.",
     images: [
-      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
-      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+      "https://images.unsplash.com/photo-1760200851878-9460b69d5cb8?w=800&q=80",
+      "https://images.unsplash.com/photo-1570804743956-7a011b8485ad?w=800&q=80",
     ],
     seller: {
       name: "Jan de Vries",
@@ -531,8 +531,8 @@ export const cars: Car[] = [
     shortDescription:
       "Two-tone Bay Window camper bus with pop-top and rebuilt engine.",
     images: [
-      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
-      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+      "https://images.unsplash.com/photo-1570804743956-7a011b8485ad?w=800&q=80",
+      "https://images.unsplash.com/photo-1695143135403-f44ab92814ea?w=800&q=80",
     ],
     seller: {
       name: "Surf & Classic Barcelona",
@@ -571,8 +571,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Monza Delta Integrale Evo 1, rally-bred legend with recent major service.",
     images: [
-      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
-      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
+      "https://images.unsplash.com/photo-1667297413627-df8c0aaa88e0?w=800&q=80",
+      "https://images.unsplash.com/photo-1758621518748-bde9e586ef9f?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -611,8 +611,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Positano 124 Spider, Pininfarina design, repainted in original colour.",
     images: [
-      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
-      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
+      "https://images.unsplash.com/photo-1757120602359-59272740fb0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1756842200624-4e54cc32e5e0?w=800&q=80",
     ],
     seller: {
       name: "Pablo Ruiz",
@@ -650,8 +650,8 @@ export const cars: Car[] = [
     shortDescription:
       "Pearl White P1800 S, lifelong Swedish car with original leather interior.",
     images: [
-      "https://images.unsplash.com/qValfiWMIII?w=800&q=80",
-      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
+      "https://images.unsplash.com/photo-1612958043022-27c6bf99ba93?w=800&q=80",
+      "https://images.unsplash.com/photo-1514732286501-e307d402a0e9?w=800&q=80",
     ],
     seller: {
       name: "Svensk Klassiker AB",
@@ -690,8 +690,8 @@ export const cars: Car[] = [
     shortDescription:
       "Eddy Grey 900 Turbo three-door, enthusiast-maintained Saab classic.",
     images: [
-      "https://images.unsplash.com/HzX6ncsim9U?w=800&q=80",
-      "https://images.unsplash.com/Liqmmue-kJY?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426310974-4dfcbc9438c6?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426311657-f05fb67a3974?w=800&q=80",
     ],
     seller: {
       name: "Erik Johansson",
@@ -729,8 +729,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa 308 GTS, carburetted V8, Massini report, tools and books.",
     images: [
-      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
-      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
+      "https://images.unsplash.com/photo-1658905097696-ec44846c3c3c?w=800&q=80",
+      "https://images.unsplash.com/photo-1528561404880-67a16c7f9860?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -769,8 +769,8 @@ export const cars: Car[] = [
     shortDescription:
       "Coniston Green Defender 90, galvanized chassis, BFG tyres, adventure-ready.",
     images: [
-      "https://images.unsplash.com/QZ4gaM5R9oA?w=800&q=80",
-      "https://images.unsplash.com/3jquALuN6B0?w=800&q=80",
+      "https://images.unsplash.com/photo-1763453646604-59f7295162ef?w=800&q=80",
+      "https://images.unsplash.com/photo-1639104087848-f5b1b4b6598d?w=800&q=80",
     ],
     seller: {
       name: "Overland Europe BV",
@@ -809,8 +809,8 @@ export const cars: Car[] = [
     shortDescription:
       "Matching-numbers 356A Speedster in Silver with red leather and Porsche CoA.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -849,8 +849,8 @@ export const cars: Car[] = [
     shortDescription:
       "Chamonix White 3.0 CSL Batmobile with original aero kit and lightweight panels.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -889,8 +889,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brun Scarabee DS 21 Pallas with serviced hydropneumatic suspension.",
     images: [
-      "https://images.unsplash.com/xPFCPOvr1GA?w=800&q=80",
-      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
+      "https://images.unsplash.com/photo-1558671728-02f3f42777ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1680986427570-c888a3470324?w=800&q=80",
     ],
     seller: {
       name: "Garage Citroen Classique",
@@ -929,8 +929,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Fly Dino 246 GT, matching numbers, Ferrari Classiche certified.",
     images: [
-      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
-      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
+      "https://images.unsplash.com/photo-1528561404880-67a16c7f9860?w=800&q=80",
+      "https://images.unsplash.com/photo-1656150686176-f1978b5d7689?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -969,8 +969,8 @@ export const cars: Car[] = [
     shortDescription:
       "Miami Blue 205 GTI 1.9, unmodified benchmark hot hatch with Speedline wheels.",
     images: [
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
     ],
     seller: {
       name: "French Classics Auto",
@@ -1008,8 +1008,8 @@ export const cars: Car[] = [
     shortDescription:
       "California Sage DB6 Vantage with triple Webers and Magnolia leather.",
     images: [
-      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
-      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+      "https://images.unsplash.com/photo-1560091447-6367b0d33903?w=800&q=80",
+      "https://images.unsplash.com/photo-1565793463692-83267d9ee3bf?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -1048,8 +1048,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bleu Alpine A110 1600S, Gordini engine, rally legend in lightweight fibreglass.",
     images: [
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
     ],
     seller: {
       name: "Heritage Motor Gallery",
@@ -1088,8 +1088,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver 300 SL Gullwing with red plaid, 30 years in European collection.",
     images: [
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1128,8 +1128,8 @@ export const cars: Car[] = [
     shortDescription:
       "Azzurro Metallizzato Ghibli 4.7, Ghia design, Maserati Classiche documented.",
     images: [
-      "https://images.unsplash.com/eZJiWQjz1dc?w=800&q=80",
-      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
+      "https://images.unsplash.com/photo-1561444490-48fbdf5d9683?w=800&q=80",
+      "https://images.unsplash.com/photo-1542035954-550b3c777a2c?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -1168,8 +1168,8 @@ export const cars: Car[] = [
     shortDescription:
       "Pimento Red TR6, straight-six roadster, 20 years in Dutch ownership.",
     images: [
-      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
-      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
+      "https://images.unsplash.com/photo-1571006668967-61991fc20d0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1654077742401-5b39fc958322?w=800&q=80",
     ],
     seller: {
       name: "British Car Corner",
@@ -1207,8 +1207,8 @@ export const cars: Car[] = [
     shortDescription:
       "Titanium Silver Z8 with just 34,000 km, S62 V8, hardtop included.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -1247,8 +1247,8 @@ export const cars: Car[] = [
     shortDescription:
       "Celeste Blue Cinquecento 500 L, canvas roof, the ultimate city car icon.",
     images: [
-      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
-      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
+      "https://images.unsplash.com/photo-1756842200624-4e54cc32e5e0?w=800&q=80",
+      "https://images.unsplash.com/photo-1755169610617-2097aba52350?w=800&q=80",
     ],
     seller: {
       name: "Mediterranean Classics",
@@ -1286,8 +1286,8 @@ export const cars: Car[] = [
     shortDescription:
       "Guards Red 944 Turbo S, 250 hp, M030 suspension, 1 of 1,635 built.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1326,8 +1326,8 @@ export const cars: Car[] = [
     shortDescription:
       "Fjord Green 356A Coupe, numbers-matching, recently serviced with new tyres.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1366,8 +1366,8 @@ export const cars: Car[] = [
     shortDescription:
       "Signal Orange 914 2.0, rebuilt engine, fresh paint, Targa-top fun.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Lukas Berger",
@@ -1405,8 +1405,8 @@ export const cars: Car[] = [
     shortDescription:
       "Alpine White 924 Turbo with iconic Pasha interior and NACA ducts.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Pierre Morel",
@@ -1444,8 +1444,8 @@ export const cars: Car[] = [
     shortDescription:
       "Grand Prix White 964 C4, AWD, exclusive Porsche Centre service history.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -1484,8 +1484,8 @@ export const cars: Car[] = [
     shortDescription:
       "Arena Red 993 Turbo, twin-turbo AWD legend, new turbos and engine reseal.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -1524,8 +1524,8 @@ export const cars: Car[] = [
     shortDescription:
       "Meridian Metallic Boxster S, IMS bearing done, mid-engine Porsche value.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Antoine Dupont",
@@ -1563,8 +1563,8 @@ export const cars: Car[] = [
     shortDescription:
       "Inka Orange 2002tii with original Kugelfischer injection, rust-free body.",
     images: [
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Dirk Schneider",
@@ -1602,8 +1602,8 @@ export const cars: Car[] = [
     shortDescription:
       "Fjord Blue E9 3.0 CSi, fuel-injected pillarless coupe, saddle leather.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -1642,8 +1642,8 @@ export const cars: Car[] = [
     shortDescription:
       "Delphin Metallic E28 M5, M1-derived engine, the original super sedan.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
     ],
     seller: {
       name: "De Klassieker BV",
@@ -1682,8 +1682,8 @@ export const cars: Car[] = [
     shortDescription:
       "Avus Blue E34 M5 3.8, hand-built S38 engine, timing chain done.",
     images: [
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Stefan Huber",
@@ -1721,8 +1721,8 @@ export const cars: Car[] = [
     shortDescription:
       "Dakar Yellow E36 M3 coupe, Euro-spec S50, VANOS rebuilt.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Lars Petersen",
@@ -1760,8 +1760,8 @@ export const cars: Car[] = [
     shortDescription:
       "Estoril Blue Z3 M Coupe, S54-powered clown shoe, black Nappa leather.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
     ],
     seller: {
       name: "Thomas Weber",
@@ -1799,8 +1799,8 @@ export const cars: Car[] = [
     shortDescription:
       "Anthracite E39 540i, rare six-speed manual V8, cooling system refreshed.",
     images: [
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Willem van Dijk",
@@ -1838,8 +1838,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver W111 250 SE Coupe, fuel-injected, chrome re-plated, red leather.",
     images: [
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -1878,8 +1878,8 @@ export const cars: Car[] = [
     shortDescription:
       "Astral Silver 450 SEL 6.9, fastest sedan of its era, hydropneumatic ride.",
     images: [
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
     ],
     seller: {
       name: "Friedrich Bauer",
@@ -1917,8 +1917,8 @@ export const cars: Car[] = [
     shortDescription:
       "Nautical Blue 560 SEC, V8 pillarless coupe, new headliner and fresh brakes.",
     images: [
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
     ],
     seller: {
       name: "Marc Janssen",
@@ -1956,8 +1956,8 @@ export const cars: Car[] = [
     shortDescription:
       "Signal Red R107 300 SL, cream leather, both tops, Riviera-ready.",
     images: [
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
     ],
     seller: {
       name: "Cote d'Azur Classics",
@@ -1996,8 +1996,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blue-Black 190E 2.6 Sportline, lowered suspension, smooth inline-six.",
     images: [
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
     ],
     seller: {
       name: "Pavel Novak",
@@ -2035,8 +2035,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brilliant Silver E55 AMG, hand-built 5.4L V8, autobahn devourer.",
     images: [
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
     ],
     seller: {
       name: "Klaus Fischer",
@@ -2074,8 +2074,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bianco Gardenia Giulia Sprint GT, twin-cam, twin Webers, honest patina.",
     images: [
-      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
-      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+      "https://images.unsplash.com/photo-1741090868609-2166f09eab8e?w=800&q=80",
+      "https://images.unsplash.com/photo-1756386159686-74c9ba1630e7?w=800&q=80",
     ],
     seller: {
       name: "Marco Bianchi",
@@ -2113,8 +2113,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Alfa GTV6 2.5, legendary Busso V6, transaxle layout.",
     images: [
-      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
-      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+      "https://images.unsplash.com/photo-1756386159686-74c9ba1630e7?w=800&q=80",
+      "https://images.unsplash.com/photo-1741089499280-e8f3cfe03020?w=800&q=80",
     ],
     seller: {
       name: "Officina Alfa Milano",
@@ -2153,8 +2153,8 @@ export const cars: Car[] = [
     shortDescription:
       "Nero 155 Q4, turbo AWD with Delta Integrale mechanicals, rare performance saloon.",
     images: [
-      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
-      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
+      "https://images.unsplash.com/photo-1741089499280-e8f3cfe03020?w=800&q=80",
+      "https://images.unsplash.com/photo-1741090868609-2166f09eab8e?w=800&q=80",
     ],
     seller: {
       name: "Giuseppe Rossi",
@@ -2192,8 +2192,8 @@ export const cars: Car[] = [
     shortDescription:
       "Verde Tropico 164, Busso V6, Pininfarina design, affordable Italian class.",
     images: [
-      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
-      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+      "https://images.unsplash.com/photo-1741090868609-2166f09eab8e?w=800&q=80",
+      "https://images.unsplash.com/photo-1756386159686-74c9ba1630e7?w=800&q=80",
     ],
     seller: {
       name: "Carlos Fernandez",
@@ -2232,8 +2232,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Competizione 8C, 1 of 500, Ferrari V8, just 12,000 km from new.",
     images: [
-      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
-      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+      "https://images.unsplash.com/photo-1756386159686-74c9ba1630e7?w=800&q=80",
+      "https://images.unsplash.com/photo-1741089499280-e8f3cfe03020?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -2272,8 +2272,8 @@ export const cars: Car[] = [
     shortDescription:
       "Regency Red XJ6 Sovereign, Pininfarina design, biscuit leather, XK six.",
     images: [
-      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
-      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
+      "https://images.unsplash.com/photo-1753266322092-3199ec27c087?w=800&q=80",
+      "https://images.unsplash.com/photo-1750957823101-87ec89cf6862?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -2312,8 +2312,8 @@ export const cars: Car[] = [
     shortDescription:
       "Westminster Blue XJS V12 convertible, magnolia leather, V12 grand tourer.",
     images: [
-      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
-      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
+      "https://images.unsplash.com/photo-1750957823101-87ec89cf6862?w=800&q=80",
+      "https://images.unsplash.com/photo-1742412615479-8173c0189475?w=800&q=80",
     ],
     seller: {
       name: "Caledonian Classics",
@@ -2351,8 +2351,8 @@ export const cars: Car[] = [
     shortDescription:
       "BRG XK8 Coupe, AJ-V8, cream leather, chain tensioners sorted.",
     images: [
-      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
-      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
+      "https://images.unsplash.com/photo-1742412615479-8173c0189475?w=800&q=80",
+      "https://images.unsplash.com/photo-1753266322092-3199ec27c087?w=800&q=80",
     ],
     seller: {
       name: "Padraig O'Sullivan",
@@ -2390,8 +2390,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa 328 GTS, Swiss delivery, full belt service, V8 targa.",
     images: [
-      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
-      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
+      "https://images.unsplash.com/photo-1656150686176-f1978b5d7689?w=800&q=80",
+      "https://images.unsplash.com/photo-1658905097696-ec44846c3c3c?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -2430,8 +2430,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Modena 348 TS, engine-out service done, affordable mid-engine Ferrari.",
     images: [
-      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
-      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
+      "https://images.unsplash.com/photo-1658905097696-ec44846c3c3c?w=800&q=80",
+      "https://images.unsplash.com/photo-1528561404880-67a16c7f9860?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Roma",
@@ -2470,8 +2470,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Fiorano F355 Berlinetta, six-speed manual, titanium exhaust, howling V8.",
     images: [
-      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
-      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
+      "https://images.unsplash.com/photo-1528561404880-67a16c7f9860?w=800&q=80",
+      "https://images.unsplash.com/photo-1656150686176-f1978b5d7689?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -2510,8 +2510,8 @@ export const cars: Car[] = [
     shortDescription:
       "Grigio Ingrid 456 GT, V12 six-speed manual, continent-crossing grand tourer.",
     images: [
-      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
-      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
+      "https://images.unsplash.com/photo-1656150686176-f1978b5d7689?w=800&q=80",
+      "https://images.unsplash.com/photo-1658905097696-ec44846c3c3c?w=800&q=80",
     ],
     seller: {
       name: "Galerie Automobile Paris",
@@ -2550,8 +2550,8 @@ export const cars: Car[] = [
     shortDescription:
       "Verde Espada Series III, V12 four-seater, Bertone design, tobacco leather.",
     images: [
-      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
-      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
+      "https://images.unsplash.com/photo-1741779427006-cc0bfc107236?w=800&q=80",
+      "https://images.unsplash.com/photo-1630769660701-3454835913dc?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -2590,8 +2590,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bianco Jalpa 3500, rare V8 Lamborghini, 1 of 410 built, red leather.",
     images: [
-      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
-      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
+      "https://images.unsplash.com/photo-1630769660701-3454835913dc?w=800&q=80",
+      "https://images.unsplash.com/photo-1741779427006-cc0bfc107236?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Roma",
@@ -2630,8 +2630,8 @@ export const cars: Car[] = [
     shortDescription:
       "Viola SE30 Diablo VT, V12 AWD, just 38,000 km, full service history.",
     images: [
-      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
-      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
+      "https://images.unsplash.com/photo-1741779427006-cc0bfc107236?w=800&q=80",
+      "https://images.unsplash.com/photo-1630769660701-3454835913dc?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -2670,8 +2670,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cumberland Grey V8 Vantage, Britain's first supercar, red Connolly leather.",
     images: [
-      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
-      "https://images.unsplash.com/7T5juXetLeU?w=800&q=80",
+      "https://images.unsplash.com/photo-1565793463692-83267d9ee3bf?w=800&q=80",
+      "https://images.unsplash.com/photo-1628608570910-5ba45093d2c2?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -2710,8 +2710,8 @@ export const cars: Car[] = [
     shortDescription:
       "Solway Grey DB7 Vantage, V12 manual, Ian Callum design, Parchment leather.",
     images: [
-      "https://images.unsplash.com/7T5juXetLeU?w=800&q=80",
-      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+      "https://images.unsplash.com/photo-1628608570910-5ba45093d2c2?w=800&q=80",
+      "https://images.unsplash.com/photo-1560091447-6367b0d33903?w=800&q=80",
     ],
     seller: {
       name: "Galerie Automobile Paris",
@@ -2750,8 +2750,8 @@ export const cars: Car[] = [
     shortDescription:
       "Celeste Chiaro Merak SS, mid-engine V6, Giugiaro design, SS upgrades.",
     images: [
-      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
-      "https://images.unsplash.com/fizuSGluj8M?w=800&q=80",
+      "https://images.unsplash.com/photo-1542035954-550b3c777a2c?w=800&q=80",
+      "https://images.unsplash.com/photo-1680744764636-60dfa5471940?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -2790,8 +2790,8 @@ export const cars: Car[] = [
     shortDescription:
       "Grigio Biturbo S, twin-turbo V6, freshly rebuilt turbos, affordable Maserati.",
     images: [
-      "https://images.unsplash.com/fizuSGluj8M?w=800&q=80",
-      "https://images.unsplash.com/eZJiWQjz1dc?w=800&q=80",
+      "https://images.unsplash.com/photo-1680744764636-60dfa5471940?w=800&q=80",
+      "https://images.unsplash.com/photo-1561444490-48fbdf5d9683?w=800&q=80",
     ],
     seller: {
       name: "Giuseppe Rossi",
@@ -2829,8 +2829,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Nettuno 3200 GT, twin-turbo V8, boomerang lights, cambelt done.",
     images: [
-      "https://images.unsplash.com/eZJiWQjz1dc?w=800&q=80",
-      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
+      "https://images.unsplash.com/photo-1561444490-48fbdf5d9683?w=800&q=80",
+      "https://images.unsplash.com/photo-1542035954-550b3c777a2c?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -2869,8 +2869,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Arancio Stratos Stradale, 1 of 492, Ferrari V6, rally legend.",
     images: [
-      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
-      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
+      "https://images.unsplash.com/photo-1758621518748-bde9e586ef9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1645778804878-70fd3856118a?w=800&q=80",
     ],
     seller: {
       name: "Marco Bianchi",
@@ -2908,8 +2908,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Lancia Fulvia 1.6 HF, rally-bred V4, lightweight coupe.",
     images: [
-      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
-      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
+      "https://images.unsplash.com/photo-1645778804878-70fd3856118a?w=800&q=80",
+      "https://images.unsplash.com/photo-1667297413627-df8c0aaa88e0?w=800&q=80",
     ],
     seller: {
       name: "Officina Lancia Torino",
@@ -2948,8 +2948,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Lord Thema 8.32, Ferrari V8 in a Lancia sedan, Poltrona Frau leather.",
     images: [
-      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
-      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
+      "https://images.unsplash.com/photo-1667297413627-df8c0aaa88e0?w=800&q=80",
+      "https://images.unsplash.com/photo-1758621518748-bde9e586ef9f?w=800&q=80",
     ],
     seller: {
       name: "Officina Lancia Torino",
@@ -2988,8 +2988,8 @@ export const cars: Car[] = [
     shortDescription:
       "Giallo Tahiti X1/9, mid-engine Bertone targa, lightweight fun.",
     images: [
-      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
-      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
+      "https://images.unsplash.com/photo-1755169610617-2097aba52350?w=800&q=80",
+      "https://images.unsplash.com/photo-1757120602359-59272740fb0a?w=800&q=80",
     ],
     seller: {
       name: "Pierre Duval",
@@ -3027,8 +3027,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Capri 124 Sport Coupe, twin-cam, attractive Italian sporting coupe.",
     images: [
-      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
-      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
+      "https://images.unsplash.com/photo-1757120602359-59272740fb0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1756842200624-4e54cc32e5e0?w=800&q=80",
     ],
     seller: {
       name: "Mediterranean Classics",
@@ -3066,8 +3066,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa Barchetta, 1.8 16V roadster, affordable open-air fun.",
     images: [
-      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
-      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
+      "https://images.unsplash.com/photo-1756842200624-4e54cc32e5e0?w=800&q=80",
+      "https://images.unsplash.com/photo-1755169610617-2097aba52350?w=800&q=80",
     ],
     seller: {
       name: "Luca Moretti",
@@ -3105,8 +3105,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brun Sandalwood 504 Coupe V6, Pininfarina elegance, tobacco leather.",
     images: [
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
     ],
     seller: {
       name: "French Classics Auto",
@@ -3144,8 +3144,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brun Scarabee SM, Maserati V6, hydropneumatic, DIRAVI steering marvel.",
     images: [
-      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
-      "https://images.unsplash.com/OvHMqzIQZlo?w=800&q=80",
+      "https://images.unsplash.com/photo-1680986427570-c888a3470324?w=800&q=80",
+      "https://images.unsplash.com/photo-1679108229811-1f8c6debf983?w=800&q=80",
     ],
     seller: {
       name: "Garage Citroen Classique",
@@ -3184,8 +3184,8 @@ export const cars: Car[] = [
     shortDescription:
       "Gris Futura CX GTi Turbo 2, 168 hp, hydropneumatic magic carpet ride.",
     images: [
-      "https://images.unsplash.com/OvHMqzIQZlo?w=800&q=80",
-      "https://images.unsplash.com/xPFCPOvr1GA?w=800&q=80",
+      "https://images.unsplash.com/photo-1679108229811-1f8c6debf983?w=800&q=80",
+      "https://images.unsplash.com/photo-1558671728-02f3f42777ea?w=800&q=80",
     ],
     seller: {
       name: "Henri Martin",
@@ -3223,8 +3223,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bleu Alpine R5 Turbo 2, mid-engine Group B homologation, wide-body legend.",
     images: [
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
     ],
     seller: {
       name: "Heritage Motor Gallery",
@@ -3263,8 +3263,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cardinal Red Saab 99 Turbo, turbo pioneer, rugged Swedish engineering.",
     images: [
-      "https://images.unsplash.com/Liqmmue-kJY?w=800&q=80",
-      "https://images.unsplash.com/cCA-kz1SKzc?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426311657-f05fb67a3974?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426312110-65ac029a400b?w=800&q=80",
     ],
     seller: {
       name: "Svensk Klassiker AB",
@@ -3303,8 +3303,8 @@ export const cars: Car[] = [
     shortDescription:
       "Nocturne Blue 9000 Aero, 225 hp turbo, rust-free Swedish autobahn express.",
     images: [
-      "https://images.unsplash.com/cCA-kz1SKzc?w=800&q=80",
-      "https://images.unsplash.com/HzX6ncsim9U?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426312110-65ac029a400b?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426310974-4dfcbc9438c6?w=800&q=80",
     ],
     seller: {
       name: "Anders Lindqvist",
@@ -3342,8 +3342,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cypress Green 1800ES shooting brake, glass tailgate icon, fuel-injected.",
     images: [
-      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
-      "https://images.unsplash.com/w5d3zmSe4pw?w=800&q=80",
+      "https://images.unsplash.com/photo-1514732286501-e307d402a0e9?w=800&q=80",
+      "https://images.unsplash.com/photo-1512772432849-f685f947c18f?w=800&q=80",
     ],
     seller: {
       name: "Svensk Klassiker AB",
@@ -3382,8 +3382,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver 240 Turbo estate, intercooled, boxy icon with endless redblock engine.",
     images: [
-      "https://images.unsplash.com/w5d3zmSe4pw?w=800&q=80",
-      "https://images.unsplash.com/qValfiWMIII?w=800&q=80",
+      "https://images.unsplash.com/photo-1512772432849-f685f947c18f?w=800&q=80",
+      "https://images.unsplash.com/photo-1612958043022-27c6bf99ba93?w=800&q=80",
     ],
     seller: {
       name: "Erik Johansson",
@@ -3421,8 +3421,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cream Yellow 850 T5-R estate, 1 of 2,500, turbo five-cylinder, Porsche brakes.",
     images: [
-      "https://images.unsplash.com/qValfiWMIII?w=800&q=80",
-      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
+      "https://images.unsplash.com/photo-1612958043022-27c6bf99ba93?w=800&q=80",
+      "https://images.unsplash.com/photo-1514732286501-e307d402a0e9?w=800&q=80",
     ],
     seller: {
       name: "Nordic Classics AB",
@@ -3461,8 +3461,8 @@ export const cars: Car[] = [
     shortDescription:
       "Orange Opel GT 1900, rotating headlights, German mini-Corvette.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Matthias Braun",
@@ -3500,8 +3500,8 @@ export const cars: Car[] = [
     shortDescription:
       "Signal Red Manta GTE, fuel-injected, Recaro seats, affordable classic coupe.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Dirk Schneider",
@@ -3539,8 +3539,8 @@ export const cars: Car[] = [
     shortDescription:
       "Moonstone Silver Calibra Turbo 4x4, 204 hp, ultra-low drag, AWD.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Thomas Weber",
@@ -3578,8 +3578,8 @@ export const cars: Car[] = [
     shortDescription:
       "French Blue TR6 PI, Lucas injection, 150 hp UK-spec with overdrive.",
     images: [
-      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
-      "https://images.unsplash.com/NzZfSaPfytI?w=800&q=80",
+      "https://images.unsplash.com/photo-1654077742401-5b39fc958322?w=800&q=80",
+      "https://images.unsplash.com/photo-1610038587158-88b2f292eba0?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -3618,8 +3618,8 @@ export const cars: Car[] = [
     shortDescription:
       "Inca Yellow Spitfire 1500, low mileage, new soft top, budget roadster fun.",
     images: [
-      "https://images.unsplash.com/NzZfSaPfytI?w=800&q=80",
-      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
+      "https://images.unsplash.com/photo-1610038587158-88b2f292eba0?w=800&q=80",
+      "https://images.unsplash.com/photo-1571006668967-61991fc20d0e?w=800&q=80",
     ],
     seller: {
       name: "Caledonian Classics",
@@ -3657,8 +3657,8 @@ export const cars: Car[] = [
     shortDescription:
       "Magenta Stag V8, improved cooling, T-bar roll hoop, four-seat GT convertible.",
     images: [
-      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
-      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
+      "https://images.unsplash.com/photo-1571006668967-61991fc20d0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1654077742401-5b39fc958322?w=800&q=80",
     ],
     seller: {
       name: "James Crawford",
@@ -3696,8 +3696,8 @@ export const cars: Car[] = [
     shortDescription:
       "BRG MGB GT, chrome bumpers, rebuilt engine, practical Pininfarina fastback.",
     images: [
-      "https://images.unsplash.com/hvemWc4oFTw?w=800&q=80",
-      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
+      "https://images.unsplash.com/photo-1571006668967-61991fc20d0e?w=800&q=80",
+      "https://images.unsplash.com/photo-1654077742401-5b39fc958322?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -3736,8 +3736,8 @@ export const cars: Car[] = [
     shortDescription:
       "Old English White MGA 1600 Coupe, full restoration 2017, red leather.",
     images: [
-      "https://images.unsplash.com/zAettKpsvcs?w=800&q=80",
-      "https://images.unsplash.com/NzZfSaPfytI?w=800&q=80",
+      "https://images.unsplash.com/photo-1654077742401-5b39fc958322?w=800&q=80",
+      "https://images.unsplash.com/photo-1610038587158-88b2f292eba0?w=800&q=80",
     ],
     seller: {
       name: "De Klassieker BV",
@@ -3776,8 +3776,8 @@ export const cars: Car[] = [
     shortDescription:
       "Gold Leaf Yellow Elan Sprint, Big Valve twin-cam, featherweight roadster.",
     images: [
-      "https://images.unsplash.com/_KESEuT51IA?w=800&q=80",
-      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
+      "https://images.unsplash.com/photo-1586151138503-64e692a04738?w=800&q=80",
+      "https://images.unsplash.com/photo-1760552844985-fd5541473e56?w=800&q=80",
     ],
     seller: {
       name: "Lotus Heritage Ltd",
@@ -3816,8 +3816,8 @@ export const cars: Car[] = [
     shortDescription:
       "Calypso Red Esprit Turbo, Bond car icon, mid-engine wedge, turbo 2.2L.",
     images: [
-      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
-      "https://images.unsplash.com/nnhSYjLhtG4?w=800&q=80",
+      "https://images.unsplash.com/photo-1760552844985-fd5541473e56?w=800&q=80",
+      "https://images.unsplash.com/photo-1749259175285-f9fe1e70086e?w=800&q=80",
     ],
     seller: {
       name: "Lotus Heritage Ltd",
@@ -3856,8 +3856,8 @@ export const cars: Car[] = [
     shortDescription:
       "Norfolk Mustard Elise S1, 725 kg, Rover K-Series, pure driving machine.",
     images: [
-      "https://images.unsplash.com/nnhSYjLhtG4?w=800&q=80",
-      "https://images.unsplash.com/_KESEuT51IA?w=800&q=80",
+      "https://images.unsplash.com/photo-1749259175285-f9fe1e70086e?w=800&q=80",
+      "https://images.unsplash.com/photo-1586151138503-64e692a04738?w=800&q=80",
     ],
     seller: {
       name: "Simon Clarke",
@@ -3895,8 +3895,8 @@ export const cars: Car[] = [
     shortDescription:
       "Crystal Blue Interceptor III, Chrysler V8, Italian design, glass tailgate.",
     images: [
-      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
-      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+      "https://images.unsplash.com/photo-1560091447-6367b0d33903?w=800&q=80",
+      "https://images.unsplash.com/photo-1565793463692-83267d9ee3bf?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -3935,8 +3935,8 @@ export const cars: Car[] = [
     shortDescription:
       "Starmist Blue Griffith 500, 5.0L V8, no electronics, raw British thrills.",
     images: [
-      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
-      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+      "https://images.unsplash.com/photo-1560091447-6367b0d33903?w=800&q=80",
+      "https://images.unsplash.com/photo-1565793463692-83267d9ee3bf?w=800&q=80",
     ],
     seller: {
       name: "Simon Clarke",
@@ -3974,8 +3974,8 @@ export const cars: Car[] = [
     shortDescription:
       "Reflex Spice Cerbera Speed Six, TVR's own inline-six, 350 hp British GT.",
     images: [
-      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
-      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
+      "https://images.unsplash.com/photo-1565793463692-83267d9ee3bf?w=800&q=80",
+      "https://images.unsplash.com/photo-1560091447-6367b0d33903?w=800&q=80",
     ],
     seller: {
       name: "Caledonian Classics",
@@ -4013,8 +4013,8 @@ export const cars: Car[] = [
     shortDescription:
       "Low-mileage DMC-12, stainless steel, gullwing doors, pop culture icon.",
     images: [
-      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
-      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+      "https://images.unsplash.com/photo-1560091447-6367b0d33903?w=800&q=80",
+      "https://images.unsplash.com/photo-1565793463692-83267d9ee3bf?w=800&q=80",
     ],
     seller: {
       name: "Padraig O'Sullivan",
@@ -4052,8 +4052,8 @@ export const cars: Car[] = [
     shortDescription:
       "BRG Cooper Sport Pack, late production, low mileage, two owners from new.",
     images: [
-      "https://images.unsplash.com/5XNipxnR7NM?w=800&q=80",
-      "https://images.unsplash.com/Y8Sm2UsRJng?w=800&q=80",
+      "https://images.unsplash.com/photo-1762772566714-e61ebe79d6de?w=800&q=80",
+      "https://images.unsplash.com/photo-1579279219378-731a5c4f4d16?w=800&q=80",
     ],
     seller: {
       name: "James Crawford",
@@ -4091,8 +4091,8 @@ export const cars: Car[] = [
     shortDescription:
       "Mars Red Golf GTI Mk1, tartan seats, golf ball knob, the original hot hatch.",
     images: [
-      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
-      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+      "https://images.unsplash.com/photo-1695143135403-f44ab92814ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1760200851878-9460b69d5cb8?w=800&q=80",
     ],
     seller: {
       name: "Matthias Braun",
@@ -4130,8 +4130,8 @@ export const cars: Car[] = [
     shortDescription:
       "Classic Green Corrado VR6, narrow-angle six, active spoiler, chains done.",
     images: [
-      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
-      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+      "https://images.unsplash.com/photo-1760200851878-9460b69d5cb8?w=800&q=80",
+      "https://images.unsplash.com/photo-1570804743956-7a011b8485ad?w=800&q=80",
     ],
     seller: {
       name: "Jan de Vries",
@@ -4169,8 +4169,8 @@ export const cars: Car[] = [
     shortDescription:
       "Diamond Silver Scirocco GTI, Giugiaro design, GTI performance, clean lines.",
     images: [
-      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
-      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+      "https://images.unsplash.com/photo-1570804743956-7a011b8485ad?w=800&q=80",
+      "https://images.unsplash.com/photo-1695143135403-f44ab92814ea?w=800&q=80",
     ],
     seller: {
       name: "Lukas Berger",
@@ -4208,8 +4208,8 @@ export const cars: Car[] = [
     shortDescription:
       "Gris Palladium DS 21 Cabriolet by Chapron, hydropneumatic, red leather.",
     images: [
-      "https://images.unsplash.com/xPFCPOvr1GA?w=800&q=80",
-      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
+      "https://images.unsplash.com/photo-1558671728-02f3f42777ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1680986427570-c888a3470324?w=800&q=80",
     ],
     seller: {
       name: "Garage Citroen Classique",
@@ -4248,8 +4248,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bleu Metallise A110 1300 Berlinette, late production, lightweight rally heritage.",
     images: [
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
     ],
     seller: {
       name: "Antoine Dupont",
@@ -4287,8 +4287,8 @@ export const cars: Car[] = [
     shortDescription:
       "Maritime Blue 944 S2 Cabriolet, 3.0L 16V, perfect balance, open-air Porsche.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -4327,8 +4327,8 @@ export const cars: Car[] = [
     shortDescription:
       "Lachssilber 635 CSi, pillarless grand tourer, M30 inline-six, natural leather.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Stefan Huber",
@@ -4366,8 +4366,8 @@ export const cars: Car[] = [
     shortDescription:
       "Azzurro Dino 246 GTS, Classiche certified, matching numbers, targa V6.",
     images: [
-      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
-      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
+      "https://images.unsplash.com/photo-1658905097696-ec44846c3c3c?w=800&q=80",
+      "https://images.unsplash.com/photo-1528561404880-67a16c7f9860?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -4406,8 +4406,8 @@ export const cars: Car[] = [
     shortDescription:
       "Minerva Blue 911 SC Targa, 3.0L flat-six, cork leather, new Bilstein shocks.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Friedrich Bauer",
@@ -4445,8 +4445,8 @@ export const cars: Car[] = [
     shortDescription:
       "Brilliant Silver R129 SL 500, V8, both tops, over-engineered luxury roadster.",
     images: [
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
     ],
     seller: {
       name: "Miguel Santos",
@@ -4484,8 +4484,8 @@ export const cars: Car[] = [
     shortDescription:
       "Calypso Red E30 325i Cabriolet, M20 six, power top, late production model.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
     ],
     seller: {
       name: "Lars Petersen",
@@ -4523,8 +4523,8 @@ export const cars: Car[] = [
     shortDescription:
       "Verde Muschio Montreal, racing-derived V8, Bertone slatted headlights.",
     images: [
-      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
-      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
+      "https://images.unsplash.com/photo-1741089499280-e8f3cfe03020?w=800&q=80",
+      "https://images.unsplash.com/photo-1741090868609-2166f09eab8e?w=800&q=80",
     ],
     seller: {
       name: "Officina Alfa Milano",
@@ -4563,8 +4563,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bleu Monaco GTA V6 Turbo, rear-engine, PRV turbo, French supercar.",
     images: [
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
     ],
     seller: {
       name: "French Classics Auto",
@@ -4602,8 +4602,8 @@ export const cars: Car[] = [
     shortDescription:
       "Sorrento Green 205 GTI 1.6, lighter and nimbler variant, service history.",
     images: [
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
     ],
     seller: {
       name: "Henri Martin",
@@ -4641,8 +4641,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bianco Saratoga Beta Monte Carlo, mid-engine targa, Group 5 racing heritage.",
     images: [
-      "https://images.unsplash.com/NFAJhive61U?w=800&q=80",
-      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
+      "https://images.unsplash.com/photo-1758621518748-bde9e586ef9f?w=800&q=80",
+      "https://images.unsplash.com/photo-1645778804878-70fd3856118a?w=800&q=80",
     ],
     seller: {
       name: "Officina Lancia Torino",
@@ -4681,8 +4681,8 @@ export const cars: Car[] = [
     shortDescription:
       "Henna Red M1, 1 of 453, mid-engine Giugiaro design, M88 inline-six.",
     images: [
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -4721,8 +4721,8 @@ export const cars: Car[] = [
     shortDescription:
       "Regency Red E-Type V12 Roadster, 5.3L V12, wider Series 3 body, biscuit leather.",
     images: [
-      "https://images.unsplash.com/U5EoUWLk4vg?w=800&q=80",
-      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
+      "https://images.unsplash.com/photo-1753266322092-3199ec27c087?w=800&q=80",
+      "https://images.unsplash.com/photo-1750957823101-87ec89cf6862?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -4761,8 +4761,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa Abarth 695 SS, tuned 500, scorpion badges, giant-killing pocket rocket.",
     images: [
-      "https://images.unsplash.com/XPRvkCazYdk?w=800&q=80",
-      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
+      "https://images.unsplash.com/photo-1755169610617-2097aba52350?w=800&q=80",
+      "https://images.unsplash.com/photo-1757120602359-59272740fb0a?w=800&q=80",
     ],
     seller: {
       name: "Luca Moretti",
@@ -4800,8 +4800,8 @@ export const cars: Car[] = [
     shortDescription:
       "Champagne W123 280 CE pillarless coupe, smooth inline-six, understated elegance.",
     images: [
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
     ],
     seller: {
       name: "Friedrich Bauer",
@@ -4839,8 +4839,8 @@ export const cars: Car[] = [
     shortDescription:
       "Kansas Beige 1303 Cabriolet, Karmann-built, excellent canvas top, summer ready.",
     images: [
-      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
-      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+      "https://images.unsplash.com/photo-1695143135403-f44ab92814ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1760200851878-9460b69d5cb8?w=800&q=80",
     ],
     seller: {
       name: "Willem van Dijk",
@@ -4878,8 +4878,8 @@ export const cars: Car[] = [
     shortDescription:
       "Polaris Silver E21 323i, M20 six, European twin-headlight, lightweight classic.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Klaus Fischer",
@@ -4917,8 +4917,8 @@ export const cars: Car[] = [
     shortDescription:
       "Maritime Blue 968 Club Sport, stripped, Variocam 3.0L, purist's Porsche.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -4957,8 +4957,8 @@ export const cars: Car[] = [
     shortDescription:
       "Blu Notte Quattroporte IV, twin-turbo V6, Gandini design, affordable opulence.",
     images: [
-      "https://images.unsplash.com/Kuj96T16Bt0?w=800&q=80",
-      "https://images.unsplash.com/fizuSGluj8M?w=800&q=80",
+      "https://images.unsplash.com/photo-1542035954-550b3c777a2c?w=800&q=80",
+      "https://images.unsplash.com/photo-1680744764636-60dfa5471940?w=800&q=80",
     ],
     seller: {
       name: "Giuseppe Rossi",
@@ -4996,8 +4996,8 @@ export const cars: Car[] = [
     shortDescription:
       "Nero Mondial QV, four-seat mid-engine Ferrari, belt service done, Swiss car.",
     images: [
-      "https://images.unsplash.com/o7ceuBKduk0?w=800&q=80",
-      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
+      "https://images.unsplash.com/photo-1528561404880-67a16c7f9860?w=800&q=80",
+      "https://images.unsplash.com/photo-1656150686176-f1978b5d7689?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -5036,8 +5036,8 @@ export const cars: Car[] = [
     shortDescription:
       "Red Europa Twin Cam, mid-engine, 610 kg, Lotus-Ford twin-cam, ultra-lightweight.",
     images: [
-      "https://images.unsplash.com/_KESEuT51IA?w=800&q=80",
-      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
+      "https://images.unsplash.com/photo-1586151138503-64e692a04738?w=800&q=80",
+      "https://images.unsplash.com/photo-1760552844985-fd5541473e56?w=800&q=80",
     ],
     seller: {
       name: "Lotus Heritage Ltd",
@@ -5076,8 +5076,8 @@ export const cars: Car[] = [
     shortDescription:
       "Tornado Red Golf GTI 16V Mk2, big bumper, refined hot hatch evolution.",
     images: [
-      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
-      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
+      "https://images.unsplash.com/photo-1760200851878-9460b69d5cb8?w=800&q=80",
+      "https://images.unsplash.com/photo-1570804743956-7a011b8485ad?w=800&q=80",
     ],
     seller: {
       name: "Matthias Braun",
@@ -5115,8 +5115,8 @@ export const cars: Car[] = [
     shortDescription:
       "Baltic Blue 928 GTS, 5.4L V8 transaxle, ultimate front-engine Porsche GT.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Garage Suisse SA",
@@ -5155,8 +5155,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bianco Countach LP400 S, V12 wide-body, the ultimate 1980s poster car.",
     images: [
-      "https://images.unsplash.com/sjPYbFnhzwY?w=800&q=80",
-      "https://images.unsplash.com/7DIDw3bDjAs?w=800&q=80",
+      "https://images.unsplash.com/photo-1630769660701-3454835913dc?w=800&q=80",
+      "https://images.unsplash.com/photo-1741779427006-cc0bfc107236?w=800&q=80",
     ],
     seller: {
       name: "Scuderia Classica",
@@ -5195,8 +5195,8 @@ export const cars: Car[] = [
     shortDescription:
       "Graphite Grey 300 SL Roadster, Bosch injection, red leather, comprehensive history.",
     images: [
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -5235,8 +5235,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver BMW 507, 1 of 252, von Goertz design, V8, museum-quality condition.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -5275,8 +5275,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver Birch DB5, Bond car legend, matching numbers, AMHT documented.",
     images: [
-      "https://images.unsplash.com/Hb2kdSJr5uo?w=800&q=80",
-      "https://images.unsplash.com/_Flri1epVx4?w=800&q=80",
+      "https://images.unsplash.com/photo-1560091447-6367b0d33903?w=800&q=80",
+      "https://images.unsplash.com/photo-1565793463692-83267d9ee3bf?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -5315,8 +5315,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso SZ Zagato, 1 of 1,036, Busso V6, polarizing design icon.",
     images: [
-      "https://images.unsplash.com/wuUg63kJeFo?w=800&q=80",
-      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
+      "https://images.unsplash.com/photo-1741090868609-2166f09eab8e?w=800&q=80",
+      "https://images.unsplash.com/photo-1756386159686-74c9ba1630e7?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -5355,8 +5355,8 @@ export const cars: Car[] = [
     shortDescription:
       "Orient Blue E38 740i Sport, V8, M-Parallel wheels, handsome flagship.",
     images: [
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Marc Janssen",
@@ -5394,8 +5394,8 @@ export const cars: Car[] = [
     shortDescription:
       "Liquid Yellow Clio V6 Phase 2, mid-engine V6, road-legal concept car.",
     images: [
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
     ],
     seller: {
       name: "Heritage Motor Gallery",
@@ -5434,8 +5434,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silver CLK GTR, 1 of 25, 6.9L V12, 612 hp, street-legal GT racer.",
     images: [
-      "https://images.unsplash.com/z0fqoea84XA?w=800&q=80",
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
+      "https://images.unsplash.com/photo-1556838827-2885ad5f6ce4?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -5474,8 +5474,8 @@ export const cars: Car[] = [
     shortDescription:
       "Cherry Red classic 900 Turbo Convertible, final year, tan leather, turbo.",
     images: [
-      "https://images.unsplash.com/HzX6ncsim9U?w=800&q=80",
-      "https://images.unsplash.com/Liqmmue-kJY?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426310974-4dfcbc9438c6?w=800&q=80",
+      "https://images.unsplash.com/photo-1642426311657-f05fb67a3974?w=800&q=80",
     ],
     seller: {
       name: "Mikko Virtanen",
@@ -5513,8 +5513,8 @@ export const cars: Car[] = [
     shortDescription:
       "Noir Traction Avant 15-Six, final year, pioneering FWD, six-cylinder.",
     images: [
-      "https://images.unsplash.com/AfHWF4Ky-gs?w=800&q=80",
-      "https://images.unsplash.com/OvHMqzIQZlo?w=800&q=80",
+      "https://images.unsplash.com/photo-1680986427570-c888a3470324?w=800&q=80",
+      "https://images.unsplash.com/photo-1679108229811-1f8c6debf983?w=800&q=80",
     ],
     seller: {
       name: "Garage Citroen Classique",
@@ -5553,8 +5553,8 @@ export const cars: Car[] = [
     shortDescription:
       "Ivory 356B Carrera 2, four-cam Fuhrmann engine, 1 of 310 coupes, red leather.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Klassik Automobil Stuttgart",
@@ -5593,8 +5593,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Corsa Testarossa, flat-12, iconic side strakes, belt service done.",
     images: [
-      "https://images.unsplash.com/Az9LKGyn1w0?w=800&q=80",
-      "https://images.unsplash.com/lm1-ARjcw8c?w=800&q=80",
+      "https://images.unsplash.com/photo-1656150686176-f1978b5d7689?w=800&q=80",
+      "https://images.unsplash.com/photo-1658905097696-ec44846c3c3c?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Milano",
@@ -5633,8 +5633,8 @@ export const cars: Car[] = [
     shortDescription:
       "Grigio Quartz Delta HF Turbo, 1.6 turbo, affordable Lancia performance.",
     images: [
-      "https://images.unsplash.com/ECXJcaS0w24?w=800&q=80",
-      "https://images.unsplash.com/Mnfgvx6LGiw?w=800&q=80",
+      "https://images.unsplash.com/photo-1645778804878-70fd3856118a?w=800&q=80",
+      "https://images.unsplash.com/photo-1667297413627-df8c0aaa88e0?w=800&q=80",
     ],
     seller: {
       name: "Officina Lancia Torino",
@@ -5673,8 +5673,8 @@ export const cars: Car[] = [
     shortDescription:
       "Silverstone E60 M5, 507 hp V10, rod bearings done, SMG gearbox.",
     images: [
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -5713,8 +5713,8 @@ export const cars: Car[] = [
     shortDescription:
       "Rosso Giulietta Sprint, Bertone design, 1.3 twin-cam, post-war Alfa icon.",
     images: [
-      "https://images.unsplash.com/TPNrYf6mjlE?w=800&q=80",
-      "https://images.unsplash.com/SC7qeGgH75Y?w=800&q=80",
+      "https://images.unsplash.com/photo-1756386159686-74c9ba1630e7?w=800&q=80",
+      "https://images.unsplash.com/photo-1741089499280-e8f3cfe03020?w=800&q=80",
     ],
     seller: {
       name: "Auto Classica Roma",
@@ -5753,8 +5753,8 @@ export const cars: Car[] = [
     shortDescription:
       "Deep Blue Pearl R32 Mk4, VR6, DSG, 4MOTION, twin-pipe exhaust note.",
     images: [
-      "https://images.unsplash.com/Fp7qRMsOB0s?w=800&q=80",
-      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
+      "https://images.unsplash.com/photo-1570804743956-7a011b8485ad?w=800&q=80",
+      "https://images.unsplash.com/photo-1695143135403-f44ab92814ea?w=800&q=80",
     ],
     seller: {
       name: "Jan de Vries",
@@ -5792,8 +5792,8 @@ export const cars: Car[] = [
     shortDescription:
       "Obsidian Black C 63 AMG, 6.2L V8, Performance Pack, old-school AMG.",
     images: [
-      "https://images.unsplash.com/LQo3xnXcIZY?w=800&q=80",
-      "https://images.unsplash.com/CUvD7i14594?w=800&q=80",
+      "https://images.unsplash.com/photo-1751385304965-1f6e26a10b43?w=800&q=80",
+      "https://images.unsplash.com/photo-1553196250-b754cf811ad1?w=800&q=80",
     ],
     seller: {
       name: "Klaus Fischer",
@@ -5831,8 +5831,8 @@ export const cars: Car[] = [
     shortDescription:
       "Basalt Black Cayenne Turbo, twin-turbo V8, 450 hp, Swiss-delivered SUV.",
     images: [
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
     ],
     seller: {
       name: "Pierre Morel",
@@ -5870,8 +5870,8 @@ export const cars: Car[] = [
     shortDescription:
       "Green/Yellow Lotus Seven S3, aluminium body, 460 kg, visceral driving.",
     images: [
-      "https://images.unsplash.com/OapSdv5ICtY?w=800&q=80",
-      "https://images.unsplash.com/nnhSYjLhtG4?w=800&q=80",
+      "https://images.unsplash.com/photo-1760552844985-fd5541473e56?w=800&q=80",
+      "https://images.unsplash.com/photo-1749259175285-f9fe1e70086e?w=800&q=80",
     ],
     seller: {
       name: "Simon Clarke",
@@ -5909,8 +5909,8 @@ export const cars: Car[] = [
     shortDescription:
       "Bleu Gordini Dauphine, Gordini-tuned rear engine, rally-bred pocket rocket.",
     images: [
-      "https://images.unsplash.com/Q3WITn0yQBY?w=800&q=80",
-      "https://images.unsplash.com/Y3pctxjYpWI?w=800&q=80",
+      "https://images.unsplash.com/photo-1633936239504-fd6a10563bde?w=800&q=80",
+      "https://images.unsplash.com/photo-1680365392933-63962e0ddc7c?w=800&q=80",
     ],
     seller: {
       name: "Pierre Duval",
@@ -5948,8 +5948,8 @@ export const cars: Car[] = [
     shortDescription:
       "Feuerrot BMW Isetta 300, bubble car icon, concours-restored, BMW's saviour.",
     images: [
-      "https://images.unsplash.com/XXiTv3ACnrM?w=800&q=80",
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
+      "https://images.unsplash.com/photo-1753658478807-00db61f7acf2?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
@@ -5988,8 +5988,8 @@ export const cars: Car[] = [
     shortDescription:
       "BRG XK120 Roadster, fastest car of its era, XK twin-cam, wire wheels.",
     images: [
-      "https://images.unsplash.com/keO4grpS7FY?w=800&q=80",
-      "https://images.unsplash.com/L2PpmkMQYww?w=800&q=80",
+      "https://images.unsplash.com/photo-1750957823101-87ec89cf6862?w=800&q=80",
+      "https://images.unsplash.com/photo-1742412615479-8173c0189475?w=800&q=80",
     ],
     seller: {
       name: "British Heritage Motors",
@@ -6028,8 +6028,8 @@ export const cars: Car[] = [
     shortDescription:
       "Verde Pino Fiat Dino 2400 Coupe, Ferrari V6, Bertone design, GT sophistication.",
     images: [
-      "https://images.unsplash.com/LD8F38MI5So?w=800&q=80",
-      "https://images.unsplash.com/McgINzTDjXw?w=800&q=80",
+      "https://images.unsplash.com/photo-1757120602359-59272740fb0a?w=800&q=80",
+      "https://images.unsplash.com/photo-1756842200624-4e54cc32e5e0?w=800&q=80",
     ],
     seller: {
       name: "Marco Bianchi",
@@ -6067,8 +6067,8 @@ export const cars: Car[] = [
     shortDescription:
       "California White PV544, B18 engine, split rear window, charming final-year Volvo.",
     images: [
-      "https://images.unsplash.com/BJgCY8aFW-M?w=800&q=80",
-      "https://images.unsplash.com/w5d3zmSe4pw?w=800&q=80",
+      "https://images.unsplash.com/photo-1514732286501-e307d402a0e9?w=800&q=80",
+      "https://images.unsplash.com/photo-1512772432849-f685f947c18f?w=800&q=80",
     ],
     seller: {
       name: "Anders Lindqvist",
@@ -6106,8 +6106,8 @@ export const cars: Car[] = [
     shortDescription:
       "Arctic Silver Cayman S, 3.4L flat-six, mid-engine precision, Swiss car.",
     images: [
-      "https://images.unsplash.com/f3jzDhC6fFM?w=800&q=80",
-      "https://images.unsplash.com/qJfgzt45Rec?w=800&q=80",
+      "https://images.unsplash.com/photo-1759773826076-0d1ec3a3049e?w=800&q=80",
+      "https://images.unsplash.com/photo-1671981151707-7aa791793275?w=800&q=80",
     ],
     seller: {
       name: "Prestige Motors AG",
@@ -6146,8 +6146,8 @@ export const cars: Car[] = [
     shortDescription:
       "Elm Green Type 3 Fastback, fuel-injected, dual-boot, elegant air-cooled VW.",
     images: [
-      "https://images.unsplash.com/JhQXC3aGyDM?w=800&q=80",
-      "https://images.unsplash.com/pGqMgmpeAfY?w=800&q=80",
+      "https://images.unsplash.com/photo-1695143135403-f44ab92814ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1760200851878-9460b69d5cb8?w=800&q=80",
     ],
     seller: {
       name: "Dirk Schneider",
@@ -6185,8 +6185,8 @@ export const cars: Car[] = [
     shortDescription:
       "Titanium Silver Alpina Z8, 1 of 555, Alpina V8, red Nappa, grand tourer.",
     images: [
-      "https://images.unsplash.com/Vq0qCv0Wc-o?w=800&q=80",
-      "https://images.unsplash.com/eB3d7PB_fmo?w=800&q=80",
+      "https://images.unsplash.com/photo-1731707667003-f202025c29a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1748352007751-d3c5a4c0d4f5?w=800&q=80",
     ],
     seller: {
       name: "Bavarian Classics GmbH",
