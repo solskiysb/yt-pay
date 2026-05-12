@@ -20,6 +20,7 @@ export function SearchFilters() {
   const currentMaxPrice = searchParams.get("maxPrice") ?? "";
   const currentMinYear = searchParams.get("minYear") ?? "";
   const currentMaxYear = searchParams.get("maxYear") ?? "";
+  const hideSold = searchParams.get("hideSold") === "1";
 
   const hasFilters =
     currentSearch ||
@@ -27,7 +28,8 @@ export function SearchFilters() {
     currentMinPrice ||
     currentMaxPrice ||
     currentMinYear ||
-    currentMaxYear;
+    currentMaxYear ||
+    hideSold;
 
   const updateParam = useCallback(
     (key: string, value: string) => {
@@ -124,14 +126,23 @@ export function SearchFilters() {
         </div>
       </div>
 
-      {hasFilters && (
-        <div className="flex justify-end">
+      <div className="flex items-center justify-between">
+        <label className="flex items-center gap-2 text-sm text-stone-600 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={hideSold}
+            onChange={(e) => updateParam("hideSold", e.target.checked ? "1" : "")}
+            className="size-4 rounded border-stone-300 text-amber-600 focus:ring-amber-500"
+          />
+          Hide sold cars
+        </label>
+        {hasFilters && (
           <Button variant="ghost" size="sm" onClick={clearAll}>
             <X className="size-3.5" />
             Clear filters
           </Button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

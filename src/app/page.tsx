@@ -181,12 +181,9 @@ export default function HomePage() {
             Reach thousands of passionate car enthusiasts across Europe.
             Listings start at just{" "}
             <span className="font-semibold text-amber-400">
-              {new Intl.NumberFormat("de-DE", {
-                style: "currency",
-                currency: "EUR",
-              }).format(siteConfig.listingPrice)}
+              &euro;19
             </span>
-            .
+            {" "}for early adopters.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link

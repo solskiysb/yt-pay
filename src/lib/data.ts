@@ -39,6 +39,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-04-15",
   },
   {
@@ -79,6 +80,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-04-20",
   },
   {
@@ -118,6 +120,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-01",
   },
   {
@@ -158,6 +161,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-04-10",
   },
   {
@@ -198,6 +202,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-28",
   },
   {
@@ -238,6 +243,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-05",
   },
   {
@@ -278,6 +284,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-04-05",
   },
   {
@@ -318,6 +325,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-25",
   },
   {
@@ -358,6 +366,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-02",
   },
   {
@@ -398,6 +407,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-18",
   },
   {
@@ -437,6 +447,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-08",
   },
   {
@@ -477,6 +488,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "sold",
     createdAt: "2026-03-20",
   },
   {
@@ -516,6 +528,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-12",
   },
   {
@@ -556,6 +569,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-03",
   },
   {
@@ -596,6 +610,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-04-08",
   },
   {
@@ -635,6 +650,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-06",
   },
   {
@@ -675,6 +691,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-22",
   },
   {
@@ -714,6 +731,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-07",
   },
   {
@@ -754,6 +772,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-04-02",
   },
   {
@@ -794,6 +813,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-09",
   },
   {
@@ -834,6 +854,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-15",
   },
   {
@@ -874,6 +895,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-25",
   },
   {
@@ -914,6 +936,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-28",
   },
   {
@@ -954,6 +977,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "sold",
     createdAt: "2026-03-30",
   },
   {
@@ -993,6 +1017,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-04",
   },
   {
@@ -1033,6 +1058,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-14",
   },
   {
@@ -1073,6 +1099,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-06",
   },
   {
@@ -1113,6 +1140,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-02-20",
   },
   {
@@ -1153,6 +1181,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-16",
   },
   {
@@ -1192,6 +1221,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-10",
   },
   {
@@ -1232,6 +1262,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-18",
   },
   {
@@ -1271,6 +1302,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-11",
   },
   {
@@ -1311,6 +1343,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-30",
   },
   {
@@ -1351,6 +1384,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-03-10",
   },
   {
@@ -1390,6 +1424,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-11",
   },
   {
@@ -1429,6 +1464,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-05-02",
   },
   {
@@ -1469,6 +1505,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-19",
   },
   {
@@ -1509,6 +1546,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-03-22",
   },
   {
@@ -1548,6 +1586,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-06",
   },
   {
@@ -1587,6 +1626,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-07",
   },
   {
@@ -1627,6 +1667,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-13",
   },
   {
@@ -1667,6 +1708,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-03-30",
   },
   {
@@ -1706,6 +1748,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-21",
   },
   {
@@ -1745,6 +1788,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-01",
   },
   {
@@ -1784,6 +1828,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-04-17",
   },
   {
@@ -1823,6 +1868,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-08",
   },
   {
@@ -1863,6 +1909,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-18",
   },
   {
@@ -1902,6 +1949,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-04-03",
   },
   {
@@ -1941,6 +1989,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-26",
   },
   {
@@ -1981,6 +2030,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-05-03",
   },
   {
@@ -2020,6 +2070,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-09",
   },
   {
@@ -2059,6 +2110,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-07",
   },
   {
@@ -2098,6 +2150,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-04-09",
   },
   {
@@ -2138,6 +2191,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-23",
   },
   {
@@ -2177,6 +2231,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-05",
   },
   {
@@ -2217,6 +2272,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-04-29",
   },
   {
@@ -2257,6 +2313,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-03-12",
   },
   {
@@ -2297,6 +2354,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-15",
   },
   {
@@ -2336,6 +2394,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-02",
   },
   {
@@ -2375,6 +2434,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-05-10",
   },
   {
@@ -2415,6 +2475,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-03-25",
   },
   {
@@ -2455,6 +2516,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-20",
   },
   {
@@ -2495,6 +2557,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-03-15",
   },
   {
@@ -2535,6 +2598,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-08",
   },
   {
@@ -2575,6 +2639,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-03-28",
   },
   {
@@ -2615,6 +2680,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-12",
   },
   {
@@ -2655,6 +2721,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-03-05",
   },
   {
@@ -2695,6 +2762,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-04",
   },
   {
@@ -2735,6 +2803,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-27",
   },
   {
@@ -2775,6 +2844,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-10",
   },
   {
@@ -2814,6 +2884,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-04",
   },
   {
@@ -2854,6 +2925,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-04-22",
   },
   {
@@ -2893,6 +2965,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-02-28",
   },
   {
@@ -2933,6 +3006,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-05",
   },
   {
@@ -2973,6 +3047,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-18",
   },
   {
@@ -3012,6 +3087,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-01",
   },
   {
@@ -3051,6 +3127,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-06",
   },
   {
@@ -3090,6 +3167,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-10",
   },
   {
@@ -3129,6 +3207,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-14",
   },
   {
@@ -3169,6 +3248,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-03-20",
   },
   {
@@ -3208,6 +3288,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-03",
   },
   {
@@ -3248,6 +3329,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-03-08",
   },
   {
@@ -3288,6 +3370,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-16",
   },
   {
@@ -3327,6 +3410,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "sold",
     createdAt: "2026-05-07",
   },
   {
@@ -3367,6 +3451,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-06",
   },
   {
@@ -3406,6 +3491,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-09",
   },
   {
@@ -3446,6 +3532,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-24",
   },
   {
@@ -3485,6 +3572,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-11",
   },
   {
@@ -3524,6 +3612,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-05",
   },
   {
@@ -3563,6 +3652,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-08",
   },
   {
@@ -3603,6 +3693,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-19",
   },
   {
@@ -3642,6 +3733,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-02",
   },
   {
@@ -3681,6 +3773,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-25",
   },
   {
@@ -3721,6 +3814,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-28",
   },
   {
@@ -3761,6 +3855,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-22",
   },
   {
@@ -3801,6 +3896,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-04-01",
   },
   {
@@ -3841,6 +3937,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-15",
   },
   {
@@ -3880,6 +3977,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-04",
   },
   {
@@ -3920,6 +4018,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-08",
   },
   {
@@ -3959,6 +4058,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-20",
   },
   {
@@ -3998,6 +4098,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-01",
   },
   {
@@ -4037,6 +4138,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-03-14",
   },
   {
@@ -4076,6 +4178,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-04-30",
   },
   {
@@ -4115,6 +4218,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-07",
   },
   {
@@ -4154,6 +4258,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-23",
   },
   {
@@ -4193,6 +4298,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-06",
   },
   {
@@ -4233,6 +4339,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-02-25",
   },
   {
@@ -4272,6 +4379,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-04-02",
   },
   {
@@ -4312,6 +4420,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-02",
   },
   {
@@ -4351,6 +4460,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-13",
   },
   {
@@ -4391,6 +4501,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-02-15",
   },
   {
@@ -4430,6 +4541,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-18",
   },
   {
@@ -4469,6 +4581,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-03",
   },
   {
@@ -4508,6 +4621,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-26",
   },
   {
@@ -4548,6 +4662,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-03-30",
   },
   {
@@ -4587,6 +4702,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-22",
   },
   {
@@ -4626,6 +4742,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-07",
   },
   {
@@ -4666,6 +4783,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-09",
   },
   {
@@ -4706,6 +4824,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-02-10",
   },
   {
@@ -4746,6 +4865,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-03-28",
   },
   {
@@ -4785,6 +4905,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-18",
   },
   {
@@ -4824,6 +4945,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-16",
   },
   {
@@ -4863,6 +4985,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-21",
   },
   {
@@ -4902,6 +5025,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-05",
   },
   {
@@ -4942,6 +5066,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-03-16",
   },
   {
@@ -4981,6 +5106,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-08",
   },
   {
@@ -5021,6 +5147,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-14",
   },
   {
@@ -5061,6 +5188,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-03",
   },
   {
@@ -5100,6 +5228,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-09",
   },
   {
@@ -5140,6 +5269,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-12",
   },
   {
@@ -5180,6 +5310,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-02-01",
   },
   {
@@ -5220,6 +5351,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "sold",
     createdAt: "2026-01-15",
   },
   {
@@ -5260,6 +5392,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-01-05",
   },
   {
@@ -5300,6 +5433,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-01-10",
   },
   {
@@ -5340,6 +5474,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-05",
   },
   {
@@ -5379,6 +5514,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-04",
   },
   {
@@ -5419,6 +5555,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-20",
   },
   {
@@ -5459,6 +5596,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-01-01",
   },
   {
@@ -5498,6 +5636,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-24",
   },
   {
@@ -5538,6 +5677,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-03-15",
   },
   {
@@ -5578,6 +5718,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-02-20",
   },
   {
@@ -5618,6 +5759,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-02-05",
   },
   {
@@ -5658,6 +5800,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-10",
   },
   {
@@ -5698,6 +5841,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-04-27",
   },
   {
@@ -5738,6 +5882,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-03-25",
   },
   {
@@ -5777,6 +5922,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-01",
   },
   {
@@ -5816,6 +5962,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-29",
   },
   {
@@ -5855,6 +6002,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-11",
   },
   {
@@ -5894,6 +6042,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-06",
   },
   {
@@ -5933,6 +6082,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-04-10",
   },
   {
@@ -5973,6 +6123,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-10",
   },
   {
@@ -6013,6 +6164,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-02-28",
   },
   {
@@ -6052,6 +6204,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-01",
   },
   {
@@ -6091,6 +6244,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-17",
   },
   {
@@ -6131,6 +6285,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-05-05",
   },
   {
@@ -6170,6 +6325,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "sold",
     createdAt: "2026-05-03",
   },
   {
@@ -6210,6 +6366,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-02-15",
   },
   {
@@ -6250,6 +6407,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: true,
+    status: "active",
     createdAt: "2026-02-10",
   },
   {
@@ -6289,6 +6447,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-08",
   },
   {
@@ -6328,6 +6487,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-11",
   },
   {
@@ -6368,6 +6528,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-08",
   },
   {
@@ -6407,6 +6568,7 @@ export const cars: Car[] = [
     ],
     condition: "fair",
     featured: false,
+    status: "active",
     createdAt: "2026-05-06",
   },
   {
@@ -6446,6 +6608,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-19",
   },
   {
@@ -6486,6 +6649,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-03-01",
   },
   {
@@ -6526,6 +6690,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-01-20",
   },
   {
@@ -6566,6 +6731,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-12",
   },
   {
@@ -6606,6 +6772,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-03-22",
   },
   {
@@ -6645,6 +6812,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "sold",
     createdAt: "2026-04-02",
   },
   {
@@ -6685,6 +6853,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-11",
   },
   {
@@ -6724,6 +6893,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-03-28",
   },
   {
@@ -6763,6 +6933,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-28",
   },
   {
@@ -6803,6 +6974,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-03-18",
   },
   {
@@ -6843,6 +7015,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-01-01",
   },
   {
@@ -6882,6 +7055,7 @@ export const cars: Car[] = [
     ],
     condition: "good",
     featured: false,
+    status: "active",
     createdAt: "2026-04-07",
   },
   {
@@ -6922,6 +7096,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-02-20",
   },
   {
@@ -6962,6 +7137,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: false,
+    status: "active",
     createdAt: "2026-02-08",
   },
   {
@@ -7002,6 +7178,7 @@ export const cars: Car[] = [
     ],
     condition: "excellent",
     featured: true,
+    status: "active",
     createdAt: "2026-01-15",
   },
 ];
@@ -7025,8 +7202,10 @@ export function filterCars(params: {
   minYear?: number;
   maxYear?: number;
   search?: string;
+  hideSold?: boolean;
 }): Car[] {
   return cars.filter((car) => {
+    if (params.hideSold && car.status === "sold") return false;
     if (params.make && car.make !== params.make) return false;
     if (params.minPrice !== undefined && car.price < params.minPrice)
       return false;

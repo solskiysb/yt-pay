@@ -66,7 +66,7 @@ export default function TermsPage() {
 
             <h2>4. Listing Fees</h2>
             <p>
-              Each vehicle listing on {siteConfig.name} costs &euro;{siteConfig.listingPrice}.
+              Vehicle listing fees on {siteConfig.name} vary by plan (Starter, Collector, or Dealer).
               This fee is charged at the time of listing publication and is{" "}
               <strong>non-refundable</strong>, regardless of whether the vehicle
               sells. The listing fee covers publication on our platform for the

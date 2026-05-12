@@ -27,6 +27,7 @@ export default async function CarsPage({
     typeof params.maxYear === "string" ? Number(params.maxYear) : undefined;
   const search =
     typeof params.search === "string" ? params.search : undefined;
+  const hideSold = params.hideSold === "1";
 
   const filteredCars = filterCars({
     make,
@@ -35,6 +36,7 @@ export default async function CarsPage({
     minYear: minYear && !isNaN(minYear) ? minYear : undefined,
     maxYear: maxYear && !isNaN(maxYear) ? maxYear : undefined,
     search,
+    hideSold,
   });
 
   return (

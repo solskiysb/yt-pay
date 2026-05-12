@@ -33,7 +33,12 @@ export function CarCard({ car }: { car: Car }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute top-3 left-3 flex gap-2">
-          {car.featured && (
+          {car.status === "sold" && (
+            <span className="rounded-full bg-red-600 px-2.5 py-0.5 text-xs font-bold text-white shadow-sm">
+              Sold
+            </span>
+          )}
+          {car.featured && car.status !== "sold" && (
             <span className="rounded-full bg-amber-500 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
               Featured
             </span>
@@ -44,6 +49,9 @@ export function CarCard({ car }: { car: Car }) {
             {condition.label}
           </span>
         </div>
+        {car.status === "sold" && (
+          <div className="absolute inset-0 bg-stone-900/20" />
+        )}
       </div>
 
       <div className="p-4">

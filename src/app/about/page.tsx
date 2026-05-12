@@ -83,8 +83,8 @@ export default function AboutPage() {
             Ready to Find Your Next Classic?
           </h2>
           <p className="mt-4 text-stone-400">
-            Browse our curated collection or list your own car for just
-            &euro;{siteConfig.listingPrice}.
+            Browse our curated collection or list your own car starting
+            from &euro;19 for early adopters.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link

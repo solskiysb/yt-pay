@@ -25,5 +25,6 @@ export interface Car {
   features: string[];
   condition: "excellent" | "good" | "fair";
   featured: boolean;
+  status: "active" | "sold" | "draft";
   createdAt: string;
 }

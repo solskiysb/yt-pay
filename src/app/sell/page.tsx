@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Camera, FileText, CreditCard, Rocket } from "lucide-react";
-import { siteConfig } from "@/lib/config";
+import { Camera, FileText, CreditCard, Rocket, Check } from "lucide-react";
+import { siteConfig, pricingTiers } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: `Sell Your Car — ${siteConfig.name}`,
-  description: "List your classic, retro or beautiful car on YT Pay. Reach thousands of enthusiasts across Europe for just €49.",
+  description:
+    "List your classic, retro or beautiful car on YT Pay. Reach thousands of enthusiasts across Europe.",
 };
 
 const steps = [
@@ -26,8 +27,9 @@ const steps = [
   {
     icon: CreditCard,
     step: "03",
-    title: "Pay & Publish",
-    description: `A one-time fee of €${siteConfig.listingPrice} gets your car featured on our platform for 60 days. No commissions, no hidden fees.`,
+    title: "Choose Your Plan",
+    description:
+      "Pick the tier that suits you — from a single listing to a full dealer package. Early adopter pricing available now.",
   },
   {
     icon: Rocket,
@@ -40,12 +42,8 @@ const steps = [
 
 const faqs = [
   {
-    q: "How much does it cost to list?",
-    a: `A flat fee of €${siteConfig.listingPrice} per listing. No commissions on the sale, no recurring charges.`,
-  },
-  {
     q: "How long does my listing stay active?",
-    a: "Listings are active for 60 days. You can renew at a discounted rate if your car hasn't sold.",
+    a: "Depends on your plan: Starter gets 60 days, Collector 90 days, and Dealer 120 days. You can renew at a discounted rate.",
   },
   {
     q: "What kind of cars can I list?",
@@ -57,7 +55,11 @@ const faqs = [
   },
   {
     q: "Can I edit my listing after publishing?",
-    a: "Yes. You can update photos, description, and price at any time from your account.",
+    a: "Yes. You can update photos, description, and price at any time. Key changes go through a quick re-review.",
+  },
+  {
+    q: "What are early adopter prices?",
+    a: "We're offering special launch pricing for our first sellers. These prices are locked in for your first purchase and won't increase for renewals.",
   },
 ];
 
@@ -67,23 +69,22 @@ export default function SellPage() {
       {/* Hero */}
       <section className="bg-stone-50 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-6 text-center">
+          <div className="mx-auto mb-4 inline-flex items-center rounded-full bg-amber-100 px-4 py-1.5 text-sm font-medium text-amber-800">
+            Early Adopter Pricing — Limited Time
+          </div>
           <h1 className="font-heading text-4xl font-bold tracking-tight text-stone-900 lg:text-5xl">
             Sell Your Car
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-stone-600">
-            Reach thousands of passionate car enthusiasts across Europe.
-            List your classic for just &euro;{siteConfig.listingPrice} — no
-            commissions, no surprises.
+            Reach thousands of passionate car enthusiasts across Europe. No
+            commissions, no surprises — just transparent pricing.
           </p>
           <Link
-            href="#"
+            href="#pricing"
             className="mt-8 inline-flex h-12 items-center rounded-full bg-amber-500 px-8 font-medium text-stone-900 transition hover:bg-amber-400"
           >
-            Create Listing
+            See Plans & Pricing
           </Link>
-          <p className="mt-3 text-sm text-stone-500">
-            Account required. Sign up takes 30 seconds.
-          </p>
         </div>
       </section>
 
@@ -112,34 +113,80 @@ export default function SellPage() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="bg-stone-900 py-20">
-        <div className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="font-heading text-3xl font-bold text-white">
-            Simple, Transparent Pricing
+      {/* Pricing Tiers */}
+      <section id="pricing" className="bg-stone-900 py-20 lg:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <h2 className="text-center font-heading text-3xl font-bold text-white">
+            Choose Your Plan
           </h2>
-          <div className="mt-10 rounded-2xl bg-stone-800 p-8">
-            <div className="text-5xl font-bold text-amber-400">
-              &euro;{siteConfig.listingPrice}
-            </div>
-            <div className="mt-2 text-stone-400">per listing</div>
-            <ul className="mt-6 space-y-3 text-left text-stone-300">
-              <li className="flex items-center gap-3">
-                <span className="text-amber-400">&#10003;</span> 60 days active listing
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-amber-400">&#10003;</span> Up to 20 high-quality photos
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-amber-400">&#10003;</span> Direct buyer inquiries to your email
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-amber-400">&#10003;</span> No commission on sale
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-amber-400">&#10003;</span> Edit listing anytime
-              </li>
-            </ul>
+          <p className="mt-4 text-center text-stone-400">
+            No commissions. No hidden fees. Just a one-time payment.
+          </p>
+
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+            {pricingTiers.map((tier) => (
+              <div
+                key={tier.name}
+                className={`relative rounded-2xl p-8 ${
+                  tier.popular
+                    ? "bg-amber-500 text-stone-900 ring-2 ring-amber-400"
+                    : "bg-stone-800 text-stone-100"
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-stone-900 px-4 py-1 text-xs font-bold text-amber-400 uppercase tracking-wider">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className="text-lg font-bold">{tier.name}</h3>
+                <p
+                  className={`mt-1 text-sm ${tier.popular ? "text-stone-700" : "text-stone-400"}`}
+                >
+                  Up to {tier.listings}{" "}
+                  {tier.listings === 1 ? "listing" : "listings"}
+                </p>
+
+                <div className="mt-6">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-bold">
+                      &euro;{tier.earlyAdopterPrice}
+                    </span>
+                    <span
+                      className={`text-lg line-through ${tier.popular ? "text-stone-600" : "text-stone-500"}`}
+                    >
+                      &euro;{tier.price}
+                    </span>
+                  </div>
+                  <p
+                    className={`mt-1 text-sm font-medium ${tier.popular ? "text-stone-700" : "text-amber-400"}`}
+                  >
+                    Early adopter price
+                  </p>
+                </div>
+
+                <ul className="mt-8 space-y-3">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3 text-sm">
+                      <Check
+                        className={`mt-0.5 size-4 shrink-0 ${tier.popular ? "text-stone-900" : "text-amber-400"}`}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="#"
+                  className={`mt-8 flex h-11 items-center justify-center rounded-full font-medium transition ${
+                    tier.popular
+                      ? "bg-stone-900 text-white hover:bg-stone-800"
+                      : "bg-amber-500 text-stone-900 hover:bg-amber-400"
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
