@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Metadata } from "next";
 import {
   MessageSquare,
   Mail,
@@ -11,9 +10,12 @@ import {
   Check,
   Archive,
   Car,
+  Send,
+  Reply,
+  Loader2,
 } from "lucide-react";
 
-type InquiryStatus = "new" | "read" | "archived";
+type InquiryStatus = "new" | "read" | "replied" | "archived";
 
 interface Inquiry {
   id: string;
@@ -24,6 +26,8 @@ interface Inquiry {
   message: string;
   date: string;
   status: InquiryStatus;
+  sellerReply?: string;
+  repliedAt?: string;
 }
 
 const mockInquiries: Inquiry[] = [
@@ -62,7 +66,7 @@ const mockInquiries: Inquiry[] = [
   },
   {
     id: "inq-4",
-    buyerName: "Anna Bergström",
+    buyerName: "Anna Bergstrom",
     buyerEmail: "anna.bergstrom@telia.se",
     listingTitle: "1994 Porsche 911 Carrera (993)",
     listingId: "porsche-911-993-1994",
@@ -80,7 +84,10 @@ const mockInquiries: Inquiry[] = [
     message:
       "Does the Certificate of Authenticity confirm matching numbers for the engine and gearbox? I would also appreciate knowing the car's paint thickness readings if available. I am a serious buyer with financing already arranged.",
     date: "2026-05-09T14:00:00",
-    status: "read",
+    status: "replied",
+    sellerReply:
+      "Yes, matching numbers confirmed. Happy to share the full documentation. Please contact us to arrange a viewing.",
+    repliedAt: "2026-05-09T16:00:00",
   },
   {
     id: "inq-6",
@@ -101,6 +108,7 @@ const statusConfig: Record<
 > = {
   new: { label: "New", className: "bg-amber-100 text-amber-700" },
   read: { label: "Read", className: "bg-stone-100 text-stone-600" },
+  replied: { label: "Replied", className: "bg-emerald-100 text-emerald-700" },
   archived: { label: "Archived", className: "bg-stone-50 text-stone-400" },
 };
 
@@ -122,14 +130,24 @@ const formatDate = (dateStr: string) => {
 export default function InquiriesPage() {
   const [inquiries, setInquiries] = useState(mockInquiries);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [replyingId, setReplyingId] = useState<string | null>(null);
+  const [replyText, setReplyText] = useState("");
+  const [sendingReply, setSendingReply] = useState(false);
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
+    if (expandedId !== id) {
+      // Close reply form when switching inquiries
+      setReplyingId(null);
+      setReplyText("");
+    }
   };
 
   const markAsRead = (id: string) => {
     setInquiries((prev) =>
-      prev.map((inq) => (inq.id === id ? { ...inq, status: "read" as const } : inq))
+      prev.map((inq) =>
+        inq.id === id ? { ...inq, status: "read" as const } : inq
+      )
     );
   };
 
@@ -139,6 +157,48 @@ export default function InquiriesPage() {
         inq.id === id ? { ...inq, status: "archived" as const } : inq
       )
     );
+  };
+
+  const handleReply = async (inquiryId: string) => {
+    if (!replyText.trim()) return;
+
+    setSendingReply(true);
+    try {
+      const res = await fetch("/api/inquiries/reply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          inquiryId,
+          message: replyText.trim(),
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Failed to send reply");
+      }
+
+      // Update local state
+      setInquiries((prev) =>
+        prev.map((inq) =>
+          inq.id === inquiryId
+            ? {
+                ...inq,
+                status: "replied" as const,
+                sellerReply: replyText.trim(),
+                repliedAt: new Date().toISOString(),
+              }
+            : inq
+        )
+      );
+      setReplyingId(null);
+      setReplyText("");
+    } catch (err) {
+      console.error("Reply error:", err);
+      alert("Failed to send reply. Please try again.");
+    } finally {
+      setSendingReply(false);
+    }
   };
 
   const unreadCount = inquiries.filter((i) => i.status === "new").length;
@@ -166,6 +226,7 @@ export default function InquiriesPage() {
       <div className="space-y-3">
         {inquiries.map((inquiry) => {
           const isExpanded = expandedId === inquiry.id;
+          const isReplying = replyingId === inquiry.id;
           const status = statusConfig[inquiry.status];
 
           return (
@@ -187,14 +248,14 @@ export default function InquiriesPage() {
                       : "bg-transparent"
                   }`}
                 />
-                <div className="flex-1 min-w-0">
+                <div className="min-w-0 flex-1">
                   <div className="flex items-baseline justify-between gap-2">
                     <p className="text-sm font-semibold text-stone-900">
                       {inquiry.buyerName}
                     </p>
-                    <div className="flex items-center gap-2 shrink-0">
+                    <div className="flex shrink-0 items-center gap-2">
                       <span
-                        className={`hidden sm:inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${status.className}`}
+                        className={`hidden items-center rounded-full px-2 py-0.5 text-xs font-medium sm:inline-flex ${status.className}`}
                       >
                         {status.label}
                       </span>
@@ -209,7 +270,7 @@ export default function InquiriesPage() {
                     {inquiry.listingTitle}
                   </p>
                   {!isExpanded && (
-                    <p className="mt-1 text-sm text-stone-500 truncate">
+                    <p className="mt-1 truncate text-sm text-stone-500">
                       {inquiry.message}
                     </p>
                   )}
@@ -243,6 +304,66 @@ export default function InquiriesPage() {
                       {inquiry.message}
                     </p>
 
+                    {/* Previous reply */}
+                    {inquiry.sellerReply && (
+                      <div className="rounded-lg border border-emerald-100 bg-emerald-50 p-3">
+                        <p className="mb-1 text-xs font-medium text-emerald-700">
+                          Your reply
+                          {inquiry.repliedAt && (
+                            <span className="ml-1 font-normal text-emerald-600">
+                              &middot; {formatDate(inquiry.repliedAt)}
+                            </span>
+                          )}
+                        </p>
+                        <p className="text-sm leading-relaxed text-stone-700">
+                          {inquiry.sellerReply}
+                        </p>
+                      </div>
+                    )}
+
+                    {/* Reply form */}
+                    {isReplying && (
+                      <div className="space-y-3">
+                        <textarea
+                          value={replyText}
+                          onChange={(e) => setReplyText(e.target.value)}
+                          rows={4}
+                          placeholder="Write your reply..."
+                          className="block w-full resize-y rounded-lg border border-stone-300 bg-white px-3 py-2.5 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
+                          autoFocus
+                        />
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => handleReply(inquiry.id)}
+                            disabled={sendingReply || !replyText.trim()}
+                            className="inline-flex items-center gap-1.5 rounded-lg bg-amber-500 px-4 py-1.5 text-xs font-medium text-stone-900 transition-colors hover:bg-amber-400 disabled:opacity-60"
+                          >
+                            {sendingReply ? (
+                              <>
+                                <Loader2 className="size-3 animate-spin" />
+                                Sending...
+                              </>
+                            ) : (
+                              <>
+                                <Send className="size-3" />
+                                Send Reply
+                              </>
+                            )}
+                          </button>
+                          <button
+                            onClick={() => {
+                              setReplyingId(null);
+                              setReplyText("");
+                            }}
+                            disabled={sendingReply}
+                            className="inline-flex items-center rounded-lg bg-stone-100 px-3 py-1.5 text-xs font-medium text-stone-700 transition-colors hover:bg-stone-200"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
                     {/* Actions */}
                     <div className="flex gap-2">
                       {inquiry.status === "new" && (
@@ -269,14 +390,19 @@ export default function InquiriesPage() {
                           Archive
                         </button>
                       )}
-                      <a
-                        href={`mailto:${inquiry.buyerEmail}`}
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-medium text-stone-900 transition-colors hover:bg-amber-400"
-                      >
-                        <Mail className="size-3" />
-                        Reply
-                      </a>
+                      {inquiry.status !== "archived" && !isReplying && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setReplyingId(inquiry.id);
+                            setReplyText("");
+                          }}
+                          className="inline-flex items-center gap-1.5 rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-medium text-stone-900 transition-colors hover:bg-amber-400"
+                        >
+                          <Reply className="size-3" />
+                          Reply
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

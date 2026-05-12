@@ -89,6 +89,7 @@ export function dbListingToCar(listing: DbListing): Car {
 /**
  * Fetch public listings with optional filters.
  * Only returns approved + sold listings for public views.
+ * Supports pagination via `page` and `limit` params.
  */
 export async function getListings(params?: {
   make?: string;
@@ -99,12 +100,18 @@ export async function getListings(params?: {
   search?: string;
   hideSold?: boolean;
   limit?: number;
-}): Promise<Car[]> {
+  page?: number;
+}): Promise<{ cars: Car[]; totalCount: number }> {
   const supabase = await createClient();
+
+  const page = params?.page ?? 1;
+  const limit = params?.limit ?? 24;
+  const from = (page - 1) * limit;
+  const to = from + limit - 1;
 
   let query = supabase
     .from("listings")
-    .select("*, listing_images(*)")
+    .select("*, listing_images(*)", { count: "exact" })
     .in("status", params?.hideSold ? ["approved"] : ["approved", "sold"])
     .order("created_at", { ascending: false });
 
@@ -129,18 +136,20 @@ export async function getListings(params?: {
       `make.ilike.${term},model.ilike.${term},description.ilike.${term}`
     );
   }
-  if (params?.limit) {
-    query = query.limit(params.limit);
-  }
 
-  const { data, error } = await query;
+  query = query.range(from, to);
+
+  const { data, count, error } = await query;
 
   if (error) {
     console.error("getListings error:", error);
-    return [];
+    return { cars: [], totalCount: 0 };
   }
 
-  return (data as DbListing[]).map(dbListingToCar);
+  return {
+    cars: (data as DbListing[]).map(dbListingToCar),
+    totalCount: count ?? 0,
+  };
 }
 
 /**

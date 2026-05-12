@@ -1,7 +1,10 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { getListings, getListingMakes } from "@/lib/db";
 import { CarCard } from "@/components/car-card";
 import { SearchFilters } from "@/components/search-filters";
+
+const ITEMS_PER_PAGE = 24;
 
 export const metadata = {
   title: "Browse Collection | YT Pay",
@@ -28,8 +31,12 @@ export default async function CarsPage({
   const search =
     typeof params.search === "string" ? params.search : undefined;
   const hideSold = params.hideSold === "1";
+  const currentPage = Math.max(
+    1,
+    typeof params.page === "string" ? parseInt(params.page, 10) || 1 : 1
+  );
 
-  const [filteredCars, makes] = await Promise.all([
+  const [{ cars: filteredCars, totalCount }, makes] = await Promise.all([
     getListings({
       make,
       minPrice: minPrice && !isNaN(minPrice) ? minPrice : undefined,
@@ -38,9 +45,28 @@ export default async function CarsPage({
       maxYear: maxYear && !isNaN(maxYear) ? maxYear : undefined,
       search,
       hideSold,
+      page: currentPage,
+      limit: ITEMS_PER_PAGE,
     }),
     getListingMakes(),
   ]);
+
+  const totalPages = Math.max(1, Math.ceil(totalCount / ITEMS_PER_PAGE));
+
+  // Build URL preserving current filters
+  function buildPageUrl(page: number): string {
+    const p = new URLSearchParams();
+    if (make) p.set("make", make);
+    if (minPrice !== undefined && !isNaN(minPrice)) p.set("minPrice", String(minPrice));
+    if (maxPrice !== undefined && !isNaN(maxPrice)) p.set("maxPrice", String(maxPrice));
+    if (minYear !== undefined && !isNaN(minYear)) p.set("minYear", String(minYear));
+    if (maxYear !== undefined && !isNaN(maxYear)) p.set("maxYear", String(maxYear));
+    if (search) p.set("search", search);
+    if (hideSold) p.set("hideSold", "1");
+    if (page > 1) p.set("page", String(page));
+    const qs = p.toString();
+    return `/cars${qs ? `?${qs}` : ""}`;
+  }
 
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -49,8 +75,8 @@ export default async function CarsPage({
           Browse Collection
         </h1>
         <p className="mt-2 text-stone-500">
-          Showing {filteredCars.length}{" "}
-          {filteredCars.length === 1 ? "car" : "cars"}
+          Showing {filteredCars.length} of {totalCount}{" "}
+          {totalCount === 1 ? "car" : "cars"}
         </p>
       </div>
 
@@ -73,6 +99,44 @@ export default async function CarsPage({
             Try adjusting your filters or search terms.
           </p>
         </div>
+      )}
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <nav
+          className="mt-12 flex items-center justify-center gap-2"
+          aria-label="Pagination"
+        >
+          {currentPage > 1 ? (
+            <Link
+              href={buildPageUrl(currentPage - 1)}
+              className="rounded-lg border border-stone-300 px-4 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-50"
+            >
+              Previous
+            </Link>
+          ) : (
+            <span className="rounded-lg border border-stone-200 px-4 py-2 text-sm font-medium text-stone-400 cursor-not-allowed">
+              Previous
+            </span>
+          )}
+
+          <span className="px-4 py-2 text-sm text-stone-600">
+            Page {currentPage} of {totalPages}
+          </span>
+
+          {currentPage < totalPages ? (
+            <Link
+              href={buildPageUrl(currentPage + 1)}
+              className="rounded-lg border border-stone-300 px-4 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-50"
+            >
+              Next
+            </Link>
+          ) : (
+            <span className="rounded-lg border border-stone-200 px-4 py-2 text-sm font-medium text-stone-400 cursor-not-allowed">
+              Next
+            </span>
+          )}
+        </nav>
       )}
     </main>
   );

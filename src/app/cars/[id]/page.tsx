@@ -12,6 +12,9 @@ import { getListingBySlug } from "@/lib/db";
 import { Separator } from "@/components/ui/separator";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { InquiryForm } from "@/components/inquiry-form";
+import { ShareButtons } from "@/components/share-buttons";
+import { ViewTracker } from "@/components/view-tracker";
+import { siteConfig } from "@/lib/config";
 
 const formatPrice = (price: number) =>
   new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" }).format(
@@ -70,6 +73,7 @@ export default async function CarDetailPage({
 
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <ViewTracker slug={id} />
       <Link
         href="/cars"
         className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-stone-500 transition-colors hover:text-stone-900"
@@ -105,6 +109,13 @@ export default async function CarDetailPage({
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-stone-900">
             {car.year} {car.make} {car.model}
           </h1>
+
+          <div className="mt-3">
+            <ShareButtons
+              url={`${siteConfig.url}/cars/${id}`}
+              title={`${car.year} ${car.make} ${car.model}`}
+            />
+          </div>
 
           <p className="mt-2 text-3xl font-bold text-stone-900">
             {formatPrice(car.price)}
