@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: `About — ${siteConfig.name}`,
   description:
-    "Learn about YT Pay — Europe's curated marketplace for retro, classic and beautiful automobiles. Founded in 2026.",
+    "Learn about YT Pay — Europe's curated marketplace for retro, classic and beautiful automobiles. Founded in 2022.",
 };
 
 const values = [
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <p className="text-sm font-medium uppercase tracking-wider text-stone-400">
                 Founded
               </p>
-              <p className="mt-2 text-2xl font-bold text-stone-900">2026</p>
+              <p className="mt-2 text-2xl font-bold text-stone-900">2022</p>
             </div>
             <div className="text-center">
               <p className="text-sm font-medium uppercase tracking-wider text-stone-400">
@@ -121,22 +121,25 @@ export default function AboutPage() {
           </h2>
           <div className="mt-8 space-y-5 text-stone-600 leading-relaxed">
             <p>
-              We started {siteConfig.name} because we were tired of searching
-              for interesting cars on platforms designed for appliances. Classic
-              and beautiful automobiles deserve better than being listed next to
-              minivans and rental fleet cast-offs.
+              Since 2022, our team has been building digital products in the
+              automotive and marketplace space. {siteConfig.name} is our latest
+              venture — born from years of experience and a genuine passion for
+              cars with character. We saw that classic and beautiful automobiles
+              deserve a platform that matches their elegance, not one designed
+              for mass-market appliances.
             </p>
             <p>
               Every car on our platform is reviewed by our team. We look for
               character, honest representation, and sellers who genuinely care
-              about finding the right buyer for their car. It&apos;s a slower
-              approach, but we believe it&apos;s the right one.
+              about finding the right buyer for their car. It&apos;s a curated
+              approach built on years of understanding what collectors and
+              enthusiasts actually need.
             </p>
             <p>
-              We&apos;re currently in private beta, onboarding sellers by
-              invitation and refining the experience based on real feedback. If
-              you share our passion for automotive excellence, we&apos;d love to
-              have you join us.
+              We&apos;re currently in private beta, onboarding select sellers
+              and refining the experience based on real feedback. If you share
+              our passion for automotive excellence, we&apos;d love to have you
+              join us.
             </p>
           </div>
         </div>
