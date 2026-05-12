@@ -34,6 +34,8 @@ function LoginForm() {
       return;
     }
 
+    // Small delay to let cookies propagate
+    await new Promise((r) => setTimeout(r, 500));
     window.location.href = redirectTo;
   }
 
