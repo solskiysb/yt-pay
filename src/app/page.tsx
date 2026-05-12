@@ -1,65 +1,210 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  ArrowRight,
+  Shield,
+  Globe,
+  Sparkles,
+  Search,
+  MessageSquare,
+  Car,
+  CheckCircle,
+} from "lucide-react";
+import { Hero } from "@/components/hero";
+import { CarCard } from "@/components/car-card";
+import { getFeaturedCars } from "@/lib/data";
+import { siteConfig } from "@/lib/config";
 
-export default function Home() {
+const valueProps = [
+  {
+    icon: Sparkles,
+    title: "Curated Selection",
+    description:
+      "Every listing is hand-picked for quality and authenticity. No junk, no fakes -- only cars worth your time.",
+  },
+  {
+    icon: Shield,
+    title: "Verified Sellers",
+    description:
+      "All sellers are vetted and verified. Buy with confidence knowing every listing comes from a trusted source.",
+  },
+  {
+    icon: Globe,
+    title: "Pan-European",
+    description:
+      "Find your dream car anywhere in Europe. From London to Milan, Munich to Paris -- one marketplace for the continent.",
+  },
+];
+
+const steps = [
+  {
+    icon: Search,
+    step: "01",
+    title: "Browse",
+    description: "Explore our curated collection of classic and beautiful cars.",
+  },
+  {
+    icon: MessageSquare,
+    step: "02",
+    title: "Contact",
+    description: "Reach out directly to the seller to ask questions and negotiate.",
+  },
+  {
+    icon: Car,
+    step: "03",
+    title: "Meet & Drive",
+    description:
+      "Arrange to see the car in person. Test drive it, inspect it, fall in love.",
+  },
+  {
+    icon: CheckCircle,
+    step: "04",
+    title: "Done",
+    description: "Complete the purchase and drive away in your dream car.",
+  },
+];
+
+export default function HomePage() {
+  const featuredCars = getFeaturedCars().slice(0, 6);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      {/* Hero */}
+      <Hero />
+
+      {/* Featured Collection */}
+      <section className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mb-10 flex items-end justify-between">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+              Featured Collection
+            </h2>
+            <p className="mt-2 text-stone-500">
+              Hand-picked automobiles from across Europe
+            </p>
+          </div>
+          <Link
+            href="/cars"
+            className="hidden items-center gap-1 text-sm font-medium text-stone-600 transition-colors hover:text-stone-900 sm:flex"
+          >
+            View all
+            <ArrowRight className="size-4" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredCars.map((car) => (
+            <CarCard key={car.id} car={car} />
+          ))}
+        </div>
+
+        <div className="mt-8 flex justify-center sm:hidden">
+          <Link
+            href="/cars"
+            className="inline-flex items-center gap-1 text-sm font-medium text-stone-600"
+          >
+            View all cars
+            <ArrowRight className="size-4" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Why YT Pay */}
+      <section className="bg-stone-50 py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+              Why {siteConfig.name}?
+            </h2>
+            <p className="mt-2 text-stone-500">
+              The trusted way to buy and sell classic cars in Europe
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+            {valueProps.map((prop) => (
+              <div key={prop.title} className="text-center">
+                <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
+                  <prop.icon className="size-6" />
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-stone-900">
+                  {prop.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                  {prop.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+              How It Works
+            </h2>
+            <p className="mt-2 text-stone-500">
+              From first look to first drive in four simple steps
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((item) => (
+              <div key={item.step} className="relative text-center">
+                <span className="text-5xl font-bold text-stone-100">
+                  {item.step}
+                </span>
+                <div className="mt-2 flex justify-center text-stone-600">
+                  <item.icon className="size-6" />
+                </div>
+                <h3 className="mt-3 text-lg font-semibold text-stone-900">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-stone-900 py-20">
+        <div className="mx-auto w-full max-w-3xl px-4 text-center sm:px-6">
+          <h2 className="text-3xl font-bold tracking-tight text-white">
+            List Your Classic
+          </h2>
+          <p className="mt-4 text-lg text-stone-400 leading-relaxed">
+            Reach thousands of passionate car enthusiasts across Europe.
+            Listings start at just{" "}
+            <span className="font-semibold text-amber-400">
+              {new Intl.NumberFormat("de-DE", {
+                style: "currency",
+                currency: "EUR",
+              }).format(siteConfig.listingPrice)}
+            </span>
+            .
           </p>
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <Link
+              href="/sell"
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-amber-500 px-6 text-sm font-semibold text-white transition-colors hover:bg-amber-400"
+            >
+              Start Listing
+              <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              href="/cars"
+              className="inline-flex h-11 items-center gap-2 rounded-lg border border-stone-700 px-6 text-sm font-medium text-stone-300 transition-colors hover:border-stone-600 hover:text-white"
+            >
+              Browse Cars First
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
