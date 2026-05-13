@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { getListings, getListingMakes } from "@/lib/db";
+import { getListings, getListingMakes, getListingBodyTypes } from "@/lib/db";
 import { CarCard } from "@/components/car-card";
 import { SearchFilters } from "@/components/search-filters";
 
@@ -30,26 +30,37 @@ export default async function CarsPage({
     typeof params.maxYear === "string" ? Number(params.maxYear) : undefined;
   const search =
     typeof params.search === "string" ? params.search : undefined;
+  const condition =
+    typeof params.condition === "string" ? params.condition : undefined;
+  const bodyType =
+    typeof params.bodyType === "string" ? params.bodyType : undefined;
+  const sortBy =
+    typeof params.sortBy === "string" ? params.sortBy : undefined;
   const hideSold = params.hideSold === "1";
   const currentPage = Math.max(
     1,
     typeof params.page === "string" ? parseInt(params.page, 10) || 1 : 1
   );
 
-  const [{ cars: filteredCars, totalCount }, makes] = await Promise.all([
-    getListings({
-      make,
-      minPrice: minPrice && !isNaN(minPrice) ? minPrice : undefined,
-      maxPrice: maxPrice && !isNaN(maxPrice) ? maxPrice : undefined,
-      minYear: minYear && !isNaN(minYear) ? minYear : undefined,
-      maxYear: maxYear && !isNaN(maxYear) ? maxYear : undefined,
-      search,
-      hideSold,
-      page: currentPage,
-      limit: ITEMS_PER_PAGE,
-    }),
-    getListingMakes(),
-  ]);
+  const [{ cars: filteredCars, totalCount }, makes, bodyTypes] =
+    await Promise.all([
+      getListings({
+        make,
+        minPrice: minPrice && !isNaN(minPrice) ? minPrice : undefined,
+        maxPrice: maxPrice && !isNaN(maxPrice) ? maxPrice : undefined,
+        minYear: minYear && !isNaN(minYear) ? minYear : undefined,
+        maxYear: maxYear && !isNaN(maxYear) ? maxYear : undefined,
+        search,
+        condition,
+        bodyType,
+        sortBy,
+        hideSold,
+        page: currentPage,
+        limit: ITEMS_PER_PAGE,
+      }),
+      getListingMakes(),
+      getListingBodyTypes(),
+    ]);
 
   const totalPages = Math.max(1, Math.ceil(totalCount / ITEMS_PER_PAGE));
 
@@ -57,6 +68,9 @@ export default async function CarsPage({
   function buildPageUrl(page: number): string {
     const p = new URLSearchParams();
     if (make) p.set("make", make);
+    if (condition) p.set("condition", condition);
+    if (bodyType) p.set("bodyType", bodyType);
+    if (sortBy) p.set("sortBy", sortBy);
     if (minPrice !== undefined && !isNaN(minPrice)) p.set("minPrice", String(minPrice));
     if (maxPrice !== undefined && !isNaN(maxPrice)) p.set("maxPrice", String(maxPrice));
     if (minYear !== undefined && !isNaN(minYear)) p.set("minYear", String(minYear));
@@ -82,14 +96,14 @@ export default async function CarsPage({
 
       <div className="mb-8">
         <Suspense fallback={<div className="h-10" />}>
-          <SearchFilters makes={makes} />
+          <SearchFilters makes={makes} bodyTypes={bodyTypes} />
         </Suspense>
       </div>
 
       {filteredCars.length > 0 ? (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredCars.map((car) => (
-            <CarCard key={car.id} car={car} />
+          {filteredCars.map((car, index) => (
+            <CarCard key={car.id} car={car} index={index} />
           ))}
         </div>
       ) : (

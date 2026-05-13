@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Gauge } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { SaveButton } from "@/components/save-button";
 import type { Car } from "@/lib/types";
 
@@ -16,22 +15,25 @@ const conditionConfig = {
   fair: { label: "Fair", className: "bg-amber-100 text-amber-800" },
 } as const;
 
-export function CarCard({ car }: { car: Car }) {
+export function CarCard({ car, index = 0 }: { car: Car; index?: number }) {
   const condition = conditionConfig[car.condition];
+  const isAboveFold = index < 6;
 
   return (
     <Link
       href={`/cars/${car.id}`}
       className="group block overflow-hidden rounded-xl bg-white ring-1 ring-stone-200 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:ring-stone-300"
     >
-      <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+      <div className="relative aspect-[4/3] overflow-hidden bg-stone-200">
         <Image
           src={car.images[0]}
           alt={`${car.year} ${car.make} ${car.model}`}
           fill
           unoptimized
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          priority={isAboveFold}
+          loading={isAboveFold ? "eager" : "lazy"}
         />
         <div className="absolute top-3 left-3 flex gap-2">
           {car.status === "sold" && (

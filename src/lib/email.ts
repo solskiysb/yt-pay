@@ -1,4 +1,5 @@
 import { Resend } from "resend";
+import { siteConfig } from "./config";
 
 function getResendClient() {
   const key = process.env.RESEND_API_KEY;
@@ -108,6 +109,148 @@ export async function sendInquiryNotification(params: {
             <td style="padding:20px 32px;border-top:1px solid #e7e5e4;text-align:center;">
               <p style="margin:0;font-size:12px;color:#a8a29e;">
                 <a href="https://yt-pay.io" style="color:#a8a29e;text-decoration:none;">yt-pay.io</a> &mdash; Curated Classics & Beautiful Cars
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+    `.trim(),
+  });
+}
+
+export async function sendSavedSearchAlert(params: {
+  email: string;
+  name: string;
+  criteria: {
+    make?: string;
+    model?: string;
+    maxPrice?: number;
+    minYear?: number;
+    maxYear?: number;
+  };
+  matches: {
+    id: string;
+    slug: string;
+    make: string;
+    model: string;
+    year: number;
+    price: number;
+    listing_images: { url: string }[];
+  }[];
+}) {
+  const resend = getResendClient();
+  if (!resend) return;
+
+  const { email, name, criteria, matches } = params;
+
+  // Build human-readable criteria summary
+  const parts: string[] = [];
+  if (criteria.make) parts.push(criteria.make);
+  if (criteria.model) parts.push(criteria.model);
+  if (criteria.minYear || criteria.maxYear) {
+    const yearRange = [criteria.minYear, criteria.maxYear]
+      .filter(Boolean)
+      .join("-");
+    parts.push(yearRange);
+  }
+  if (criteria.maxPrice)
+    parts.push(`under ${criteria.maxPrice.toLocaleString("en-US", { style: "currency", currency: "EUR", maximumFractionDigits: 0 })}`);
+  const criteriaLabel = parts.length > 0 ? parts.join(" ") : "your saved search";
+
+  // Build listing cards HTML
+  const listingCards = matches
+    .map((car) => {
+      const imageUrl =
+        car.listing_images?.[0]?.url ??
+        "https://placehold.co/400x260?text=No+Photo";
+      const carUrl = `${siteConfig.url}/listings/${car.slug}`;
+      const priceFormatted = car.price.toLocaleString("en-US", {
+        style: "currency",
+        currency: "EUR",
+        maximumFractionDigits: 0,
+      });
+
+      return `
+              <tr>
+                <td style="padding:0 0 16px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#fafaf9;border-radius:8px;overflow:hidden;">
+                    <tr>
+                      <td>
+                        <img src="${imageUrl}" alt="${car.year} ${car.make} ${car.model}" width="496" style="display:block;width:100%;height:auto;border-radius:8px 8px 0 0;" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:16px 20px;">
+                        <p style="margin:0 0 4px;font-size:16px;font-weight:600;color:#1c1917;">${car.year} ${car.make} ${car.model}</p>
+                        <p style="margin:0 0 12px;font-size:18px;font-weight:700;color:#d97706;">${priceFormatted}</p>
+                        <a href="${carUrl}" style="display:inline-block;padding:10px 20px;background-color:#f59e0b;color:#1c1917;font-size:13px;font-weight:600;text-decoration:none;border-radius:6px;">View on EraMarque</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>`;
+    })
+    .join("");
+
+  await resend.emails.send({
+    from: "EraMarque <notifications@yt-pay.io>",
+    to: email,
+    subject: `New cars matching your search on EraMarque`,
+    html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="margin:0;padding:0;background-color:#f5f5f4;font-family:'Inter','Helvetica Neue',Arial,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f4;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color:#1c1917;padding:24px 32px;text-align:center;">
+              <span style="font-size:22px;font-weight:700;color:#f59e0b;letter-spacing:2px;">ERAMARQUE</span>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:32px;">
+              <h1 style="margin:0 0 8px;font-size:20px;font-weight:600;color:#1c1917;">New matches found</h1>
+              <p style="margin:0 0 24px;font-size:14px;color:#78716c;">Hi ${name || "there"}, we found <strong>${matches.length} new listing${matches.length > 1 ? "s" : ""}</strong> matching <strong>${criteriaLabel}</strong>.</p>
+
+              <!-- Listing Cards -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                ${listingCards}
+              </table>
+
+              <!-- Manage Alerts -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+                <tr>
+                  <td align="center">
+                    <a href="${siteConfig.url}/buyer/saved-searches" style="display:inline-block;padding:12px 28px;background-color:#ffffff;color:#1c1917;font-size:14px;font-weight:600;text-decoration:none;border-radius:8px;border:1px solid #d6d3d1;">Manage Your Alerts</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:20px 32px;border-top:1px solid #e7e5e4;text-align:center;">
+              <p style="margin:0 0 8px;font-size:12px;color:#a8a29e;">
+                <a href="${siteConfig.url}" style="color:#a8a29e;text-decoration:none;">yt-pay.io</a> &mdash; Curated Classics &amp; Beautiful Cars
+              </p>
+              <p style="margin:0;font-size:11px;color:#d6d3d1;">
+                <a href="${siteConfig.url}/buyer/saved-searches" style="color:#d6d3d1;text-decoration:underline;">Unsubscribe from these alerts</a>
               </p>
             </td>
           </tr>

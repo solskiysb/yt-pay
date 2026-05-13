@@ -99,6 +99,9 @@ export async function getListings(params?: {
   maxYear?: number;
   search?: string;
   hideSold?: boolean;
+  condition?: string;
+  bodyType?: string;
+  sortBy?: string;
   limit?: number;
   page?: number;
 }): Promise<{ cars: Car[]; totalCount: number }> {
@@ -109,14 +112,49 @@ export async function getListings(params?: {
   const from = (page - 1) * limit;
   const to = from + limit - 1;
 
+  // Determine sort column and direction
+  let orderColumn = "created_at";
+  let orderAscending = false;
+  switch (params?.sortBy) {
+    case "price_asc":
+      orderColumn = "price";
+      orderAscending = true;
+      break;
+    case "price_desc":
+      orderColumn = "price";
+      orderAscending = false;
+      break;
+    case "year_desc":
+      orderColumn = "year";
+      orderAscending = false;
+      break;
+    case "year_asc":
+      orderColumn = "year";
+      orderAscending = true;
+      break;
+    case "views":
+      orderColumn = "views_count";
+      orderAscending = false;
+      break;
+    default:
+      // "newest" or empty — created_at desc
+      break;
+  }
+
   let query = supabase
     .from("listings")
     .select("*, listing_images(*)", { count: "exact" })
     .in("status", params?.hideSold ? ["approved"] : ["approved", "sold"])
-    .order("created_at", { ascending: false });
+    .order(orderColumn, { ascending: orderAscending });
 
   if (params?.make) {
     query = query.eq("make", params.make);
+  }
+  if (params?.condition) {
+    query = query.eq("condition", params.condition);
+  }
+  if (params?.bodyType) {
+    query = query.eq("body_type", params.bodyType);
   }
   if (params?.minPrice !== undefined) {
     query = query.gte("price", params.minPrice);
@@ -216,6 +254,33 @@ export async function getFeaturedListings(): Promise<Car[]> {
   }
 
   return (data as DbListing[]).map(dbListingToCar);
+}
+
+/**
+ * Fetch distinct body types from approved/sold listings for the filter dropdown.
+ */
+export async function getListingBodyTypes(): Promise<string[]> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("listings")
+    .select("body_type")
+    .in("status", ["approved", "sold"])
+    .not("body_type", "is", null);
+
+  if (error) {
+    console.error("getListingBodyTypes error:", error);
+    return [];
+  }
+
+  const types = [
+    ...new Set(
+      (data ?? [])
+        .map((row) => row.body_type as string)
+        .filter(Boolean)
+    ),
+  ];
+  return types.sort();
 }
 
 /**
