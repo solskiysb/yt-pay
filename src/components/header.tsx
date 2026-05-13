@@ -130,14 +130,12 @@ export function Header() {
               <div className="h-8 w-8 animate-pulse rounded-full bg-muted" />
             ) : user ? (
               <DropdownMenu>
-                <DropdownMenuTrigger>
-                  <button className="flex items-center gap-2 rounded-full outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                    <Avatar>
-                      <AvatarFallback className="bg-accent-gold/15 text-accent-gold-dark text-xs font-semibold">
-                        {getInitials(user)}
-                      </AvatarFallback>
-                    </Avatar>
-                  </button>
+                <DropdownMenuTrigger className="flex items-center gap-2 rounded-full outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                  <Avatar>
+                    <AvatarFallback className="bg-accent-gold/15 text-accent-gold-dark text-xs font-semibold">
+                      {getInitials(user)}
+                    </AvatarFallback>
+                  </Avatar>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" sideOffset={8} className="w-56">
                   <DropdownMenuLabel className="font-normal">
