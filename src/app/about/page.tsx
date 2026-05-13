@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: `About — ${siteConfig.name}`,
   description:
-    "Learn about YT Pay — Europe's curated marketplace for retro, classic and beautiful automobiles. Founded in 2022.",
+    "Learn about EraMarque — Europe's curated marketplace for retro, classic and beautiful automobiles. Founded in 2022.",
 };
 
 const values = [

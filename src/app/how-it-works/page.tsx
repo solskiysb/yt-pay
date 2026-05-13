@@ -23,7 +23,7 @@ import { siteConfig } from "@/lib/config";
 export const metadata: Metadata = {
   title: `How It Works | ${siteConfig.name}`,
   description:
-    "Learn how to buy and sell cars on YT Pay. Safety tips, buyer and seller guides, and frequently asked questions.",
+    "Learn how to buy and sell cars on EraMarque. Safety tips, buyer and seller guides, and frequently asked questions.",
 };
 
 const buyerSteps = [
@@ -137,12 +137,12 @@ const sellerTips = [
 
 const faqs = [
   {
-    question: "Is YT Pay a dealer? Do you own the cars?",
+    question: "Is EraMarque a dealer? Do you own the cars?",
     answer:
-      "No. YT Pay is a classified marketplace. All cars are listed by independent sellers -- private individuals and dealers. We connect buyers and sellers but are not involved in the transaction itself.",
+      "No. EraMarque is a classified marketplace. All cars are listed by independent sellers -- private individuals and dealers. We connect buyers and sellers but are not involved in the transaction itself.",
   },
   {
-    question: "Does YT Pay guarantee the condition of the cars?",
+    question: "Does EraMarque guarantee the condition of the cars?",
     answer:
       "We review every listing for quality and completeness, but we do not independently verify the mechanical condition of each vehicle. We strongly recommend having any car inspected by a qualified mechanic before purchasing.",
   },

@@ -104,7 +104,7 @@ export default function RegisterPage() {
             Create your account
           </h1>
           <p className="mt-2 text-sm text-muted-foreground">
-            Join YT Pay and start buying or selling classic cars
+            Join EraMarque and start buying or selling classic cars
           </p>
         </div>
 

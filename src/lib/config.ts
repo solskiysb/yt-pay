@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "YT Pay",
+  name: "EraMarque",
   tagline: "Curated Classics & Beautiful Cars",
   description:
     "Europe's curated marketplace for retro, classic and beautiful automobiles. Find your dream car.",

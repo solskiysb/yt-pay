@@ -99,8 +99,8 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="font-heading text-xl font-bold tracking-tight text-foreground">
-            YT
-            <span className="text-accent-gold"> PAY</span>
+            Era
+            <span className="text-accent-gold">Marque</span>
           </span>
         </Link>
 
@@ -213,7 +213,7 @@ export function Header() {
           <SheetContent side="right" className="w-72">
             <SheetHeader>
               <SheetTitle className="font-heading text-lg">
-                YT<span className="text-accent-gold"> PAY</span>
+                Era<span className="text-accent-gold">Marque</span>
               </SheetTitle>
             </SheetHeader>
             <nav className="mt-8 flex flex-col gap-1">

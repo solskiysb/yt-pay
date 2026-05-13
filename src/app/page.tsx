@@ -111,7 +111,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Why YT Pay */}
+      {/* Why EraMarque */}
       <section className="bg-stone-50 py-20">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">

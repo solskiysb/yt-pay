@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "YT Pay — Curated Classics & Beautiful Cars";
+export const alt = "EraMarque — Curated Classics & Beautiful Cars";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -28,7 +28,7 @@ export default async function Image() {
             letterSpacing: "-2px",
           }}
         >
-          YT PAY
+          ERAMARQUE
         </div>
         <div
           style={{

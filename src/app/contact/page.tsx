@@ -19,7 +19,7 @@ export default function ContactPage() {
     const subject = (formData.get("subject") as string).trim();
     const message = (formData.get("message") as string).trim();
 
-    const subjectLine = `[YT Pay Contact] ${subject}`;
+    const subjectLine = `[EraMarque Contact] ${subject}`;
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
     const mailtoUrl = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(body)}`;
 

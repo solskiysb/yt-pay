@@ -9,7 +9,7 @@ import { getUser } from "@/lib/auth";
 export const metadata: Metadata = {
   title: `Sell Your Car — ${siteConfig.name}`,
   description:
-    "List your classic, retro or beautiful car on YT Pay. Currently in private beta — list for free.",
+    "List your classic, retro or beautiful car on EraMarque. Currently in private beta — list for free.",
 };
 
 const steps = [
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "Do you handle payment or delivery?",
-    a: "No. YT Pay is a marketplace that connects buyers and sellers. All transactions happen directly between parties.",
+    a: "No. EraMarque is a marketplace that connects buyers and sellers. All transactions happen directly between parties.",
   },
   {
     q: "Can I edit my listing after publishing?",

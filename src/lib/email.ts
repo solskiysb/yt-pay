@@ -31,7 +31,7 @@ export async function sendInquiryNotification(params: {
   } = params;
 
   await resend.emails.send({
-    from: "YT Pay <notifications@yt-pay.io>",
+    from: "EraMarque <notifications@yt-pay.io>",
     to: sellerEmail,
     subject: `New inquiry for ${listingTitle}`,
     html: `
@@ -50,7 +50,7 @@ export async function sendInquiryNotification(params: {
           <!-- Header -->
           <tr>
             <td style="background-color:#1c1917;padding:24px 32px;text-align:center;">
-              <span style="font-size:22px;font-weight:700;color:#f59e0b;letter-spacing:2px;">YT PAY</span>
+              <span style="font-size:22px;font-weight:700;color:#f59e0b;letter-spacing:2px;">ERAMARQUE</span>
             </td>
           </tr>
 
@@ -136,7 +136,7 @@ export async function sendReplyNotification(params: {
     params;
 
   await resend.emails.send({
-    from: "YT Pay <notifications@yt-pay.io>",
+    from: "EraMarque <notifications@yt-pay.io>",
     to: buyerEmail,
     subject: `Reply to your inquiry — ${listingTitle}`,
     html: `
@@ -155,7 +155,7 @@ export async function sendReplyNotification(params: {
           <!-- Header -->
           <tr>
             <td style="background-color:#1c1917;padding:24px 32px;text-align:center;">
-              <span style="font-size:22px;font-weight:700;color:#f59e0b;letter-spacing:2px;">YT PAY</span>
+              <span style="font-size:22px;font-weight:700;color:#f59e0b;letter-spacing:2px;">ERAMARQUE</span>
             </td>
           </tr>
 

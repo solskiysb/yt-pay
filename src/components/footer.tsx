@@ -49,7 +49,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <Link href="/" className="inline-block">
               <span className="font-heading text-xl font-bold tracking-tight">
-                YT<span className="text-accent-gold"> PAY</span>
+                Era<span className="text-accent-gold">Marque</span>
               </span>
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">

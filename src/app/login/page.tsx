@@ -46,7 +46,7 @@ function LoginForm() {
           Welcome back
         </h1>
         <p className="mt-2 text-sm text-stone-500">
-          Sign in to your YT Pay account
+          Sign in to your EraMarque account
         </p>
       </div>
 

@@ -46,10 +46,10 @@ export async function generateMetadata({
   const { id } = await params;
   const car = await getListingBySlug(id);
   if (!car) {
-    return { title: "Car Not Found | YT Pay" };
+    return { title: "Car Not Found | EraMarque" };
   }
   return {
-    title: `${car.year} ${car.make} ${car.model} | YT Pay`,
+    title: `${car.year} ${car.make} ${car.model} | EraMarque`,
     description: car.shortDescription,
   };
 }
@@ -118,7 +118,7 @@ export default async function CarDetailPage({
         car.status === "sold"
           ? "https://schema.org/SoldOut"
           : "https://schema.org/InStock",
-      seller: { "@type": "Organization", name: "YT Pay" },
+      seller: { "@type": "Organization", name: "EraMarque" },
       url: `${siteConfig.url}/cars/${car.id}`,
     },
     image: car.images,

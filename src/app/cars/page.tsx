@@ -7,7 +7,7 @@ import { SearchFilters } from "@/components/search-filters";
 const ITEMS_PER_PAGE = 24;
 
 export const metadata = {
-  title: "Browse Collection | YT Pay",
+  title: "Browse Collection | EraMarque",
   description:
     "Browse our curated collection of retro, classic and beautiful automobiles across Europe.",
 };

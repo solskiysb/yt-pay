@@ -1,4 +1,4 @@
-# YT Pay — Curated Classics & Beautiful Cars
+# EraMarque — Curated Classics & Beautiful Cars
 
 European marketplace for retro, classic and beautiful automobiles.
 
