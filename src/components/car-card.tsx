@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Gauge } from "lucide-react";
+import { MapPin, Gauge, Gavel } from "lucide-react";
 import { SaveButton } from "@/components/save-button";
+import { AuctionCountdown } from "@/components/auction-panel";
 import type { Car } from "@/lib/types";
 
 const formatPrice = (price: number) =>
@@ -18,6 +19,7 @@ const conditionConfig = {
 export function CarCard({ car, index = 0 }: { car: Car; index?: number }) {
   const condition = conditionConfig[car.condition];
   const isAboveFold = index < 6;
+  const isAuction = car.listingType === "auction";
 
   return (
     <Link
@@ -36,12 +38,18 @@ export function CarCard({ car, index = 0 }: { car: Car; index?: number }) {
           loading={isAboveFold ? "eager" : "lazy"}
         />
         <div className="absolute top-3 left-3 flex gap-2">
+          {isAuction && (
+            <span className="flex items-center gap-1 rounded-full bg-blue-600 px-2.5 py-0.5 text-xs font-bold text-white shadow-sm">
+              <Gavel className="size-3" />
+              Auction
+            </span>
+          )}
           {car.status === "sold" && (
             <span className="rounded-full bg-red-600 px-2.5 py-0.5 text-xs font-bold text-white shadow-sm">
               Sold
             </span>
           )}
-          {car.featured && car.status !== "sold" && (
+          {car.featured && car.status !== "sold" && !isAuction && (
             <span className="rounded-full bg-amber-500 px-2.5 py-0.5 text-xs font-semibold text-white shadow-sm">
               Featured
             </span>
@@ -67,9 +75,28 @@ export function CarCard({ car, index = 0 }: { car: Car; index?: number }) {
           {car.year} {car.make} {car.model}
         </h3>
 
-        <p className="mt-1 text-xl font-bold text-stone-900">
-          {formatPrice(car.price)}
-        </p>
+        {isAuction ? (
+          <div className="mt-1">
+            <p className="text-xl font-bold text-stone-900">
+              {(car.currentBid ?? 0) > 0
+                ? formatPrice(car.currentBid!)
+                : formatPrice(car.startingBid ?? car.price)}
+            </p>
+            <div className="mt-1.5 flex items-center gap-3 text-sm text-stone-500">
+              <span className="flex items-center gap-1">
+                <Gavel className="size-3.5" />
+                {car.bidCount ?? 0} {(car.bidCount ?? 0) === 1 ? "bid" : "bids"}
+              </span>
+              {car.auctionEnd && (
+                <AuctionCountdown auctionEnd={car.auctionEnd} />
+              )}
+            </div>
+          </div>
+        ) : (
+          <p className="mt-1 text-xl font-bold text-stone-900">
+            {formatPrice(car.price)}
+          </p>
+        )}
 
         <div className="mt-3 flex items-center gap-4 text-sm text-stone-500">
           <span className="flex items-center gap-1">

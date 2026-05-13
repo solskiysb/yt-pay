@@ -1,5 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import type { Car } from "./types";
+import type { Car, Bid } from "./types";
 
 // Type for a listing row joined with its images from Supabase
 export interface DbListing {
@@ -28,6 +28,13 @@ export interface DbListing {
   contacts_count: number;
   created_at: string;
   listing_images: { url: string; sort_order: number; is_primary: boolean }[];
+  listing_type?: string;
+  auction_end?: string | null;
+  reserve_price?: number | null;
+  reserve_met?: boolean;
+  starting_bid?: number | null;
+  current_bid?: number;
+  bid_count?: number;
 }
 
 /**
@@ -83,6 +90,13 @@ export function dbListingToCar(listing: DbListing): Car {
     featured: listing.is_featured,
     status: statusMap[listing.status] ?? "draft",
     createdAt: listing.created_at,
+    listingType: (listing.listing_type as Car["listingType"]) ?? "classified",
+    auctionEnd: listing.auction_end ?? undefined,
+    currentBid: listing.current_bid ?? 0,
+    bidCount: listing.bid_count ?? 0,
+    startingBid: listing.starting_bid ?? undefined,
+    reservePrice: listing.reserve_price ?? undefined,
+    reserveMet: listing.reserve_met ?? false,
   };
 }
 
@@ -101,6 +115,7 @@ export async function getListings(params?: {
   hideSold?: boolean;
   condition?: string;
   bodyType?: string;
+  listingType?: string;
   sortBy?: string;
   limit?: number;
   page?: number;
@@ -147,6 +162,9 @@ export async function getListings(params?: {
     .in("status", params?.hideSold ? ["approved"] : ["approved", "sold"])
     .order(orderColumn, { ascending: orderAscending });
 
+  if (params?.listingType) {
+    query = query.eq("listing_type", params.listingType);
+  }
   if (params?.make) {
     query = query.eq("make", params.make);
   }
@@ -340,4 +358,76 @@ export async function getSellerListings(sellerId: string): Promise<DbListing[]> 
   }
 
   return (data ?? []) as DbListing[];
+}
+
+/**
+ * Fetch bids for a listing, ordered by most recent first.
+ */
+export async function getBidsForListing(
+  listingId: string,
+  limit = 10
+): Promise<Bid[]> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("bids")
+    .select("*, profiles(full_name)")
+    .eq("listing_id", listingId)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+
+  if (error) {
+    console.error("getBidsForListing error:", error);
+    return [];
+  }
+
+  return (data ?? []).map(
+    (row: {
+      id: string;
+      listing_id: string;
+      bidder_id: string;
+      amount: number;
+      created_at: string;
+      profiles?: { full_name: string | null } | null;
+    }) => {
+      const name = row.profiles?.full_name ?? "Anonymous";
+      const parts = name.split(" ");
+      const initials =
+        parts.length >= 2
+          ? `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase()
+          : name.substring(0, 2).toUpperCase();
+
+      return {
+        id: row.id,
+        listingId: row.listing_id,
+        bidderId: row.bidder_id,
+        amount: row.amount,
+        createdAt: row.created_at,
+        bidderInitials: initials,
+      };
+    }
+  );
+}
+
+/**
+ * Fetch active auction listings for the homepage.
+ */
+export async function getAuctionListings(limit = 6): Promise<Car[]> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("listings")
+    .select("*, listing_images(*)")
+    .eq("listing_type", "auction")
+    .in("status", ["approved", "sold"])
+    .gte("auction_end", new Date().toISOString())
+    .order("auction_end", { ascending: true })
+    .limit(limit);
+
+  if (error) {
+    console.error("getAuctionListings error:", error);
+    return [];
+  }
+
+  return (data as DbListing[]).map(dbListingToCar);
 }

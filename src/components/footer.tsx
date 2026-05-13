@@ -7,6 +7,7 @@ const footerLinks = {
     { name: "Browse Cars", href: "/cars" },
     { name: "Sell Your Car", href: "/sell" },
     { name: "How It Works", href: "/how-it-works" },
+    { name: "Guides", href: "/guides" },
   ],
   company: [
     { name: "About", href: "/about" },

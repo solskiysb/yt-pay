@@ -29,4 +29,20 @@ export interface Car {
   featured: boolean;
   status: "active" | "sold" | "draft";
   createdAt: string;
+  listingType?: "classified" | "auction";
+  auctionEnd?: string;
+  currentBid?: number;
+  bidCount?: number;
+  startingBid?: number;
+  reservePrice?: number;
+  reserveMet?: boolean;
+}
+
+export interface Bid {
+  id: string;
+  listingId: string;
+  bidderId: string;
+  amount: number;
+  createdAt: string;
+  bidderInitials: string;
 }

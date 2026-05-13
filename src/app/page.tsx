@@ -14,8 +14,9 @@ import {
 } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { CarCard } from "@/components/car-card";
-import { getFeaturedListings } from "@/lib/db";
+import { getFeaturedListings, getAuctionListings } from "@/lib/db";
 import { siteConfig } from "@/lib/config";
+import { Gavel } from "lucide-react";
 
 const valueProps = [
   {
@@ -67,12 +68,59 @@ const steps = [
 ];
 
 export default async function HomePage() {
-  const featuredCars = await getFeaturedListings();
+  const [featuredCars, auctionCars] = await Promise.all([
+    getFeaturedListings(),
+    getAuctionListings(6),
+  ]);
 
   return (
     <main>
       {/* Hero */}
       <Hero />
+
+      {/* Live Auctions */}
+      {auctionCars.length > 0 && (
+        <section className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="mb-10 flex items-end justify-between">
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-blue-100 text-blue-600">
+                  <Gavel className="size-4" />
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+                  Live Auctions
+                </h2>
+              </div>
+              <p className="mt-2 text-stone-500">
+                Bid on curated classics ending soon
+              </p>
+            </div>
+            <Link
+              href="/cars?listingType=auction"
+              className="hidden items-center gap-1 text-sm font-medium text-stone-600 transition-colors hover:text-stone-900 sm:flex"
+            >
+              View All Auctions
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {auctionCars.map((car) => (
+              <CarCard key={car.id} car={car} />
+            ))}
+          </div>
+
+          <div className="mt-8 flex justify-center sm:hidden">
+            <Link
+              href="/cars?listingType=auction"
+              className="inline-flex items-center gap-1 text-sm font-medium text-stone-600"
+            >
+              View All Auctions
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Featured Collection */}
       <section className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
@@ -234,6 +282,101 @@ export default async function HomePage() {
               className="inline-flex items-center gap-1.5 text-sm font-medium text-stone-600 transition-colors hover:text-stone-900"
             >
               Learn more about how it works
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* From the Journal */}
+      <section className="py-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10 flex items-end justify-between">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+                From the Journal
+              </h2>
+              <p className="mt-2 text-stone-500">
+                Buying guides, model histories, and market insights
+              </p>
+            </div>
+            <Link
+              href="/guides"
+              className="hidden items-center gap-1 text-sm font-medium text-stone-600 transition-colors hover:text-stone-900 sm:flex"
+            >
+              All guides
+              <ArrowRight className="size-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <Link
+              href="/guides/buying-your-first-classic"
+              className="group rounded-2xl border border-stone-200 bg-white p-6 transition-all hover:border-stone-300 hover:shadow-md"
+            >
+              <span className="text-xs font-medium text-amber-600">
+                Buying Guide
+              </span>
+              <h3 className="mt-2 font-heading text-lg font-bold text-stone-900 group-hover:text-amber-700 transition-colors">
+                Buying Your First Classic Car
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                Everything you need to know -- budgets, inspections,
+                negotiation tips, and common mistakes to avoid.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600">
+                Read guide
+                <ArrowRight className="size-3.5" />
+              </span>
+            </Link>
+
+            <Link
+              href="/guides/porsche-911-buyers-guide"
+              className="group rounded-2xl border border-stone-200 bg-white p-6 transition-all hover:border-stone-300 hover:shadow-md"
+            >
+              <span className="text-xs font-medium text-amber-600">
+                Model Guide
+              </span>
+              <h3 className="mt-2 font-heading text-lg font-bold text-stone-900 group-hover:text-amber-700 transition-colors">
+                The Porsche 911 Buyer&apos;s Guide
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                Every generation explained -- from the original 901 to the 997.
+                Price ranges, common issues, and best buys.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600">
+                Read guide
+                <ArrowRight className="size-3.5" />
+              </span>
+            </Link>
+
+            <Link
+              href="/guides/market-trends-2026"
+              className="group rounded-2xl border border-stone-200 bg-white p-6 transition-all hover:border-stone-300 hover:shadow-md"
+            >
+              <span className="text-xs font-medium text-amber-600">
+                Market Insights
+              </span>
+              <h3 className="mt-2 font-heading text-lg font-bold text-stone-900 group-hover:text-amber-700 transition-colors">
+                Classic Car Market Trends 2026
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-stone-500">
+                Rising stars, best value segments, and youngtimers poised for
+                significant appreciation this year.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-amber-600">
+                Read guide
+                <ArrowRight className="size-3.5" />
+              </span>
+            </Link>
+          </div>
+
+          <div className="mt-8 flex justify-center sm:hidden">
+            <Link
+              href="/guides"
+              className="inline-flex items-center gap-1 text-sm font-medium text-stone-600"
+            >
+              All guides
               <ArrowRight className="size-4" />
             </Link>
           </div>

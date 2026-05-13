@@ -13,13 +13,16 @@ import {
   MessageCircle,
   BadgeCheck,
   ChevronRight,
+  Gavel,
 } from "lucide-react";
-import { getListingBySlug } from "@/lib/db";
+import { getListingBySlug, getBidsForListing } from "@/lib/db";
 import { PhotoGallery } from "@/components/photo-gallery";
 import { InquiryForm } from "@/components/inquiry-form";
+import { AuctionPanel } from "@/components/auction-panel";
 import { ShareButtons } from "@/components/share-buttons";
 import { ViewTracker } from "@/components/view-tracker";
 import { MobileStickyInquiry } from "@/components/mobile-sticky-inquiry";
+import { MobileStickyAuction } from "@/components/mobile-sticky-auction";
 import { siteConfig } from "@/lib/config";
 
 const formatPrice = (price: number) =>
@@ -65,6 +68,11 @@ export default async function CarDetailPage({
   if (!car) {
     notFound();
   }
+
+  const isAuction = car.listingType === "auction";
+
+  // Fetch bids for auction listings
+  const bids = isAuction ? await getBidsForListing(car.dbId) : [];
 
   const condition = conditionConfig[car.condition];
 
@@ -199,6 +207,12 @@ export default async function CarDetailPage({
           <div className="lg:col-span-2">
             {/* Title and badges */}
             <div className="flex flex-wrap items-center gap-2">
+              {isAuction && (
+                <span className="flex items-center gap-1 rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+                  <Gavel className="size-3" />
+                  Auction
+                </span>
+              )}
               <span
                 className={`rounded-full px-3 py-1 text-xs font-semibold ${condition.className}`}
               >
@@ -220,9 +234,11 @@ export default async function CarDetailPage({
               {car.year} {car.make} {car.model}
             </h1>
 
-            <p className="mt-3 text-3xl font-bold text-stone-900 sm:text-4xl">
-              {formatPrice(car.price)}
-            </p>
+            {!isAuction && (
+              <p className="mt-3 text-3xl font-bold text-stone-900 sm:text-4xl">
+                {formatPrice(car.price)}
+              </p>
+            )}
 
             {/* Location, mileage, condition inline */}
             <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-stone-500">
@@ -322,45 +338,80 @@ export default async function CarDetailPage({
             </div>
           </div>
 
-          {/* Right column: Sticky inquiry panel */}
+          {/* Right column: Sticky sidebar */}
           <div className="hidden lg:block">
             <div className="sticky top-24">
               <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-                {/* Price */}
-                <p className="text-3xl font-bold text-stone-900">
-                  {formatPrice(car.price)}
-                </p>
+                {isAuction ? (
+                  <>
+                    <AuctionPanel
+                      listingId={car.dbId}
+                      initialCurrentBid={car.currentBid ?? 0}
+                      initialBidCount={car.bidCount ?? 0}
+                      initialReserveMet={car.reserveMet ?? false}
+                      auctionEnd={car.auctionEnd!}
+                      startingBid={car.startingBid ?? 0}
+                      reservePrice={car.reservePrice}
+                      initialBids={bids}
+                    />
 
-                {/* Seller info */}
-                <div className="mt-4 flex items-center gap-3 rounded-xl bg-stone-50 p-3">
-                  <div className="flex size-10 items-center justify-center rounded-full bg-stone-200 text-stone-500">
-                    <User className="size-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-stone-800">
-                      {car.sellerName}
+                    {/* Seller info */}
+                    <div className="mt-5 border-t border-stone-100 pt-5">
+                      <div className="flex items-center gap-3 rounded-xl bg-stone-50 p-3">
+                        <div className="flex size-10 items-center justify-center rounded-full bg-stone-200 text-stone-500">
+                          <User className="size-5" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-stone-800">
+                            {car.sellerName}
+                          </p>
+                          <p className="text-xs text-stone-400">
+                            Member since{" "}
+                            {new Date(car.createdAt).getFullYear()}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Price */}
+                    <p className="text-3xl font-bold text-stone-900">
+                      {formatPrice(car.price)}
                     </p>
-                    <p className="text-xs text-stone-400">
-                      Member since{" "}
-                      {new Date(car.createdAt).getFullYear()}
+
+                    {/* Seller info */}
+                    <div className="mt-4 flex items-center gap-3 rounded-xl bg-stone-50 p-3">
+                      <div className="flex size-10 items-center justify-center rounded-full bg-stone-200 text-stone-500">
+                        <User className="size-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-stone-800">
+                          {car.sellerName}
+                        </p>
+                        <p className="text-xs text-stone-400">
+                          Member since{" "}
+                          {new Date(car.createdAt).getFullYear()}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Inquiry form */}
+                    <div id="inquiry-form" className="mt-6">
+                      <InquiryForm
+                        listingId={car.dbId}
+                        sellerId={car.sellerId}
+                        listingTitle={`${car.year} ${car.make} ${car.model}`}
+                      />
+                    </div>
+
+                    {/* Disclaimer */}
+                    <p className="mt-5 text-center text-xs leading-relaxed text-stone-400">
+                      This is a classified ad. {siteConfig.name} is not involved
+                      in any transactions between buyers and sellers.
                     </p>
-                  </div>
-                </div>
-
-                {/* Inquiry form */}
-                <div id="inquiry-form" className="mt-6">
-                  <InquiryForm
-                    listingId={car.dbId}
-                    sellerId={car.sellerId}
-                    listingTitle={`${car.year} ${car.make} ${car.model}`}
-                  />
-                </div>
-
-                {/* Disclaimer */}
-                <p className="mt-5 text-center text-xs leading-relaxed text-stone-400">
-                  This is a classified ad. {siteConfig.name} is not involved in
-                  any transactions between buyers and sellers.
-                </p>
+                  </>
+                )}
 
                 {/* Trust badges */}
                 <div className="mt-5 border-t border-stone-100 pt-5">
@@ -371,7 +422,7 @@ export default async function CarDetailPage({
                     </div>
                     <div className="flex items-center gap-2.5 text-sm text-stone-500">
                       <Shield className="size-4 flex-shrink-0 text-emerald-500" />
-                      <span>Secure Messaging</span>
+                      <span>{isAuction ? "Secure Bidding" : "Secure Messaging"}</span>
                     </div>
                     <div className="flex items-center gap-2.5 text-sm text-stone-500">
                       <MessageCircle className="size-4 flex-shrink-0 text-emerald-500" />
@@ -383,34 +434,69 @@ export default async function CarDetailPage({
             </div>
           </div>
 
-          {/* Mobile inquiry section (shown inline on mobile, hidden on desktop) */}
+          {/* Mobile section (shown inline on mobile, hidden on desktop) */}
           <div id="inquiry-form-mobile" className="lg:hidden">
             <div className="rounded-2xl border border-stone-200 bg-white p-6">
-              {/* Seller info */}
-              <div className="mb-5 flex items-center gap-3 rounded-xl bg-stone-50 p-3">
-                <div className="flex size-10 items-center justify-center rounded-full bg-stone-200 text-stone-500">
-                  <User className="size-5" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-stone-800">
-                    {car.sellerName}
-                  </p>
-                  <p className="text-xs text-stone-400">
-                    Member since {new Date(car.createdAt).getFullYear()}
-                  </p>
-                </div>
-              </div>
+              {isAuction ? (
+                <>
+                  <AuctionPanel
+                    listingId={car.dbId}
+                    initialCurrentBid={car.currentBid ?? 0}
+                    initialBidCount={car.bidCount ?? 0}
+                    initialReserveMet={car.reserveMet ?? false}
+                    auctionEnd={car.auctionEnd!}
+                    startingBid={car.startingBid ?? 0}
+                    reservePrice={car.reservePrice}
+                    initialBids={bids}
+                  />
 
-              <InquiryForm
-                listingId={car.dbId}
-                sellerId={car.sellerId}
-                listingTitle={`${car.year} ${car.make} ${car.model}`}
-              />
+                  <div className="mt-5 border-t border-stone-100 pt-5">
+                    <div className="flex items-center gap-3 rounded-xl bg-stone-50 p-3">
+                      <div className="flex size-10 items-center justify-center rounded-full bg-stone-200 text-stone-500">
+                        <User className="size-5" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-stone-800">
+                          {car.sellerName}
+                        </p>
+                        <p className="text-xs text-stone-400">
+                          Member since{" "}
+                          {new Date(car.createdAt).getFullYear()}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  {/* Seller info */}
+                  <div className="mb-5 flex items-center gap-3 rounded-xl bg-stone-50 p-3">
+                    <div className="flex size-10 items-center justify-center rounded-full bg-stone-200 text-stone-500">
+                      <User className="size-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-stone-800">
+                        {car.sellerName}
+                      </p>
+                      <p className="text-xs text-stone-400">
+                        Member since{" "}
+                        {new Date(car.createdAt).getFullYear()}
+                      </p>
+                    </div>
+                  </div>
 
-              <p className="mt-5 text-center text-xs leading-relaxed text-stone-400">
-                This is a classified ad. {siteConfig.name} is not involved in
-                any transactions between buyers and sellers.
-              </p>
+                  <InquiryForm
+                    listingId={car.dbId}
+                    sellerId={car.sellerId}
+                    listingTitle={`${car.year} ${car.make} ${car.model}`}
+                  />
+
+                  <p className="mt-5 text-center text-xs leading-relaxed text-stone-400">
+                    This is a classified ad. {siteConfig.name} is not involved in
+                    any transactions between buyers and sellers.
+                  </p>
+                </>
+              )}
 
               {/* Trust badges */}
               <div className="mt-5 flex flex-wrap justify-center gap-4 border-t border-stone-100 pt-5 text-xs text-stone-400">
@@ -420,7 +506,7 @@ export default async function CarDetailPage({
                 </span>
                 <span className="flex items-center gap-1.5">
                   <Shield className="size-3.5 text-emerald-500" />
-                  Secure Messaging
+                  {isAuction ? "Secure Bidding" : "Secure Messaging"}
                 </span>
                 <span className="flex items-center gap-1.5">
                   <MessageCircle className="size-3.5 text-emerald-500" />
@@ -433,7 +519,14 @@ export default async function CarDetailPage({
       </div>
 
       {/* Mobile sticky bottom bar */}
-      <MobileStickyInquiry price={formatPrice(car.price)} />
+      {isAuction ? (
+        <MobileStickyAuction
+          currentBid={car.currentBid ?? 0}
+          auctionEnd={car.auctionEnd!}
+        />
+      ) : (
+        <MobileStickyInquiry price={formatPrice(car.price)} />
+      )}
     </main>
   );
 }

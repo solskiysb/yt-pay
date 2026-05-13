@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getListings, getListingMakes, getListingBodyTypes } from "@/lib/db";
 import { CarCard } from "@/components/car-card";
 import { SearchFilters } from "@/components/search-filters";
+import { ListingTypeFilter } from "@/components/listing-type-filter";
 
 const ITEMS_PER_PAGE = 24;
 
@@ -36,6 +37,8 @@ export default async function CarsPage({
     typeof params.bodyType === "string" ? params.bodyType : undefined;
   const sortBy =
     typeof params.sortBy === "string" ? params.sortBy : undefined;
+  const listingType =
+    typeof params.listingType === "string" ? params.listingType : undefined;
   const hideSold = params.hideSold === "1";
   const currentPage = Math.max(
     1,
@@ -53,6 +56,7 @@ export default async function CarsPage({
         search,
         condition,
         bodyType,
+        listingType,
         sortBy,
         hideSold,
         page: currentPage,
@@ -76,6 +80,7 @@ export default async function CarsPage({
     if (minYear !== undefined && !isNaN(minYear)) p.set("minYear", String(minYear));
     if (maxYear !== undefined && !isNaN(maxYear)) p.set("maxYear", String(maxYear));
     if (search) p.set("search", search);
+    if (listingType) p.set("listingType", listingType);
     if (hideSold) p.set("hideSold", "1");
     if (page > 1) p.set("page", String(page));
     const qs = p.toString();
@@ -92,6 +97,12 @@ export default async function CarsPage({
           Showing {filteredCars.length} of {totalCount}{" "}
           {totalCount === 1 ? "car" : "cars"}
         </p>
+      </div>
+
+      <div className="mb-4">
+        <Suspense fallback={<div className="h-10" />}>
+          <ListingTypeFilter />
+        </Suspense>
       </div>
 
       <div className="mb-8">
