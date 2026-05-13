@@ -51,6 +51,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<SupabaseUser | null>(null);
+  const [userRole, setUserRole] = useState<string>("buyer");
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
@@ -65,8 +66,16 @@ export function Header() {
   useEffect(() => {
     const supabase = createClient();
 
-    supabase.auth.getUser().then(({ data: { user: currentUser } }) => {
+    supabase.auth.getUser().then(async ({ data: { user: currentUser } }) => {
       setUser(currentUser);
+      if (currentUser) {
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("role")
+          .eq("id", currentUser.id)
+          .single();
+        if (profile?.role) setUserRole(profile.role);
+      }
       setLoading(false);
     });
 
@@ -121,16 +130,14 @@ export function Header() {
               <div className="h-8 w-8 animate-pulse rounded-full bg-muted" />
             ) : user ? (
               <DropdownMenu>
-                <DropdownMenuTrigger
-                  render={
-                    <button className="flex items-center gap-2 rounded-full outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" />
-                  }
-                >
-                  <Avatar size="default">
-                    <AvatarFallback className="bg-accent-gold/15 text-accent-gold-dark text-xs font-semibold">
-                      {getInitials(user)}
-                    </AvatarFallback>
-                  </Avatar>
+                <DropdownMenuTrigger>
+                  <button className="flex items-center gap-2 rounded-full outline-none ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                    <Avatar>
+                      <AvatarFallback className="bg-accent-gold/15 text-accent-gold-dark text-xs font-semibold">
+                        {getInitials(user)}
+                      </AvatarFallback>
+                    </Avatar>
+                  </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" sideOffset={8} className="w-56">
                   <DropdownMenuLabel className="font-normal">
@@ -150,18 +157,22 @@ export function Header() {
                     <UserCircle className="mr-2 size-4" />
                     My Account
                   </DropdownMenuItem>
-                  <DropdownMenuItem
-                    onSelect={() => router.push("/dashboard")}
-                  >
-                    <LayoutDashboard className="mr-2 size-4" />
-                    Dashboard
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
-                    onSelect={() => router.push("/admin")}
-                  >
-                    <Shield className="mr-2 size-4" />
-                    Admin
-                  </DropdownMenuItem>
+                  {(userRole === "seller" || userRole === "admin") && (
+                    <DropdownMenuItem
+                      onSelect={() => router.push("/dashboard")}
+                    >
+                      <LayoutDashboard className="mr-2 size-4" />
+                      Seller Dashboard
+                    </DropdownMenuItem>
+                  )}
+                  {userRole === "admin" && (
+                    <DropdownMenuItem
+                      onSelect={() => router.push("/admin")}
+                    >
+                      <Shield className="mr-2 size-4" />
+                      Admin Panel
+                    </DropdownMenuItem>
+                  )}
                   <DropdownMenuSeparator />
                   <DropdownMenuItem
                     variant="destructive"
@@ -251,22 +262,26 @@ export function Header() {
                     <UserCircle className="size-4" />
                     My Account
                   </Link>
-                  <Link
-                    href="/dashboard"
-                    onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                  >
-                    <LayoutDashboard className="size-4" />
-                    Dashboard
-                  </Link>
-                  <Link
-                    href="/admin"
-                    onClick={() => setOpen(false)}
-                    className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                  >
-                    <Shield className="size-4" />
-                    Admin
-                  </Link>
+                  {(userRole === "seller" || userRole === "admin") && (
+                    <Link
+                      href="/dashboard"
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                    >
+                      <LayoutDashboard className="size-4" />
+                      Seller Dashboard
+                    </Link>
+                  )}
+                  {userRole === "admin" && (
+                    <Link
+                      href="/admin"
+                      onClick={() => setOpen(false)}
+                      className="flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                    >
+                      <Shield className="size-4" />
+                      Admin Panel
+                    </Link>
+                  )}
                   <button
                     onClick={() => {
                       setOpen(false);
