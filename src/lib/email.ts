@@ -347,3 +347,77 @@ export async function sendReplyNotification(params: {
     `.trim(),
   });
 }
+
+export async function sendBuyerAlertConfirmation(params: {
+  email: string;
+  name?: string;
+  make?: string;
+  model?: string;
+}) {
+  const resend = getResendClient();
+  if (!resend) return;
+
+  const { email, name, make, model } = params;
+  const carLabel = [make, model].filter(Boolean).join(" ") || "classic cars";
+
+  await resend.emails.send({
+    from: "EraMarque <notifications@yt-pay.io>",
+    to: email,
+    subject: `Alert set for ${carLabel} on EraMarque`,
+    html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="margin:0;padding:0;background-color:#f5f5f4;font-family:'Inter','Helvetica Neue',Arial,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f5f5f4;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color:#1c1917;padding:24px 32px;text-align:center;">
+              <span style="font-size:22px;font-weight:700;color:#f59e0b;letter-spacing:2px;">ERAMARQUE</span>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:32px;">
+              <h1 style="margin:0 0 8px;font-size:20px;font-weight:600;color:#1c1917;">Alert confirmed</h1>
+              <p style="margin:0 0 24px;font-size:14px;color:#78716c;">
+                Hi ${name || "there"}, you will receive an email when a new <strong>${carLabel}</strong> is listed on EraMarque.
+              </p>
+
+              <!-- CTA -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center">
+                    <a href="${siteConfig.url}/cars${make ? `?make=${encodeURIComponent(make)}` : ""}" style="display:inline-block;padding:12px 28px;background-color:#f59e0b;color:#1c1917;font-size:14px;font-weight:600;text-decoration:none;border-radius:8px;">Browse Current Listings</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:20px 32px;border-top:1px solid #e7e5e4;text-align:center;">
+              <p style="margin:0;font-size:12px;color:#a8a29e;">
+                <a href="${siteConfig.url}" style="color:#a8a29e;text-decoration:none;">yt-pay.io</a> &mdash; Curated Classics &amp; Beautiful Cars
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+    `.trim(),
+  });
+}

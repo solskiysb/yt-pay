@@ -51,9 +51,21 @@ export async function generateMetadata({
   if (!car) {
     return { title: "Car Not Found | EraMarque" };
   }
+
+  // Noindex demo listings: images from wikimedia/placeholder = seeded demo data
+  const isDemoListing = car.images.some(
+    (img) =>
+      img.includes("wikimedia.org") ||
+      img.includes("wikipedia.org") ||
+      img.includes("placehold.co")
+  );
+
   return {
     title: `${car.year} ${car.make} ${car.model} | EraMarque`,
     description: car.shortDescription,
+    ...(isDemoListing && {
+      robots: { index: false, follow: true },
+    }),
   };
 }
 
