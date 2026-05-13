@@ -328,3 +328,16 @@
 {"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/api/bids/route.ts","timestamp":1778675095306,"sessionId":null}
 {"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/page.tsx","timestamp":1778675110956,"sessionId":null}
 {"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/components/listing-type-filter.tsx","timestamp":1778675111111,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/i18n/routing.ts","timestamp":1778676070366,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/i18n/request.ts","timestamp":1778676072416,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/i18n/navigation.ts","timestamp":1778676073376,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/messages/en.json","timestamp":1778676107603,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/messages/fr.json","timestamp":1778676127357,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/messages/de.json","timestamp":1778676147555,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/middleware.ts","timestamp":1778676165555,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/[locale]/layout.tsx","timestamp":1778676187832,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/app/layout.tsx","timestamp":1778676195486,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/next.config.ts","timestamp":1778676204357,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/components/header.tsx","timestamp":1778676255622,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/components/footer.tsx","timestamp":1778676278624,"sessionId":null}
+{"type":"edit","file":"/Users/sergey/CCode/Personal/yt-pay/src/components/cookie-consent.tsx","timestamp":1778676304982,"sessionId":null}

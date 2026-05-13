@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { CookieConsent } from "@/components/cookie-consent";
 import { siteConfig } from "@/lib/config";
 
 const inter = Inter({
@@ -63,12 +60,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <CookieConsent />
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

@@ -1,21 +1,9 @@
-import Link from "next/link";
+"use client";
+
 import { Mail } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-
-const footerLinks = {
-  marketplace: [
-    { name: "Browse Cars", href: "/cars" },
-    { name: "Sell Your Car", href: "/sell" },
-    { name: "How It Works", href: "/how-it-works" },
-    { name: "Guides", href: "/guides" },
-  ],
-  company: [
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-  ],
-};
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -42,6 +30,23 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const t = useTranslations("footer");
+
+  const footerLinks = {
+    marketplace: [
+      { name: t("browseCars"), href: "/cars" as const },
+      { name: t("sellYourCar"), href: "/sell" as const },
+      { name: t("howItWorks"), href: "/how-it-works" as const },
+      { name: t("guides"), href: "/guides" as const },
+    ],
+    company: [
+      { name: t("about"), href: "/about" as const },
+      { name: t("contact"), href: "/contact" as const },
+      { name: t("privacyPolicy"), href: "/privacy" as const },
+      { name: t("termsOfService"), href: "/terms" as const },
+    ],
+  };
+
   return (
     <footer className="border-t border-border bg-secondary/30">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -54,8 +59,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              {siteConfig.tagline}. A premium marketplace connecting passionate
-              collectors with Europe&apos;s finest automobiles.
+              {t("tagline")}
             </p>
             <div className="mt-5 flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -83,11 +87,11 @@ export function Footer() {
           {/* Marketplace Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-              Marketplace
+              {t("marketplace")}
             </h3>
             <ul className="mt-4 space-y-2.5">
               {footerLinks.marketplace.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -102,11 +106,11 @@ export function Footer() {
           {/* Company Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
-              Company
+              {t("company")}
             </h3>
             <ul className="mt-4 space-y-2.5">
               {footerLinks.company.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -122,8 +126,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. {t("allRightsReserved")}
           </p>
           <p className="text-xs text-muted-foreground">
             <a

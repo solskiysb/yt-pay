@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export function CookieConsent() {
+  const t = useTranslations("cookie");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -34,13 +36,12 @@ export function CookieConsent() {
       <div className="mx-auto max-w-4xl px-4 pb-4">
         <div className="flex flex-col items-center gap-3 rounded-xl bg-stone-800 p-4 shadow-lg sm:flex-row sm:gap-4">
           <p className="flex-1 text-center text-sm text-stone-300 sm:text-left">
-            We use cookies to improve your experience. By continuing, you agree
-            to our{" "}
+            {t("message")}{" "}
             <Link
               href="/privacy"
               className="font-medium text-amber-400 underline underline-offset-2 hover:text-amber-300"
             >
-              Privacy Policy
+              {t("privacyPolicy")}
             </Link>
             .
           </p>
@@ -49,13 +50,13 @@ export function CookieConsent() {
               href="/privacy"
               className="inline-flex h-9 items-center rounded-lg px-4 text-sm font-medium text-stone-300 transition-colors hover:bg-stone-700 hover:text-white"
             >
-              Learn More
+              {t("learnMore")}
             </Link>
             <button
               onClick={accept}
               className="inline-flex h-9 items-center rounded-lg bg-amber-500 px-5 text-sm font-semibold text-stone-900 transition-colors hover:bg-amber-400"
             >
-              Accept
+              {t("accept")}
             </button>
           </div>
         </div>
