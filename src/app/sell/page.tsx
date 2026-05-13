@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Camera, FileText, Users, Rocket, Check, Shield } from "lucide-react";
 import { siteConfig } from "@/lib/config";
-import { getUser } from "@/lib/auth";
 // PricingCards and Stripe integration preserved — will re-enable post-beta
+// import { getUser } from "@/lib/auth";
 // import { PricingCards } from "@/components/pricing-cards";
 
 export const metadata: Metadata = {
@@ -80,7 +80,6 @@ const faqs = [
 ];
 
 export default async function SellPage() {
-  const user = await getUser();
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -172,7 +171,7 @@ export default async function SellPage() {
             </ul>
 
             <Link
-              href={user ? "/dashboard/listings/new" : "/register"}
+              href="/register"
               className="mt-8 flex h-12 w-full items-center justify-center rounded-full bg-amber-500 font-medium text-stone-900 transition hover:bg-amber-400"
             >
               Apply to Sell
